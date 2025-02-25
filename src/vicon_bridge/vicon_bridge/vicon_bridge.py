@@ -27,16 +27,19 @@ class ViconBridge(Node):
 
         self.get_logger().info('Vicon Bridge Node Started')
 
+        self.publish = False
+
     def vicon_callback(self, msg):
         # Create new PoseStamped message for MAVROS
         mavros_msg = PoseStamped()
 
         # Copy header
         mavros_msg.header = msg.header
+        mavros_msg.header.frame_id = 'map'
+
 
         # Copy vicon position data and transform to cube frame
         mavros_msg.pose.position = msg.pose.position
-        self.get_logger().info("DIVIDING")
         mavros_msg.pose.position.x += self.transform[0]
         mavros_msg.pose.position.y += self.transform[1]
         mavros_msg.pose.position.z += self.transform[2]
@@ -45,7 +48,8 @@ class ViconBridge(Node):
         mavros_msg.pose.orientation = msg.pose.orientation
 
         # Publish the transformed message
-        self.mavros_pub.publish(mavros_msg)
+        if self.publish:
+            self.mavros_pub.publish(mavros_msg)
 
 
 def main(args=None):
