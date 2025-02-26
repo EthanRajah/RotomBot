@@ -1,0 +1,39 @@
+[7.602s] Invoking command in '/home/jetson/ros2_ws/src/dummy_vicon_republisher': PYTHONPATH=/home/jetson/ros2_ws/src/build/dummy_vicon_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/dummy_vicon_republisher build --build-base /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build install --record /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/install.log --install-scripts $base/lib/dummy_vicon_republisher --single-version-externally-managed install_data
+[9.379s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[9.380s]   warnings.warn(
+[9.659s] running egg_info
+[9.666s] creating ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info
+[9.671s] writing ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/PKG-INFO
+[9.675s] writing dependency_links to ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/dependency_links.txt
+[9.678s] writing entry points to ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/entry_points.txt
+[9.680s] writing requirements to ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/requires.txt
+[9.683s] writing top-level names to ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/top_level.txt
+[9.693s] writing manifest file '../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/SOURCES.txt'
+[9.706s] reading manifest file '../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/SOURCES.txt'
+[9.712s] writing manifest file '../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info/SOURCES.txt'
+[9.716s] running build
+[9.716s] running build_py
+[9.719s] creating /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build
+[9.721s] creating /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build/lib
+[9.723s] creating /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build/lib/dummy_vicon_republisher
+[9.726s] copying dummy_vicon_republisher/dummy_vicon_republisher.py -> /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build/lib/dummy_vicon_republisher
+[9.730s] copying dummy_vicon_republisher/__init__.py -> /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build/lib/dummy_vicon_republisher
+[9.731s] running install
+[9.742s] running install_lib
+[9.752s] creating /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages/dummy_vicon_republisher
+[9.754s] copying /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build/lib/dummy_vicon_republisher/dummy_vicon_republisher.py -> /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages/dummy_vicon_republisher
+[9.755s] copying /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build/lib/dummy_vicon_republisher/__init__.py -> /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages/dummy_vicon_republisher
+[9.759s] byte-compiling /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages/dummy_vicon_republisher/dummy_vicon_republisher.py to dummy_vicon_republisher.cpython-38.pyc
+[9.762s] byte-compiling /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages/dummy_vicon_republisher/__init__.py to __init__.cpython-38.pyc
+[9.766s] running install_data
+[9.769s] creating /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/ament_index
+[9.769s] creating /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/ament_index/resource_index
+[9.770s] creating /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/ament_index/resource_index/packages
+[9.773s] copying resource/dummy_vicon_republisher -> /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/ament_index/resource_index/packages
+[9.774s] copying package.xml -> /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher
+[9.777s] running install_egg_info
+[9.787s] Copying ../build/dummy_vicon_republisher/dummy_vicon_republisher.egg-info to /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages/dummy_vicon_republisher-0.0.0-py3.8.egg-info
+[9.794s] running install_scripts
+[9.890s] Installing dummy_vicon_republisher script to /home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/dummy_vicon_republisher
+[9.892s] writing list of installed files to '/home/jetson/ros2_ws/src/build/dummy_vicon_republisher/install.log'
+[10.081s] Invoked command in '/home/jetson/ros2_ws/src/dummy_vicon_republisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/dummy_vicon_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/dummy_vicon_republisher build --build-base /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build install --record /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/install.log --install-scripts $base/lib/dummy_vicon_republisher --single-version-externally-managed install_data

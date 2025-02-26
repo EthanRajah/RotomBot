@@ -1,0 +1,29 @@
+[5.342s] Invoking command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy /usr/bin/cmake /home/jetson/ros2_ws/src/px4_autonomy_modules -DCMAKE_INSTALL_PREFIX=/home/jetson/ros2_ws/src/install/px4_autonomy_modules
+[5.425s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[5.545s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[7.001s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[7.189s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.207s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[8.408s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.687s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[8.694s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.700s] CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+[8.700s]   Could NOT find Threads (missing: Threads_FOUND)
+[8.701s] Call Stack (most recent call first):
+[8.701s]   /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+[8.701s]   /usr/share/cmake-3.16/Modules/FindThreads.cmake:220 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+[8.702s]   /opt/ros/foxy/share/rmw_implementation/cmake/rmw_implementation-extras.cmake:67 (find_package)
+[8.702s]   /opt/ros/foxy/share/rmw_implementation/cmake/rmw_implementationConfig.cmake:41 (include)
+[8.702s]   /opt/ros/foxy/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[8.703s]   /opt/ros/foxy/share/rcl/cmake/rclConfig.cmake:41 (include)
+[8.703s]   /opt/ros/foxy/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[8.704s]   /opt/ros/foxy/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake:41 (include)
+[8.704s]   /opt/ros/foxy/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[8.704s]   /opt/ros/foxy/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)
+[8.705s]   CMakeLists.txt:10 (find_package)
+[8.705s] 
+[8.705s] 
+[8.707s] -- Configuring incomplete, errors occurred!
+[8.707s] See also "/home/jetson/ros2_ws/src/build/px4_autonomy_modules/CMakeFiles/CMakeOutput.log".
+[8.708s] See also "/home/jetson/ros2_ws/src/build/px4_autonomy_modules/CMakeFiles/CMakeError.log".
+[8.744s] Invoked command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy /usr/bin/cmake /home/jetson/ros2_ws/src/px4_autonomy_modules -DCMAKE_INSTALL_PREFIX=/home/jetson/ros2_ws/src/install/px4_autonomy_modules

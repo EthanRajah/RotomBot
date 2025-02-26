@@ -1,0 +1,26 @@
+[5.352s] Invoking command in '/home/jetson/ros2_ws/src/unit_tester': PYTHONPATH=/home/jetson/ros2_ws/src/build/unit_tester/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/unit_tester build --build-base /home/jetson/ros2_ws/src/build/unit_tester/build install --record /home/jetson/ros2_ws/src/build/unit_tester/install.log --install-scripts $base/lib/unit_tester --single-version-externally-managed install_data
+[6.635s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[6.635s]   warnings.warn(
+[6.789s] running egg_info
+[6.794s] writing ../build/unit_tester/unit_tester.egg-info/PKG-INFO
+[6.796s] writing dependency_links to ../build/unit_tester/unit_tester.egg-info/dependency_links.txt
+[6.798s] writing entry points to ../build/unit_tester/unit_tester.egg-info/entry_points.txt
+[6.799s] writing requirements to ../build/unit_tester/unit_tester.egg-info/requires.txt
+[6.799s] writing top-level names to ../build/unit_tester/unit_tester.egg-info/top_level.txt
+[6.808s] reading manifest file '../build/unit_tester/unit_tester.egg-info/SOURCES.txt'
+[6.815s] writing manifest file '../build/unit_tester/unit_tester.egg-info/SOURCES.txt'
+[6.815s] running build
+[6.816s] running build_py
+[6.817s] copying unit_tester/unit_tester.py -> /home/jetson/ros2_ws/src/build/unit_tester/build/lib/unit_tester
+[6.817s] running install
+[6.821s] running install_lib
+[6.830s] copying /home/jetson/ros2_ws/src/build/unit_tester/build/lib/unit_tester/unit_tester.py -> /home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages/unit_tester
+[6.834s] byte-compiling /home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages/unit_tester/unit_tester.py to unit_tester.cpython-38.pyc
+[6.836s] running install_data
+[6.836s] running install_egg_info
+[6.845s] removing '/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages/unit_tester-0.0.0-py3.8.egg-info' (and everything under it)
+[6.846s] Copying ../build/unit_tester/unit_tester.egg-info to /home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages/unit_tester-0.0.0-py3.8.egg-info
+[6.854s] running install_scripts
+[6.950s] Installing unit_tester script to /home/jetson/ros2_ws/src/install/unit_tester/lib/unit_tester
+[6.951s] writing list of installed files to '/home/jetson/ros2_ws/src/build/unit_tester/install.log'
+[7.060s] Invoked command in '/home/jetson/ros2_ws/src/unit_tester' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/unit_tester/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/unit_tester build --build-base /home/jetson/ros2_ws/src/build/unit_tester/build install --record /home/jetson/ros2_ws/src/build/unit_tester/install.log --install-scripts $base/lib/unit_tester --single-version-externally-managed install_data

@@ -1,0 +1,39 @@
+[7.175s] Invoking command in '/home/jetson/ros2_ws/src/comm_node': PYTHONPATH=/home/jetson/ros2_ws/src/build/comm_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/comm_node build --build-base /home/jetson/ros2_ws/src/build/comm_node/build install --record /home/jetson/ros2_ws/src/build/comm_node/install.log --install-scripts $base/lib/comm_node --single-version-externally-managed install_data
+[9.090s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[9.090s]   warnings.warn(
+[9.422s] running egg_info
+[9.429s] creating ../build/comm_node/comm_node.egg-info
+[9.436s] writing ../build/comm_node/comm_node.egg-info/PKG-INFO
+[9.441s] writing dependency_links to ../build/comm_node/comm_node.egg-info/dependency_links.txt
+[9.463s] writing entry points to ../build/comm_node/comm_node.egg-info/entry_points.txt
+[9.463s] writing requirements to ../build/comm_node/comm_node.egg-info/requires.txt
+[9.464s] writing top-level names to ../build/comm_node/comm_node.egg-info/top_level.txt
+[9.464s] writing manifest file '../build/comm_node/comm_node.egg-info/SOURCES.txt'
+[9.472s] reading manifest file '../build/comm_node/comm_node.egg-info/SOURCES.txt'
+[9.484s] writing manifest file '../build/comm_node/comm_node.egg-info/SOURCES.txt'
+[9.484s] running build
+[9.485s] running build_py
+[9.485s] creating /home/jetson/ros2_ws/src/build/comm_node/build
+[9.485s] creating /home/jetson/ros2_ws/src/build/comm_node/build/lib
+[9.486s] creating /home/jetson/ros2_ws/src/build/comm_node/build/lib/comm_node
+[9.487s] copying comm_node/__init__.py -> /home/jetson/ros2_ws/src/build/comm_node/build/lib/comm_node
+[9.489s] copying comm_node/comm.py -> /home/jetson/ros2_ws/src/build/comm_node/build/lib/comm_node
+[9.490s] running install
+[9.496s] running install_lib
+[9.500s] creating /home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages/comm_node
+[9.501s] copying /home/jetson/ros2_ws/src/build/comm_node/build/lib/comm_node/__init__.py -> /home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages/comm_node
+[9.503s] copying /home/jetson/ros2_ws/src/build/comm_node/build/lib/comm_node/comm.py -> /home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages/comm_node
+[9.504s] byte-compiling /home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages/comm_node/__init__.py to __init__.cpython-38.pyc
+[9.505s] byte-compiling /home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages/comm_node/comm.py to comm.cpython-38.pyc
+[9.511s] running install_data
+[9.514s] creating /home/jetson/ros2_ws/src/install/comm_node/share/ament_index
+[9.515s] creating /home/jetson/ros2_ws/src/install/comm_node/share/ament_index/resource_index
+[9.515s] creating /home/jetson/ros2_ws/src/install/comm_node/share/ament_index/resource_index/packages
+[9.516s] copying resource/comm_node -> /home/jetson/ros2_ws/src/install/comm_node/share/ament_index/resource_index/packages
+[9.516s] copying package.xml -> /home/jetson/ros2_ws/src/install/comm_node/share/comm_node
+[9.517s] running install_egg_info
+[9.521s] Copying ../build/comm_node/comm_node.egg-info to /home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages/comm_node-0.0.1-py3.8.egg-info
+[9.532s] running install_scripts
+[9.636s] Installing comm script to /home/jetson/ros2_ws/src/install/comm_node/lib/comm_node
+[9.637s] writing list of installed files to '/home/jetson/ros2_ws/src/build/comm_node/install.log'
+[11.628s] Invoked command in '/home/jetson/ros2_ws/src/comm_node' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/comm_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/comm_node build --build-base /home/jetson/ros2_ws/src/build/comm_node/build install --record /home/jetson/ros2_ws/src/build/comm_node/install.log --install-scripts $base/lib/comm_node --single-version-externally-managed install_data

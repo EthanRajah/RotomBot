@@ -1,0 +1,165 @@
+[0.000000] (-) TimerEvent: {}
+[0.001134] (comm_node) JobQueued: {'identifier': 'comm_node', 'dependencies': OrderedDict()}
+[0.002549] (exer2_control) JobQueued: {'identifier': 'exer2_control', 'dependencies': OrderedDict()}
+[0.003385] (px4_autonomy_modules) JobQueued: {'identifier': 'px4_autonomy_modules', 'dependencies': OrderedDict()}
+[0.003548] (realsense2mavros) JobQueued: {'identifier': 'realsense2mavros', 'dependencies': OrderedDict()}
+[0.003677] (unit_tester) JobQueued: {'identifier': 'unit_tester', 'dependencies': OrderedDict()}
+[0.003803] (vicon_bridge) JobQueued: {'identifier': 'vicon_bridge', 'dependencies': OrderedDict()}
+[0.003926] (comm_node) JobStarted: {'identifier': 'comm_node'}
+[0.099356] (-) TimerEvent: {}
+[0.119716] (exer2_control) JobStarted: {'identifier': 'exer2_control'}
+[0.194171] (px4_autonomy_modules) JobStarted: {'identifier': 'px4_autonomy_modules'}
+[0.200277] (-) TimerEvent: {}
+[0.258344] (realsense2mavros) JobStarted: {'identifier': 'realsense2mavros'}
+[0.301018] (-) TimerEvent: {}
+[0.401839] (-) TimerEvent: {}
+[0.503442] (-) TimerEvent: {}
+[0.604758] (-) TimerEvent: {}
+[0.705440] (-) TimerEvent: {}
+[0.806789] (-) TimerEvent: {}
+[0.907448] (-) TimerEvent: {}
+[1.008730] (-) TimerEvent: {}
+[1.109404] (-) TimerEvent: {}
+[1.210096] (-) TimerEvent: {}
+[1.311374] (-) TimerEvent: {}
+[1.412074] (-) TimerEvent: {}
+[1.524505] (-) TimerEvent: {}
+[1.625204] (-) TimerEvent: {}
+[1.725893] (-) TimerEvent: {}
+[1.826638] (-) TimerEvent: {}
+[1.927357] (-) TimerEvent: {}
+[2.028374] (-) TimerEvent: {}
+[2.129778] (-) TimerEvent: {}
+[2.230912] (-) TimerEvent: {}
+[2.331607] (-) TimerEvent: {}
+[2.432323] (-) TimerEvent: {}
+[2.534443] (-) TimerEvent: {}
+[2.635772] (-) TimerEvent: {}
+[2.736486] (-) TimerEvent: {}
+[2.837182] (-) TimerEvent: {}
+[2.938621] (-) TimerEvent: {}
+[3.039336] (-) TimerEvent: {}
+[3.140044] (-) TimerEvent: {}
+[3.240759] (-) TimerEvent: {}
+[3.341564] (-) TimerEvent: {}
+[3.443247] (-) TimerEvent: {}
+[3.545459] (-) TimerEvent: {}
+[3.647745] (-) TimerEvent: {}
+[3.749293] (-) TimerEvent: {}
+[3.850025] (-) TimerEvent: {}
+[3.951891] (-) TimerEvent: {}
+[4.052635] (-) TimerEvent: {}
+[4.153356] (-) TimerEvent: {}
+[4.254169] (-) TimerEvent: {}
+[4.355038] (-) TimerEvent: {}
+[4.455757] (-) TimerEvent: {}
+[4.556477] (-) TimerEvent: {}
+[4.657226] (-) TimerEvent: {}
+[4.758713] (-) TimerEvent: {}
+[4.860008] (-) TimerEvent: {}
+[4.960755] (-) TimerEvent: {}
+[5.061531] (-) TimerEvent: {}
+[5.163012] (-) TimerEvent: {}
+[5.264086] (-) TimerEvent: {}
+[5.366329] (-) TimerEvent: {}
+[5.468160] (-) TimerEvent: {}
+[5.529082] (px4_autonomy_modules) JobProgress: {'identifier': 'px4_autonomy_modules', 'progress': 'cmake'}
+[5.532256] (px4_autonomy_modules) Command: {'cmd': ['/usr/bin/cmake', '/home/jetson/ros2_ws/src/px4_autonomy_modules', '-DCMAKE_INSTALL_PREFIX=/home/jetson/ros2_ws/src/install/px4_autonomy_modules'], 'cwd': '/home/jetson/ros2_ws/src/build/px4_autonomy_modules', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'jetson'), ('SSH_CLIENT', '100.110.180.50 58621 22'), ('LC_TIME', 'en_CA.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/jetson'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-2f690e70-3197-4e7d-8aaf-9eb682dcd1fc.sock'), ('JETSON_L4T', '32.6.1'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_CA.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/jetson/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jetson'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (4 GB ram)'), ('JETSON_SERIAL_NUMBER', '1423221007917'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Porg'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda/bin:/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_CA.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_CA.UTF-8'), ('LC_TELEPHONE', 'en_CA.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-b212844ed0.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '4'), ('AMENT_PREFIX_PATH', '/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/px4_autonomy_modules:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_CA.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'en_CA.UTF-8'), ('LC_IDENTIFICATION', 'en_CA.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/jetson/ros2_ws/src/build/px4_autonomy_modules'), ('SSH_CONNECTION', '100.110.180.50 58621 100.64.173.47 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/unit_tester/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/realsense2mavros/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/comm_node/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_CA.UTF-8'), ('LC_PAPER', 'en_CA.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.6'), ('CMAKE_PREFIX_PATH', '/home/jetson/ros2_ws/install/px4_autonomy_modules:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3448-0000')]), 'shell': False}
+[5.568765] (-) TimerEvent: {}
+[5.619057] (px4_autonomy_modules) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.668809] (-) TimerEvent: {}
+[5.740031] (px4_autonomy_modules) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.768987] (-) TimerEvent: {}
+[5.869733] (-) TimerEvent: {}
+[5.970472] (-) TimerEvent: {}
+[6.071984] (-) TimerEvent: {}
+[6.173481] (-) TimerEvent: {}
+[6.274805] (-) TimerEvent: {}
+[6.375931] (-) TimerEvent: {}
+[6.476683] (-) TimerEvent: {}
+[6.586099] (-) TimerEvent: {}
+[6.686830] (-) TimerEvent: {}
+[6.788240] (-) TimerEvent: {}
+[6.889315] (-) TimerEvent: {}
+[6.990013] (-) TimerEvent: {}
+[7.091478] (-) TimerEvent: {}
+[7.192900] (-) TimerEvent: {}
+[7.195477] (px4_autonomy_modules) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[7.293069] (-) TimerEvent: {}
+[7.383234] (px4_autonomy_modules) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.393264] (-) TimerEvent: {}
+[7.401374] (px4_autonomy_modules) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[7.493832] (-) TimerEvent: {}
+[7.596402] (-) TimerEvent: {}
+[7.697727] (-) TimerEvent: {}
+[7.798637] (-) TimerEvent: {}
+[7.899356] (-) TimerEvent: {}
+[8.000088] (-) TimerEvent: {}
+[8.101189] (-) TimerEvent: {}
+[8.204926] (-) TimerEvent: {}
+[8.306345] (-) TimerEvent: {}
+[8.407479] (-) TimerEvent: {}
+[8.508847] (-) TimerEvent: {}
+[8.602896] (px4_autonomy_modules) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.609021] (-) TimerEvent: {}
+[8.710356] (-) TimerEvent: {}
+[8.811099] (-) TimerEvent: {}
+[8.881250] (px4_autonomy_modules) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[8.888504] (px4_autonomy_modules) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.894296] (px4_autonomy_modules) StderrLine: {'line': b'CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):\n'}
+[8.895038] (px4_autonomy_modules) StderrLine: {'line': b'  Could NOT find Threads (missing: Threads_FOUND)\n'}
+[8.895498] (px4_autonomy_modules) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.895909] (px4_autonomy_modules) StderrLine: {'line': b'  /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)\n'}
+[8.896266] (px4_autonomy_modules) StderrLine: {'line': b'  /usr/share/cmake-3.16/Modules/FindThreads.cmake:220 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)\n'}
+[8.896615] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/rmw_implementation/cmake/rmw_implementation-extras.cmake:67 (find_package)\n'}
+[8.896951] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/rmw_implementation/cmake/rmw_implementationConfig.cmake:41 (include)\n'}
+[8.897296] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[8.897671] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/rcl/cmake/rclConfig.cmake:41 (include)\n'}
+[8.898030] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[8.898376] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake:41 (include)\n'}
+[8.898792] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[8.899182] (px4_autonomy_modules) StderrLine: {'line': b'  /opt/ros/foxy/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)\n'}
+[8.899516] (px4_autonomy_modules) StderrLine: {'line': b'  CMakeLists.txt:10 (find_package)\n'}
+[8.899844] (px4_autonomy_modules) StderrLine: {'line': b'\n'}
+[8.900169] (px4_autonomy_modules) StderrLine: {'line': b'\n'}
+[8.901419] (px4_autonomy_modules) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[8.901909] (px4_autonomy_modules) StdoutLine: {'line': b'See also "/home/jetson/ros2_ws/src/build/px4_autonomy_modules/CMakeFiles/CMakeOutput.log".\n'}
+[8.902295] (px4_autonomy_modules) StdoutLine: {'line': b'See also "/home/jetson/ros2_ws/src/build/px4_autonomy_modules/CMakeFiles/CMakeError.log".\n'}
+[8.911292] (-) TimerEvent: {}
+[8.936602] (px4_autonomy_modules) CommandEnded: {'returncode': 1}
+[9.011469] (-) TimerEvent: {}
+[9.048318] (px4_autonomy_modules) JobEnded: {'identifier': 'px4_autonomy_modules', 'rc': 1}
+[9.111647] (-) TimerEvent: {}
+[9.212351] (-) TimerEvent: {}
+[9.313739] (-) TimerEvent: {}
+[9.414441] (-) TimerEvent: {}
+[9.515154] (-) TimerEvent: {}
+[9.615836] (-) TimerEvent: {}
+[9.716514] (-) TimerEvent: {}
+[9.817220] (-) TimerEvent: {}
+[9.917934] (-) TimerEvent: {}
+[10.018649] (-) TimerEvent: {}
+[10.119820] (-) TimerEvent: {}
+[10.220531] (-) TimerEvent: {}
+[10.321954] (-) TimerEvent: {}
+[10.423455] (-) TimerEvent: {}
+[10.524195] (-) TimerEvent: {}
+[10.625081] (-) TimerEvent: {}
+[10.716390] (realsense2mavros) JobEnded: {'identifier': 'realsense2mavros', 'rc': 'SIGINT'}
+[10.727023] (-) TimerEvent: {}
+[10.828292] (-) TimerEvent: {}
+[10.928951] (-) TimerEvent: {}
+[11.029623] (-) TimerEvent: {}
+[11.130315] (-) TimerEvent: {}
+[11.231411] (-) TimerEvent: {}
+[11.332096] (-) TimerEvent: {}
+[11.432806] (-) TimerEvent: {}
+[11.533541] (-) TimerEvent: {}
+[11.547245] (comm_node) JobEnded: {'identifier': 'comm_node', 'rc': 'SIGINT'}
+[11.633764] (-) TimerEvent: {}
+[11.735200] (-) TimerEvent: {}
+[11.837332] (-) TimerEvent: {}
+[11.900965] (exer2_control) JobEnded: {'identifier': 'exer2_control', 'rc': 'SIGINT'}
+[11.912936] (unit_tester) JobSkipped: {'identifier': 'unit_tester'}
+[11.913147] (vicon_bridge) JobSkipped: {'identifier': 'vicon_bridge'}
+[11.913276] (-) EventReactorShutdown: {}

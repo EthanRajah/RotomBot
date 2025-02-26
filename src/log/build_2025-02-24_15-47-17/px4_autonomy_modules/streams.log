@@ -1,0 +1,48 @@
+[2.642s] Invoking command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy /usr/bin/cmake /home/jetson/ros2_ws/src/px4_autonomy_modules -DCMAKE_INSTALL_PREFIX=/home/jetson/ros2_ws/src/install/px4_autonomy_modules
+[4.099s] -- The C compiler identification is GNU 8.4.0
+[4.100s] -- The CXX compiler identification is GNU 8.4.0
+[4.100s] -- Check for working C compiler: /usr/bin/cc
+[4.204s] -- Check for working C compiler: /usr/bin/cc -- works
+[4.215s] -- Detecting C compiler ABI info
+[4.952s] -- Detecting C compiler ABI info - done
+[5.071s] -- Detecting C compile features
+[5.075s] -- Detecting C compile features - done
+[5.096s] -- Check for working CXX compiler: /usr/bin/c++
+[5.847s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[5.859s] -- Detecting CXX compiler ABI info
+[6.550s] -- Detecting CXX compiler ABI info - done
+[6.631s] -- Detecting CXX compile features
+[6.634s] -- Detecting CXX compile features - done
+[6.695s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[6.891s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[6.892s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[9.167s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[9.772s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[9.859s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[10.917s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[11.215s] -- Found FastRTPS: /opt/ros/foxy/include  
+[12.212s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[12.878s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[12.890s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[12.908s] -- Looking for pthread.h
+[12.978s] -- Looking for pthread.h - not found
+[12.983s] CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+[12.983s]   Could NOT find Threads (missing: Threads_FOUND)
+[12.984s] Call Stack (most recent call first):
+[12.984s]   /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+[12.984s]   /usr/share/cmake-3.16/Modules/FindThreads.cmake:220 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+[12.985s]   /opt/ros/foxy/share/rmw_implementation/cmake/rmw_implementation-extras.cmake:67 (find_package)
+[12.985s]   /opt/ros/foxy/share/rmw_implementation/cmake/rmw_implementationConfig.cmake:41 (include)
+[12.986s]   /opt/ros/foxy/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[12.986s]   /opt/ros/foxy/share/rcl/cmake/rclConfig.cmake:41 (include)
+[12.987s]   /opt/ros/foxy/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[12.988s]   /opt/ros/foxy/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake:41 (include)
+[12.989s]   /opt/ros/foxy/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[12.989s]   /opt/ros/foxy/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)
+[12.990s]   CMakeLists.txt:10 (find_package)
+[12.990s] 
+[12.991s] 
+[13.001s] -- Configuring incomplete, errors occurred!
+[13.002s] See also "/home/jetson/ros2_ws/src/build/px4_autonomy_modules/CMakeFiles/CMakeOutput.log".
+[13.003s] See also "/home/jetson/ros2_ws/src/build/px4_autonomy_modules/CMakeFiles/CMakeError.log".
+[13.870s] Invoked command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy /usr/bin/cmake /home/jetson/ros2_ws/src/px4_autonomy_modules -DCMAKE_INSTALL_PREFIX=/home/jetson/ros2_ws/src/install/px4_autonomy_modules
