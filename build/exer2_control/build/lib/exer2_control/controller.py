@@ -17,7 +17,7 @@ class FlightController(Node):
         self.create_subscription(PoseStamped, '/mavros/vision_pose/pose', self.pose_callback, 50)
 
         # **Publishers**
-        # self.setpoint_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
+        self.setpoint_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
 
         # **Services**
         # self.create_response = self.create_service(Trigger, '/comm/test', self.handle_test)
@@ -34,9 +34,9 @@ class FlightController(Node):
         self.current_pose = msg.pose
 
     ## === SERVICE HANDLERS === ##
-    def handle_test(self, request, response):
+    def handle_test(self, response):
         """ Handles /comm/test - Starts the controller. """
-        if not self.active:
+        if self.active:
             # First run when TEST service is activated but active flag is set false
             if self.current_pose:
                 # Store goal pose as reference signal
@@ -51,7 +51,7 @@ class FlightController(Node):
                 response.message = "No valid pose data received yet."
         return response
 
-    def handle_land(self, request, response):
+    def handle_land(self, response):
         """Handle /comm/land - stop the controller"""
         if self.active:
             # Called when the TEST service is stopped, this will run
@@ -67,9 +67,9 @@ class FlightController(Node):
         if self.active and self.current_pose and self.start_position:
             # Compute distance to start position
             dist = np.linalg.norm([
-                self.current_pose.x - self.start_position.x,
-                self.current_pose.y - self.start_position.y,
-                self.current_pose.z - self.start_position.z
+                self.current_pose.position.x - self.start_position.x,
+                self.current_pose.position.y - self.start_position.y,
+                self.current_pose.position.z - self.start_position.z
             ])
 
             # Create setpoint message
@@ -80,19 +80,19 @@ class FlightController(Node):
             if dist < 0.5:
                 # **If within 0.5m, hover at the start position**
                 sp.pose.position = self.start_position
-                self.get_logger().info("Hovering at start position.")
+                # self.get_logger().info("Hovering at start position.")
             else:
                 # **Move 0.5m closer to start**
                 move_vector = np.array([
-                    self.start_position.x - self.current_pose.x,
-                    self.start_position.y - self.current_pose.y,
-                    self.start_position.z - self.current_pose.z
+                    self.start_position.x - self.current_pose.position.x,
+                    self.start_position.y - self.current_pose.position.y,
+                    self.start_position.z - self.current_pose.position.z
                 ])
                 move_vector = move_vector / np.linalg.norm(move_vector) * 0.5  # Normalize and scale
 
-                sp.pose.position.x = self.current_pose.x + move_vector[0]
-                sp.pose.position.y = self.current_pose.y + move_vector[1]
-                sp.pose.position.z = self.current_pose.z + move_vector[2]
+                sp.pose.position.x = self.current_pose.position.x + move_vector[0]
+                sp.pose.position.y = self.current_pose.position.y + move_vector[1]
+                sp.pose.position.z = self.current_pose.position.z + move_vector[2]
                 sp.pose.orientation = self.start_orientation
 
                 self.get_logger().info(f"Moving toward start: {sp.pose.position}")

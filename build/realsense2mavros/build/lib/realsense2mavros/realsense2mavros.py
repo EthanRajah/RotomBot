@@ -29,6 +29,9 @@ class realsense2mavros(Node):
 
         self.get_logger().info('Realsense to Mavros Bridge')
 
+        # Only publish if self.publish flag is true
+        self.publish = False
+
     def realsense_callback(self, msg):
         # Create new PoseStamped message for MAVROS
         # self.get_logger().info('Publishing')
@@ -37,10 +40,10 @@ class realsense2mavros(Node):
 
         # Copy header
         mavros_msg.header = msg.header
+        mavros_msg.header.frame_id = 'map'
 
         # Copy position data and transform to cube frame
         mavros_msg.pose.position = msg.pose.pose.position
-        self.get_logger().info("DIVIDING")
         mavros_msg.pose.position.x += self.transform[0]
         mavros_msg.pose.position.y += self.transform[1]
         mavros_msg.pose.position.z += self.transform[2]
@@ -49,8 +52,9 @@ class realsense2mavros(Node):
         mavros_msg.pose.orientation = msg.pose.pose.orientation
 
         # Publish the transformed message
-        # self.get_logger().info('Publishing message')
-        self.mavros_pub.publish(mavros_msg)
+        # self.get_logger().info('Realsense Publishing message')
+        if self.publish:
+            self.mavros_pub.publish(mavros_msg)
         # self.get_logger().info('Publishing complete')
 
 
