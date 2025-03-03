@@ -37,12 +37,21 @@ def callback_abort(request, response):
 class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
-        
+        # HARDCODE Test swapper field
+        self.test2 = True
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()
         self.realsense = realsense2mavros()
-        # initialize the vicon to publish nly
-        self.vicon.publish = True
+        # initialize the vicon to publish only (if test 1), else use vicon
+        self.get_logger().info(str(self.test2))
+        if self.test2:
+            self.vicon.publish = False
+            self.realsense.publish = True
+            self.get_logger().info("Only publishing realsense to /mavros/vision_pose/pose!")
+        else:
+            self.vicon.publish = True
+            self.realsense.publish = False
+            self.get_logger().info("Only publishing vicon to /mavros/vision_pose/pose!")
         # self.realsense.publish = True
     
         # Initialize flight controller
@@ -52,16 +61,15 @@ class CommNode(Node):
         
         self.pose_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
         
-        self.target_altitude = 0.5  # meters
+        self.target_altitude = 1.5  # meters
         
         # Create 20 Hz timer (1/20 = 0.05)
         self.timer = self.create_timer(0.05, self.publish_hover_setpoint)
-        
         # Create Service Servers
-        self.srv_launch = self.create_service(Trigger, '/comm/launch', self.callback_launch)
-        self.srv_test = self.create_service(Trigger, '/comm/test', self.callback_test)
-        self.srv_land = self.create_service(Trigger, '/comm/land', self.callback_land)
-        self.srv_abort = self.create_service(Trigger, '/comm/abort', self.callback_land)
+        self.srv_launch = self.create_service(Trigger, '/rob498_drone_4/comm/launch', self.callback_launch)
+        self.srv_test = self.create_service(Trigger, '/rob498_drone_4/comm/test', self.callback_test)
+        self.srv_land = self.create_service(Trigger, '/rob498_drone_4/comm/land', self.callback_land)
+        self.srv_abort = self.create_service(Trigger, '/rob498_drone_4/comm/abort', self.callback_land)
 
         self.get_logger().info("CommNode started and ready to receive commands.")
         
@@ -78,7 +86,6 @@ class CommNode(Node):
 
         self.get_logger().info("DroneControlNode initialized. Ready to receive launch commands.")
         
-        self.test2 = False
 
     def arm_drone(self):
         """ Sends command to arm the drone """
@@ -201,10 +208,11 @@ class CommNode(Node):
 
         # if test 2 (no vicon for control), publish the realsense bridge to /mavros/vision_pose/pose instead of the vicon bridge after getting
         # initial readings from vicon
-        if self.test2:
-            self.vicon.publish = False
-            self.realsense.publish = True
-            self.get_logger().info("Swapped from vicon data to realsense!")
+        # self.get_logger().info(str(self.test2))
+        # if self.test2:
+        #     self.vicon.publish = False
+        #     self.realsense.publish = True
+        #     self.get_logger().info("Swapped from vicon data to realsense!")
         response.success = True
         response.message = "Test command executed."
         return response

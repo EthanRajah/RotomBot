@@ -12,7 +12,10 @@ from tf_transformations import euler_from_quaternion, quaternion_from_euler
 class realsense2mavros(Node):
     def __init__(self):
         super().__init__('realsense2mavros')
-        self.transform = np.array([-0.124, 0, 0.1105])
+        # Old self.transform pre crash (2/28)
+        # self.transform = np.array([-0.124, 0, 0.1105])
+        # Post 2/28
+        self.transform = np.array([-0.124, 0, 0.103])
 
         # Create subscriber for realsense pose data
         self.realsense_sub = self.create_subscription(

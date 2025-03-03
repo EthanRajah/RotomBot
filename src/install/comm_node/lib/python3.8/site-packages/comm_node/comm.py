@@ -61,11 +61,10 @@ class CommNode(Node):
         
         self.pose_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
         
-        self.target_altitude = 0.5  # meters
+        self.target_altitude = 1.39  # meters
         
         # Create 20 Hz timer (1/20 = 0.05)
         self.timer = self.create_timer(0.05, self.publish_hover_setpoint)
-        
         # Create Service Servers
         self.srv_launch = self.create_service(Trigger, '/rob498_drone_4/comm/launch', self.callback_launch)
         self.srv_test = self.create_service(Trigger, '/rob498_drone_4/comm/test', self.callback_test)
