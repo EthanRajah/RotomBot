@@ -1,0 +1,26 @@
+[3.434s] Invoking command in '/home/jetson/ros2_ws/src/dummy_waypoint_publisher': PYTHONPATH=/home/jetson/ros2_ws/build/dummy_waypoint_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dummy_waypoint_publisher build --build-base /home/jetson/ros2_ws/build/dummy_waypoint_publisher/build install --record /home/jetson/ros2_ws/build/dummy_waypoint_publisher/install.log --install-scripts $base/lib/dummy_waypoint_publisher --single-version-externally-managed install_data
+[4.536s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[4.537s]   warnings.warn(
+[4.670s] running egg_info
+[4.673s] writing ../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/PKG-INFO
+[4.675s] writing dependency_links to ../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/dependency_links.txt
+[4.675s] writing entry points to ../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/entry_points.txt
+[4.676s] writing requirements to ../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/requires.txt
+[4.676s] writing top-level names to ../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/top_level.txt
+[4.695s] reading manifest file '../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/SOURCES.txt'
+[4.700s] writing manifest file '../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info/SOURCES.txt'
+[4.701s] running build
+[4.701s] running build_py
+[4.702s] copying dummy_waypoint_publisher/waypoint_publisher.py -> /home/jetson/ros2_ws/build/dummy_waypoint_publisher/build/lib/dummy_waypoint_publisher
+[4.702s] running install
+[4.706s] running install_lib
+[4.709s] copying /home/jetson/ros2_ws/build/dummy_waypoint_publisher/build/lib/dummy_waypoint_publisher/waypoint_publisher.py -> /home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages/dummy_waypoint_publisher
+[4.713s] byte-compiling /home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages/dummy_waypoint_publisher/waypoint_publisher.py to waypoint_publisher.cpython-38.pyc
+[4.715s] running install_data
+[4.716s] running install_egg_info
+[4.722s] removing '/home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages/dummy_waypoint_publisher-0.0.0-py3.8.egg-info' (and everything under it)
+[4.723s] Copying ../../build/dummy_waypoint_publisher/dummy_waypoint_publisher.egg-info to /home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages/dummy_waypoint_publisher-0.0.0-py3.8.egg-info
+[4.728s] running install_scripts
+[4.805s] Installing waypoint_publisher script to /home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/dummy_waypoint_publisher
+[4.807s] writing list of installed files to '/home/jetson/ros2_ws/build/dummy_waypoint_publisher/install.log'
+[4.903s] Invoked command in '/home/jetson/ros2_ws/src/dummy_waypoint_publisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/dummy_waypoint_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dummy_waypoint_publisher build --build-base /home/jetson/ros2_ws/build/dummy_waypoint_publisher/build install --record /home/jetson/ros2_ws/build/dummy_waypoint_publisher/install.log --install-scripts $base/lib/dummy_waypoint_publisher --single-version-externally-managed install_data

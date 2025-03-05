@@ -1,0 +1,91 @@
+[0.000000] (-) TimerEvent: {}
+[0.000559] (-) JobUnselected: {'identifier': 'comm_node'}
+[0.000742] (-) JobUnselected: {'identifier': 'dummy_vicon_republisher'}
+[0.000876] (-) JobUnselected: {'identifier': 'dummy_waypoint_publisher'}
+[0.000993] (-) JobUnselected: {'identifier': 'exer2_control'}
+[0.001262] (-) JobUnselected: {'identifier': 'px4_autonomy_modules'}
+[0.001812] (-) JobUnselected: {'identifier': 'realsense2mavros'}
+[0.002134] (-) JobUnselected: {'identifier': 'unit_tester'}
+[0.003123] (-) JobUnselected: {'identifier': 'vicon_bridge'}
+[0.004243] (-) JobUnselected: {'identifier': 'waypoint_nav'}
+[0.004940] (exer3_control) JobQueued: {'identifier': 'exer3_control', 'dependencies': OrderedDict()}
+[0.005173] (exer3_control) JobStarted: {'identifier': 'exer3_control'}
+[0.098818] (-) TimerEvent: {}
+[0.199805] (-) TimerEvent: {}
+[0.300415] (-) TimerEvent: {}
+[0.401053] (-) TimerEvent: {}
+[0.502405] (-) TimerEvent: {}
+[0.603840] (-) TimerEvent: {}
+[0.705194] (-) TimerEvent: {}
+[0.806625] (-) TimerEvent: {}
+[0.908096] (-) TimerEvent: {}
+[1.008711] (-) TimerEvent: {}
+[1.110048] (-) TimerEvent: {}
+[1.211393] (-) TimerEvent: {}
+[1.312068] (-) TimerEvent: {}
+[1.413850] (-) TimerEvent: {}
+[1.514466] (-) TimerEvent: {}
+[1.616287] (-) TimerEvent: {}
+[1.717204] (-) TimerEvent: {}
+[1.817814] (-) TimerEvent: {}
+[1.919192] (-) TimerEvent: {}
+[2.019829] (-) TimerEvent: {}
+[2.121214] (-) TimerEvent: {}
+[2.222913] (-) TimerEvent: {}
+[2.324329] (-) TimerEvent: {}
+[2.425565] (-) TimerEvent: {}
+[2.526180] (-) TimerEvent: {}
+[2.627352] (-) TimerEvent: {}
+[2.728871] (-) TimerEvent: {}
+[2.829493] (-) TimerEvent: {}
+[2.930115] (-) TimerEvent: {}
+[3.030716] (-) TimerEvent: {}
+[3.131343] (-) TimerEvent: {}
+[3.231976] (-) TimerEvent: {}
+[3.333111] (-) TimerEvent: {}
+[3.434801] (-) TimerEvent: {}
+[3.536209] (-) TimerEvent: {}
+[3.636857] (-) TimerEvent: {}
+[3.718332] (exer3_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/exer3_control', 'build', '--build-base', '/home/jetson/ros2_ws/build/exer3_control/build', 'install', '--record', '/home/jetson/ros2_ws/build/exer3_control/install.log', '--install-scripts', '$base/lib/exer3_control', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/ros2_ws/src/exer3_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'jetson', 'SSH_CLIENT': '100.112.8.57 64060 22', 'LC_TIME': 'en_CA.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/jetson/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'BROWSER': '/home/jetson/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/jetson', 'TERM_PROGRAM_VERSION': '1.96.4', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-c52e7b4a-73fd-4998-906d-ad863a446d7a.sock', 'JETSON_L4T': '32.6.1', 'DEBUGPY_ADAPTER_ENDPOINTS': '/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.0.1-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-aae4d28e98ea6a2b.txt', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Nano Developer Kit', 'VSCODE_GIT_ASKPASS_MAIN': '/home/jetson/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_CA.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/jetson/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.0.1-linux-arm64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/jetson/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'jetson', 'JETSON_MODULE': 'NVIDIA Jetson Nano (4 GB ram)', 'JETSON_SERIAL_NUMBER': '1423221007917', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Porg', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/local/cuda/bin:/home/jetson/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/remote-cli:/home/jetson/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jetson/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/jetson/.vscode-server/extensions/ms-python.debugpy-2025.0.1-linux-arm64/bundled/scripts/noConfigScripts', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_CA.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_CA.UTF-8', 'LC_TELEPHONE': 'en_CA.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-965eca1829.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '4', 'AMENT_PREFIX_PATH': '/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/px4_autonomy_modules:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/comm_node:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_CA.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'en_CA.UTF-8', 'LC_IDENTIFICATION': 'en_CA.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/jetson/ros2_ws/build/exer3_control', 'SSH_CONNECTION': '100.112.8.57 64060 100.64.173.47 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/ros2_ws/build/exer3_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/waypoint_nav/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/unit_tester/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/realsense2mavros/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/dummy_vicon_republisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/comm_node/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_CA.UTF-8', 'LC_PAPER': 'en_CA.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '4.6', 'CMAKE_PREFIX_PATH': '/home/jetson/ros2_ws/install/px4_autonomy_modules', 'JETSON_P_NUMBER': 'p3448-0000'}, 'shell': False}
+[3.737158] (-) TimerEvent: {}
+[3.841370] (-) TimerEvent: {}
+[3.942017] (-) TimerEvent: {}
+[4.042696] (-) TimerEvent: {}
+[4.143304] (-) TimerEvent: {}
+[4.244587] (-) TimerEvent: {}
+[4.346013] (-) TimerEvent: {}
+[4.447972] (-) TimerEvent: {}
+[4.548548] (-) TimerEvent: {}
+[4.649498] (-) TimerEvent: {}
+[4.750773] (-) TimerEvent: {}
+[4.852100] (-) TimerEvent: {}
+[4.952895] (exer3_control) StderrLine: {'line': b"/usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[4.953738] (-) TimerEvent: {}
+[4.954162] (exer3_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.053899] (-) TimerEvent: {}
+[5.102418] (exer3_control) StdoutLine: {'line': b'running egg_info\n'}
+[5.106077] (exer3_control) StdoutLine: {'line': b'writing ../../build/exer3_control/exer3_control.egg-info/PKG-INFO\n'}
+[5.111139] (exer3_control) StdoutLine: {'line': b'writing dependency_links to ../../build/exer3_control/exer3_control.egg-info/dependency_links.txt\n'}
+[5.112966] (exer3_control) StdoutLine: {'line': b'writing entry points to ../../build/exer3_control/exer3_control.egg-info/entry_points.txt\n'}
+[5.113380] (exer3_control) StdoutLine: {'line': b'writing requirements to ../../build/exer3_control/exer3_control.egg-info/requires.txt\n'}
+[5.113798] (exer3_control) StdoutLine: {'line': b'writing top-level names to ../../build/exer3_control/exer3_control.egg-info/top_level.txt\n'}
+[5.127188] (exer3_control) StdoutLine: {'line': b"reading manifest file '../../build/exer3_control/exer3_control.egg-info/SOURCES.txt'\n"}
+[5.131788] (exer3_control) StdoutLine: {'line': b"writing manifest file '../../build/exer3_control/exer3_control.egg-info/SOURCES.txt'\n"}
+[5.132502] (exer3_control) StdoutLine: {'line': b'running build\n'}
+[5.133015] (exer3_control) StdoutLine: {'line': b'running build_py\n'}
+[5.133749] (exer3_control) StdoutLine: {'line': b'running install\n'}
+[5.137225] (exer3_control) StdoutLine: {'line': b'running install_lib\n'}
+[5.144306] (exer3_control) StdoutLine: {'line': b'running install_data\n'}
+[5.145003] (exer3_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.151927] (exer3_control) StdoutLine: {'line': b"removing '/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.153362] (exer3_control) StdoutLine: {'line': b'Copying ../../build/exer3_control/exer3_control.egg-info to /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control-0.0.0-py3.8.egg-info\n'}
+[5.153927] (-) TimerEvent: {}
+[5.157886] (exer3_control) StdoutLine: {'line': b'running install_scripts\n'}
+[5.240315] (exer3_control) StdoutLine: {'line': b'Installing flight_controller script to /home/jetson/ros2_ws/install/exer3_control/lib/exer3_control\n'}
+[5.242896] (exer3_control) StdoutLine: {'line': b'Installing grabber script to /home/jetson/ros2_ws/install/exer3_control/lib/exer3_control\n'}
+[5.245001] (exer3_control) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/ros2_ws/build/exer3_control/install.log'\n"}
+[5.254111] (-) TimerEvent: {}
+[5.345123] (exer3_control) CommandEnded: {'returncode': 0}
+[5.354385] (-) TimerEvent: {}
+[5.442153] (exer3_control) JobEnded: {'identifier': 'exer3_control', 'rc': 0}
+[5.445762] (-) EventReactorShutdown: {}

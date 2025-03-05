@@ -1,0 +1,39 @@
+[8.614s] Invoking command in '/home/jetson/ros2_ws/src/exer3_control': PYTHONPATH=/home/jetson/ros2_ws/build/exer3_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/exer3_control build --build-base /home/jetson/ros2_ws/build/exer3_control/build install --record /home/jetson/ros2_ws/build/exer3_control/install.log --install-scripts $base/lib/exer3_control --single-version-externally-managed install_data
+[10.142s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[10.146s]   warnings.warn(
+[10.350s] running egg_info
+[10.351s] creating ../../build/exer3_control/exer3_control.egg-info
+[10.353s] writing ../../build/exer3_control/exer3_control.egg-info/PKG-INFO
+[10.355s] writing dependency_links to ../../build/exer3_control/exer3_control.egg-info/dependency_links.txt
+[10.357s] writing entry points to ../../build/exer3_control/exer3_control.egg-info/entry_points.txt
+[10.358s] writing requirements to ../../build/exer3_control/exer3_control.egg-info/requires.txt
+[10.359s] writing top-level names to ../../build/exer3_control/exer3_control.egg-info/top_level.txt
+[10.368s] writing manifest file '../../build/exer3_control/exer3_control.egg-info/SOURCES.txt'
+[10.383s] reading manifest file '../../build/exer3_control/exer3_control.egg-info/SOURCES.txt'
+[10.393s] writing manifest file '../../build/exer3_control/exer3_control.egg-info/SOURCES.txt'
+[10.394s] running build
+[10.395s] running build_py
+[10.398s] creating /home/jetson/ros2_ws/build/exer3_control/build
+[10.399s] creating /home/jetson/ros2_ws/build/exer3_control/build/lib
+[10.399s] creating /home/jetson/ros2_ws/build/exer3_control/build/lib/exer3_control
+[10.403s] copying exer3_control/flight_controller.py -> /home/jetson/ros2_ws/build/exer3_control/build/lib/exer3_control
+[10.414s] copying exer3_control/__init__.py -> /home/jetson/ros2_ws/build/exer3_control/build/lib/exer3_control
+[10.414s] running install
+[10.415s] running install_lib
+[10.421s] creating /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control
+[10.423s] copying /home/jetson/ros2_ws/build/exer3_control/build/lib/exer3_control/flight_controller.py -> /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control
+[10.428s] copying /home/jetson/ros2_ws/build/exer3_control/build/lib/exer3_control/__init__.py -> /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control
+[10.429s] byte-compiling /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control/flight_controller.py to flight_controller.cpython-38.pyc
+[10.437s] byte-compiling /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control/__init__.py to __init__.cpython-38.pyc
+[10.438s] running install_data
+[10.438s] creating /home/jetson/ros2_ws/install/exer3_control/share/ament_index
+[10.438s] creating /home/jetson/ros2_ws/install/exer3_control/share/ament_index/resource_index
+[10.439s] creating /home/jetson/ros2_ws/install/exer3_control/share/ament_index/resource_index/packages
+[10.439s] copying resource/exer3_control -> /home/jetson/ros2_ws/install/exer3_control/share/ament_index/resource_index/packages
+[10.443s] copying package.xml -> /home/jetson/ros2_ws/install/exer3_control/share/exer3_control
+[10.445s] running install_egg_info
+[10.454s] Copying ../../build/exer3_control/exer3_control.egg-info to /home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages/exer3_control-0.0.0-py3.8.egg-info
+[10.460s] running install_scripts
+[10.612s] Installing flight_controller script to /home/jetson/ros2_ws/install/exer3_control/lib/exer3_control
+[10.626s] writing list of installed files to '/home/jetson/ros2_ws/build/exer3_control/install.log'
+[10.983s] Invoked command in '/home/jetson/ros2_ws/src/exer3_control' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/exer3_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/exer3_control build --build-base /home/jetson/ros2_ws/build/exer3_control/build install --record /home/jetson/ros2_ws/build/exer3_control/install.log --install-scripts $base/lib/exer3_control --single-version-externally-managed install_data

@@ -61,7 +61,7 @@ class CommNode(Node):
         
         self.pose_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
         
-        self.target_altitude = 1.5  # meters
+        self.target_altitude = 1.39  # meters
         
         # Create 20 Hz timer (1/20 = 0.05)
         self.timer = self.create_timer(0.05, self.publish_hover_setpoint)
