@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import csv
 
-def plot(csv):
+def plot(csv_file):
     '''Function to read csv file containing (t, x_rs, y_rs, z_rs, q_x_rs, q_y_rs, q_z_rs, q_w_rs, x_v, y_v, z_v, q_x_v, q_y_v, q_z_v, q_w_v) coordinates and plot z vs time on one plot'''
     # Read csv files
-    csv_data = csv.reader(csv)
+    csv_data = csv.reader(open(csv_file, 'r'), delimiter=',')
     # Skip header row 
     next(csv_data)
     # Initialize lists to store time and z coordinates
@@ -25,7 +25,7 @@ def plot(csv):
     plt.ylabel('Z (m)')
     plt.title('Z vs Time')
     plt.legend()
-    plt.s
+    plt.show()
 
 if __name__ == '__main__':
     print('Plotting data for realsense and vicon...')
