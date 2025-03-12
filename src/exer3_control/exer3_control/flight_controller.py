@@ -14,6 +14,10 @@ class FlightController(Node):
         self.hold_count = 0
         self.active = False  # Control active flag
         self.waypoints = None
+        # Pass in transform from map to vicon/world
+        self.home = None
+        # track if we set the first waypoint
+        self.first_waypoint_set = False
 
         # **Subscribers**
         self.create_subscription(PoseStamped, '/mavros/vision_pose/pose', self.pose_callback, 50)
@@ -40,16 +44,20 @@ class FlightController(Node):
         """ Controls the drone by publishing waypoints. """
 
         # Process self.waypoints
-        if self.current_waypoint == None and self.waypoints:
-            # Set current_waypoint to first. Only occurs when we first start TEST
-            self.current_waypoint = self.waypoints.pop(0)
-
+        #self.get_logger().info(f"Waypoints: {self.waypoints}")
+        if not self.first_waypoint_set:
+            if self.current_waypoint == None and self.waypoints:
+                self.get_logger().info("Setting current waypoint to first.")
+                # Set current_waypoint to first. Only occurs when we first start TEST
+                self.current_waypoint = self.waypoints.pop(0)
+                self.first_waypoint_set = True
+        #self.get_logger().info(f"active: {self.active}, curpose: {self.current_pose}, curwaypt: {self.current_waypoint}")
         if self.active and self.current_pose and self.current_waypoint:
-            # Compute distance to start position
+            # Compute distance to current waypoint
             dist = np.linalg.norm([
-                self.current_pose.position.x - self.current_waypoint.x,
-                self.current_pose.position.y - self.current_waypoint.y,
-                self.current_pose.position.z - self.current_waypoint.z
+                self.current_pose.position.x - self.current_waypoint.position.x,
+                self.current_pose.position.y - self.current_waypoint.position.y,
+                self.current_pose.position.z - self.current_waypoint.position.z
             ])
 
             # Create setpoint message
@@ -58,43 +66,52 @@ class FlightController(Node):
             sp.header.frame_id = "map"
 
             if dist < 0.5:
-                # **If within 0.5m, hover at the start position**
-                sp.pose.position = self.current_waypoint
+                # **If within 0.5m, publish the waypoint directly**
+                sp.pose.position = self.current_waypoint.position
+                sp.pose.orientation = self.current_waypoint.orientation
                 # self.get_logger().info("Hovering at start position.")
             else:
                 # **Move 0.5m closer to start**
                 move_vector = np.array([
-                    self.current_waypoint.x - self.current_pose.position.x,
-                    self.current_waypoint.y - self.current_pose.position.y,
-                    self.current_waypoint.z - self.current_pose.position.z
+                    self.current_waypoint.position.x - self.current_pose.position.x,
+                    self.current_waypoint.position.y - self.current_pose.position.y,
+                    self.current_waypoint.position.z - self.current_pose.position.z
                 ])
                 move_vector = move_vector / np.linalg.norm(move_vector) * 0.5  # Normalize and scale
 
                 sp.pose.position.x = self.current_pose.position.x + move_vector[0]
                 sp.pose.position.y = self.current_pose.position.y + move_vector[1]
                 sp.pose.position.z = self.current_pose.position.z + move_vector[2]
-                sp.pose.orientation = self.start_orientation
+                sp.pose.orientation = self.current_waypoint.orientation
 
-                self.get_logger().info(f"Moving toward start: {sp.pose.position}")
+                # self.get_logger().info(f"Moving toward waypoint: {sp.pose.position}")
 
             # Publish the waypoint
             self.setpoint_pub.publish(sp)
 
             # Use dist to see if we're within ball radius of waypoint
-            if dist < 0.35 and self.hold_count < 20:
+            ball_radius = 0.25
+            if dist < ball_radius and self.hold_count < 20:
                 self.hold_count += 1
-            elif dist < 0.35 and len(self.waypoints):
+            elif dist < ball_radius and len(self.waypoints):
                 # Update current_waypoint if waypoints list is not empty
+                self.get_logger().info(f"Waypoint reached: {self.current_waypoint}")
                 self.current_waypoint = self.waypoints.pop(0)
                 self.hold_count = 0
-            elif dist < 0.35:
+                self.get_logger().info(f"Next waypoint: {self.current_waypoint}")
+            elif dist < ball_radius:
                 # Send land command
                 sp = PoseStamped()
                 sp.header.stamp = self.get_clock().now().to_msg()
                 sp.header.frame_id = "map"
-                pose.pose.position.x = self.current_waypoint.x
-                pose.pose.position.y = self.current_waypoint.y
-                pose.pose.position.z = 0.15
+                if self.home:
+                    pose.pose.position.x = self.home[0]
+                    pose.pose.position.y = self.home[1]
+                    pose.pose.position.z = 0.15
+                else:
+                    pose.pose.position.x = self.current_waypoint.position.x
+                    pose.pose.position.y = self.current_waypoint.position.y
+                    pose.pose.position.z = 0.1
                 pose.pose.orientation.w = 1.0 
                 self.get_logger().info(f"Waypoints Complete. Landing!")
 

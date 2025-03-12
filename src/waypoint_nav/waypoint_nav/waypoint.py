@@ -4,7 +4,7 @@ from std_srvs.srv import Trigger  # Service message type for handling commands
 from mavros_msgs.srv import CommandBool, SetMode
 from nav_msgs.msg import Odometry  # use Odometry for reading directly from camera since it has both pose and twist
 from geometry_msgs.msg import PoseStamped, PoseArray
-from exer2_control.controller import FlightController
+from exer3_control.flight_controller import FlightController
 from vicon_bridge.vicon_bridge import ViconBridge
 from realsense2mavros.realsense2mavros import realsense2mavros
 from rclpy.executors import MultiThreadedExecutor
@@ -42,7 +42,7 @@ class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
         # HARDCODE Test swapper field
-        self.test2 = False
+        self.test2 = True
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()
         self.realsense = realsense2mavros()
@@ -67,7 +67,7 @@ class CommNode(Node):
         self.sub_waypoints = self.create_subscription(PoseArray, 'rob498_drone_4/comm/waypoints', self.callback_waypoints, 10)
         self.create_subscription(PoseStamped, '/mavros/vision_pose/pose', self.pose_callback, 50)
         
-        self.target_altitude = 1.39  # meters
+        self.target_altitude = 0.5  # meters
         
         # Create 20 Hz timer (1/20 = 0.05)
         self.timer = self.create_timer(0.05, self.publish_hover_setpoint)
@@ -266,8 +266,26 @@ class CommNode(Node):
             WAYPOINTS = np.vstack((WAYPOINTS, pos))
         # Transform points into cube frame before we send to flight controller
         waypoints_transformed = self.find_transformation()
+        # Get waypoints in list format
+        waypoints_list = list(waypoints_transformed)
+        self.get_logger().info(f"transformed waypoints: {waypoints_list}")
+        # Convert each waypoint to Pose message
+        waypoints_pose_list = []
+        for waypoint in waypoints_list:
+            pose = PoseStamped()
+            pose.header.stamp = self.get_clock().now().to_msg()
+            pose.header.frame_id = "map"
+            pose.pose.position.x = waypoint[0]
+            pose.pose.position.y = waypoint[1]
+            pose.pose.position.z = waypoint[2]
+            pose.pose.orientation.x = 0.0
+            pose.pose.orientation.y = 0.0
+            pose.pose.orientation.z = 0.0
+            pose.pose.orientation.w = 1.0
+            # Append the pose only
+            waypoints_pose_list.append(pose.pose)
         # Set flight controller waypoints list to be waypoints array gotten here
-        self.flight_controller.waypoints = list(waypoints_transformed)
+        self.flight_controller.waypoints = waypoints_pose_list
 
     def pose_callback(self, msg):
         """ Updates the drone's current PoseStamped message. """
@@ -284,11 +302,13 @@ class CommNode(Node):
             # Test 2: Realsense only: Get transformation that transforms vicon to realsense, then realsense to cube (cube), then apply this transform to each waypoint
             if self.first_vicon is not None:
                 # T_1^0 = [C(q), t]
-                t, q = self.first.vicon
+                t, q = self.first_vicon
+                t = [t.x, t.y, t.z]
+                q = [q.x, q.y, q.z, q.w]
                 T_1_0 = quaternion_matrix(q)
-                T_1_0[3:, 3:] = t
+                T_1_0[:3, 3] = np.array(t).reshape(3)
                 # T_2^1 = [I, t_m], t_m = self.vicon.transform
-                x, y, z = self.vicon.transform
+                x, y, z = 2 * self.vicon.transform # we send cube setpoints: send x,y,z ahead of vicon so that vicon aligns with setpoint
                 T_2_1 = np.array([[1, 0, 0, x],
                                   [0, 1, 0, y],
                                   [0, 0, 1, z],
@@ -297,9 +317,10 @@ class CommNode(Node):
                 # each waypoint (given in world (0) frame should be multiplied by inverse of T_vw (T_2^0)):
                 # [w^0, 1]^T = T_2^0 * [w^2, 1]^T -> want w^2
                 T_inv = np.linalg.inv(self.T_vw)
+                self.flight_controller.home = (T_inv @ np.array([0, 0, self.target_altitude, 1]))[:3] # Transform home to cube frame 
                 # Convert each point to homogenous, multiply, remove the 1, return
                 waypoints_transformed = WAYPOINTS
-                ones_col = np.ones((waypoints_transformed.shape[0]), 1)
+                ones_col = np.ones((waypoints_transformed.shape[0], 1))
                 homo_pts = np.hstack((waypoints_transformed, ones_col))
                 transformed_homo_pts = (T_inv @ homo_pts.T).T # (4x4) * (4xN) transposed gives (Nx4 again)
                 waypoints_transformed = transformed_homo_pts[:, :3] # pop the ones -> Nx3 transformed points
@@ -338,7 +359,7 @@ class CommNode(Node):
 
     #     # Copy header
     #     mavros_msg.header = msg.header
-    #     mavros_msg.header.frame_id = 'map'
+    #     mavros_msg.header.frame_id = 'map'self.get_logger
 
     #     # Copy position data and transform to cube frame
     #     mavros_msg.pose.position = msg.pose.pose.position

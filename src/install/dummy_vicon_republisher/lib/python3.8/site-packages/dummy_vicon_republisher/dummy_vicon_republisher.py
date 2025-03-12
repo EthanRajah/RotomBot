@@ -29,6 +29,7 @@ class DummyViconRepublisher(Node):
 
         # Copy header
         new_msg.header = msg.header
+        new_msg.header.frame_id = "vicon/world"  # Set the frame
 
         # Copy pose data
         new_msg.pose = msg.pose
