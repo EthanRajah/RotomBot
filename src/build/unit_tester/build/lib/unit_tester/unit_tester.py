@@ -39,7 +39,7 @@ def main(args=None):
     time.sleep(10)
     tester.call_service(tester.test_client,   'Test')
     time.sleep(90)
-    # tester.call_service(tester.land_client,   'Land')
+    tester.call_service(tester.land_client,   'Land')
     # tester.call_service(tester.abort_client,  'Abort')
 
     tester.destroy_node()

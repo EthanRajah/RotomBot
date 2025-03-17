@@ -13,10 +13,10 @@ class WaypointPublisher(Node):
         self.publisher = self.create_publisher(PoseArray, '/rob498_drone_4/comm/waypoints', 10)
 
         # Define waypoints manually (x, y, z, qx, qy, qz, qw)
-        self.waypoints = [
-            [1.0, 1.0, 0.5, 0, 0, 0, 1],  # Waypoint 1
-            [-1.0, -1.0, 0.5, 0, 0, 0, 1],  # Waypoint 2
-        ]
+        # self.waypoints = [
+        #     [1.0, 1.0, 0.5, 0, 0, 0, 1],  # Waypoint 1
+        #     [-1.0, -1.0, 0.5, 0, 0, 0, 1],  # Waypoint 2
+        # ]
 
         # self.waypoints = [
         #     [-2.3, 2.3, 0.5, 0, 0, 0, 1],  # Waypoint 1
@@ -28,15 +28,15 @@ class WaypointPublisher(Node):
         #     [-2.5, -2.5, 0.5, 0, 0, 0, 1],  # Waypoint 7
         # ]
 
-        # self.waypoints = [
-        #     [-2.3, 2.3, 1.9, 0, 0, 0, 1],  # Waypoint 1
-        #     [0, 2.3, 1.6, 0, 0, 0, 1],  # Waypoint 2
-        #     [2.8, 2.3, 1.0, 0, 0, 0, 1],  # Waypoint 3
-        #     [1.5, 0.1, 2.0, 0, 0, 0, 1],  # Waypoint 4
-        #     [2.0, -2.3, 1.8, 0, 0, 0, 1],  # Waypoint 5
-        #     [1.0, -2.8, 1.6, 0, 0, 0, 1],  # Waypoint 6
-        #     [-2.5, -2.5, 1.0, 0, 0, 0, 1],  # Waypoint 7
-        # ]
+        self.waypoints = [
+            [-2.3, 2.3, 1.9, 0, 0, 0, 1],  # Waypoint 1
+            [0, 2.3, 1.6, 0, 0, 0, 1],  # Waypoint 2
+            [2.8, 2.3, 1.0, 0, 0, 0, 1],  # Waypoint 3
+            [1.5, 0.1, 2.0, 0, 0, 0, 1],  # Waypoint 4
+            [2.0, -2.3, 1.8, 0, 0, 0, 1],  # Waypoint 5
+            [1.0, -2.8, 1.6, 0, 0, 0, 1],  # Waypoint 6
+            [-2.5, -2.5, 1.0, 0, 0, 0, 1],  # Waypoint 7
+        ]
 
         self.get_logger().info("Starting continuous waypoint publishing...")
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import matplotlib.pyplot as plt
-import numpy as np
+# import numpy as np
 import csv
 
 def plot(csv_file):
@@ -21,13 +21,14 @@ def plot(csv_file):
         vicon_z.append(float(row[3]))
         realsense_z.append(float(row[10]))
     # Plot data
-    plt.plot(time, vicon_z, label='Vicon')
-    plt.plot(time, realsense_z, label='Realsense')
-    plt.xlabel('Time (s)')
-    plt.ylabel('Z (m)')
-    plt.title('Z vs Time')
+    # plt.plot(time, vicon_z, label='Vicon')
+    # plt.plot(time, realsense_z, label='Realsense')
+    plt.plot(realsense_z, vicon_z, label = 'Realsense vs Vicon' )
+    plt.xlabel('Realsense')
+    plt.ylabel('Vicon')
+    plt.title('Vicon vs Realsense')
     plt.legend()
-    plt.savefig('z_vs_time.png')
+    plt.savefig('Vicon_Vs_Realsense.png')
 
 if __name__ == '__main__':
     print('Plotting data for realsense and vicon...')

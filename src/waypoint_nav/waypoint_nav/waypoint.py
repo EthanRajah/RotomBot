@@ -42,12 +42,12 @@ class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
         # HARDCODE Test swapper field
-        self.test2 = True
+        self.test2 = False
+        self.get_logger().info("Test2 flag: " + str(self.test2))
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()
         self.realsense = realsense2mavros()
         # initialize the vicon to publish only (if test 1), else use vicon
-        self.get_logger().info(str(self.test2))
         if self.test2:
             self.vicon.publish = False
             self.realsense.publish = True
@@ -284,6 +284,8 @@ class CommNode(Node):
             pose.pose.orientation.w = 1.0
             # Append the pose only
             waypoints_pose_list.append(pose.pose)
+        # Add home waypoint to the end
+        waypoints_pose_list.append(self.local_start.pose)
         # Set flight controller waypoints list to be waypoints array gotten here
         self.flight_controller.waypoints = waypoints_pose_list
 
@@ -301,6 +303,9 @@ class CommNode(Node):
         else:
             # Test 2: Realsense only: Get transformation that transforms vicon to realsense, then realsense to cube (cube), then apply this transform to each waypoint
             if self.first_vicon is not None:
+
+                # GURPREET: EDIT BELOW... 
+                
                 # T_1^0 = [C(q), t]
                 t, q = self.first_vicon
                 t = [t.x, t.y, t.z]
@@ -308,12 +313,12 @@ class CommNode(Node):
                 T_1_0 = quaternion_matrix(q)
                 T_1_0[:3, 3] = np.array(t).reshape(3)
                 # T_2^1 = [I, t_m], t_m = self.vicon.transform
-                x, y, z = 2 * self.vicon.transform # we send cube setpoints: send x,y,z ahead of vicon so that vicon aligns with setpoint
-                T_2_1 = np.array([[1, 0, 0, x],
-                                  [0, 1, 0, y],
-                                  [0, 0, 1, z],
-                                  [0, 0, 0, 1]])
-                self.T_vw = T_1_0 @ T_2_1
+                # x, y, z = 2 * self.vicon.transform # we send cube setpoints: send x,y,z ahead of vicon so that vicon aligns with setpoint
+                # T_2_1 = np.array([[1, 0, 0, x],
+                #                   [0, 1, 0, y],
+                #                   [0, 0, 1, z],
+                #                   [0, 0, 0, 1]])
+                self.T_vw = T_1_0 # @ T_2_1
                 # each waypoint (given in world (0) frame should be multiplied by inverse of T_vw (T_2^0)):
                 # [w^0, 1]^T = T_2^0 * [w^2, 1]^T -> want w^2
                 T_inv = np.linalg.inv(self.T_vw)

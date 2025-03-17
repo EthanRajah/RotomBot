@@ -3,6 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from std_srvs.srv import Trigger
 import numpy as np
+from tf_transformations import euler_from_quaternion, quaternion_from_euler, quaternion_matrix
 
 class FlightController(Node):
     def __init__(self):
@@ -53,6 +54,12 @@ class FlightController(Node):
                 self.first_waypoint_set = True
         #self.get_logger().info(f"active: {self.active}, curpose: {self.current_pose}, curwaypt: {self.current_waypoint}")
         if self.active and self.current_pose and self.current_waypoint:
+            # Here, current_waypoint coordinates are in the initial frame., want coordinates in cube frame. do new transforms:
+            # 1. Initial frame to cube frame (composed of matrix of /mavros/vision_pose/pose readings)
+            # GURPREET: EDIT HERE
+            
+            # YOUR CODE HERE... 
+
             # Compute distance to current waypoint
             dist = np.linalg.norm([
                 self.current_pose.position.x - self.current_waypoint.position.x,
@@ -65,7 +72,7 @@ class FlightController(Node):
             sp.header.stamp = self.get_clock().now().to_msg()
             sp.header.frame_id = "map"
 
-            if dist < 0.5:
+            if dist < 0.75:
                 # **If within 0.5m, publish the waypoint directly**
                 sp.pose.position = self.current_waypoint.position
                 sp.pose.orientation = self.current_waypoint.orientation
@@ -77,7 +84,7 @@ class FlightController(Node):
                     self.current_waypoint.position.y - self.current_pose.position.y,
                     self.current_waypoint.position.z - self.current_pose.position.z
                 ])
-                move_vector = move_vector / np.linalg.norm(move_vector) * 0.5  # Normalize and scale
+                move_vector = move_vector / np.linalg.norm(move_vector) * 0.75  # Normalize and scale
 
                 sp.pose.position.x = self.current_pose.position.x + move_vector[0]
                 sp.pose.position.y = self.current_pose.position.y + move_vector[1]
@@ -85,9 +92,6 @@ class FlightController(Node):
                 sp.pose.orientation = self.current_waypoint.orientation
 
                 # self.get_logger().info(f"Moving toward waypoint: {sp.pose.position}")
-
-            # Publish the waypoint
-            self.setpoint_pub.publish(sp)
 
             # Use dist to see if we're within ball radius of waypoint
             ball_radius = 0.25
@@ -104,16 +108,19 @@ class FlightController(Node):
                 sp = PoseStamped()
                 sp.header.stamp = self.get_clock().now().to_msg()
                 sp.header.frame_id = "map"
-                if self.home:
-                    pose.pose.position.x = self.home[0]
-                    pose.pose.position.y = self.home[1]
-                    pose.pose.position.z = 0.15
-                else:
-                    pose.pose.position.x = self.current_waypoint.position.x
-                    pose.pose.position.y = self.current_waypoint.position.y
-                    pose.pose.position.z = 0.1
-                pose.pose.orientation.w = 1.0 
+                # if self.home:
+                #     pose.pose.position.x = self.home[0]
+                #     pose.pose.position.y = self.home[1]
+                #     pose.pose.position.z = 0.15
+                # else:
+                sp.pose.position.x = self.current_waypoint.position.x
+                sp.pose.position.y = self.current_waypoint.position.y
+                sp.pose.position.z = 0.1
+                sp.pose.orientation.w = 1.0 
                 self.get_logger().info(f"Waypoints Complete. Landing!")
+
+            # Publish the waypoint
+            self.setpoint_pub.publish(sp)
 
 def main(args=None):
     rclpy.init(args=args)

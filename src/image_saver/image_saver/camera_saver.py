@@ -45,7 +45,7 @@ class CameraSaverNode(Node):
 
         # Timers
         self.timer_pub = self.create_timer(1.0 / 30, self.capture_frame)  # 30 FPS
-        self.timer_save = self.create_timer(1.0, self.save_image)  # Save every 5 sec
+        self.timer_save = self.create_timer(5.0, self.save_image)  # Save every 5 sec
 
         self.latest_frame = None  # Store latest frame
 
