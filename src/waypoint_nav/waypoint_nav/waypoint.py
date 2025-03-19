@@ -42,7 +42,7 @@ class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
         # HARDCODE Test swapper field
-        self.test2 = False
+        self.test2 = True
         self.get_logger().info("Test2 flag: " + str(self.test2))
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()
@@ -117,7 +117,7 @@ class CommNode(Node):
         #     rclpy.qos.qos_profile_system_default)
         # self.first_realsense = None
         # Defines transformation matrix from vicon world frame to cube (map) frame
-        self.T_vw = None
+        self.T_2_0 = None
 
     def arm_drone(self):
         """ Sends command to arm the drone """
@@ -303,33 +303,24 @@ class CommNode(Node):
         else:
             # Test 2: Realsense only: Get transformation that transforms vicon to realsense, then realsense to cube (cube), then apply this transform to each waypoint
             if self.first_vicon is not None:
-
-                # GURPREET: EDIT BELOW... 
-                
                 # T_1^0 = [C(q), t]
                 t, q = self.first_vicon
                 t = [t.x, t.y, t.z]
                 q = [q.x, q.y, q.z, q.w]
                 T_1_0 = quaternion_matrix(q)
                 T_1_0[:3, 3] = np.array(t).reshape(3)
-                # T_2^1 = [I, t_m], t_m = self.vicon.transform
-                # x, y, z = 2 * self.vicon.transform # we send cube setpoints: send x,y,z ahead of vicon so that vicon aligns with setpoint
-                # T_2_1 = np.array([[1, 0, 0, x],
-                #                   [0, 1, 0, y],
-                #                   [0, 0, 1, z],
-                #                   [0, 0, 0, 1]])
-                self.T_vw = T_1_0 # @ T_2_1
-                # each waypoint (given in world (0) frame should be multiplied by inverse of T_vw (T_2^0)):
-                # [w^0, 1]^T = T_2^0 * [w^2, 1]^T -> want w^2
-                T_inv = np.linalg.inv(self.T_vw)
-                self.flight_controller.home = (T_inv @ np.array([0, 0, self.target_altitude, 1]))[:3] # Transform home to cube frame 
-                # Convert each point to homogenous, multiply, remove the 1, return
-                waypoints_transformed = WAYPOINTS
-                ones_col = np.ones((waypoints_transformed.shape[0], 1))
-                homo_pts = np.hstack((waypoints_transformed, ones_col))
-                transformed_homo_pts = (T_inv @ homo_pts.T).T # (4x4) * (4xN) transposed gives (Nx4 again)
-                waypoints_transformed = transformed_homo_pts[:, :3] # pop the ones -> Nx3 transformed points
-                return waypoints_transformed
+
+                # T_2_1: correct marker to realsense transformation
+                marker_to_realsense = np.array([0.089, 0, 0.012]) - np.array([-0.124, 0, 0.103])
+                T_2_1 = np.eye(4)
+                T_2_1[:3, 3] = marker_to_realsense
+                T_2_0 = T_1_0 @ T_2_1
+
+                # Transform realsense readings to vicon world frame: T_0_2
+                self.T_2_0 = T_2_0
+                self.realsense.T_2_0 = T_2_0
+                self.get_logger().info(f"Transformed T_2_0: {T_2_0}. Test2 is active")
+                return WAYPOINTS
             else:
                 self.get_logger().warn("No vicon or realsense data received yet! You really fucked something up!")
     

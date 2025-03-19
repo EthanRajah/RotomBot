@@ -50,7 +50,7 @@ class WaypointPublisher(Node):
             waypoint_array = PoseArray()
             waypoint_array.header.stamp = self.get_clock().now().to_msg()
             waypoint_array.header.frame_id = "vicon/world"  # Set the frame
-
+            self.get_logger().info("waypoints: "+ str(self.waypoints))
             for waypoint in self.waypoints:
                 pose = Pose()
                 pose.position.x = float(waypoint[0])
