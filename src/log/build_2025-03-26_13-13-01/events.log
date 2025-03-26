@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.001309] (-) JobUnselected: {'identifier': 'comm_node'}
+[0.002156] (-) JobUnselected: {'identifier': 'crack_comm'}
+[0.002812] (-) JobUnselected: {'identifier': 'crack_controller'}
+[0.003410] (-) JobUnselected: {'identifier': 'dummy_vicon_republisher'}
+[0.003607] (-) JobUnselected: {'identifier': 'dummy_waypoint_publisher'}
+[0.003769] (-) JobUnselected: {'identifier': 'exer2_control'}
+[0.003924] (-) JobUnselected: {'identifier': 'exer3_control'}
+[0.004070] (-) JobUnselected: {'identifier': 'image_saver'}
+[0.004213] (-) JobUnselected: {'identifier': 'px4_autonomy_modules'}
+[0.004368] (-) JobUnselected: {'identifier': 'realsense2mavros'}
+[0.004514] (-) JobUnselected: {'identifier': 'unit_tester'}
+[0.004775] (-) JobUnselected: {'identifier': 'vicon_bridge'}
+[0.004952] (-) JobUnselected: {'identifier': 'vicon_obstacle_republisher'}
+[0.005104] (-) JobUnselected: {'identifier': 'waypoint_nav'}
+[0.005257] (api_waypoint) JobQueued: {'identifier': 'api_waypoint', 'dependencies': OrderedDict()}
+[0.005466] (api_waypoint) JobStarted: {'identifier': 'api_waypoint'}
+[0.099789] (-) TimerEvent: {}
+[0.200833] (-) TimerEvent: {}
+[0.301599] (-) TimerEvent: {}
+[0.402908] (-) TimerEvent: {}
+[0.504199] (-) TimerEvent: {}
+[0.605462] (-) TimerEvent: {}
+[0.706890] (-) TimerEvent: {}
+[0.808595] (-) TimerEvent: {}
+[0.910006] (-) TimerEvent: {}
+[1.010661] (-) TimerEvent: {}
+[1.113226] (-) TimerEvent: {}
+[1.214005] (-) TimerEvent: {}
+[1.315481] (-) TimerEvent: {}
+[1.416186] (-) TimerEvent: {}
+[1.517936] (-) TimerEvent: {}
+[1.619646] (-) TimerEvent: {}
+[1.721888] (-) TimerEvent: {}
+[1.823386] (-) TimerEvent: {}
+[1.924473] (-) TimerEvent: {}
+[2.025300] (-) TimerEvent: {}
+[2.126335] (-) TimerEvent: {}
+[2.226966] (-) TimerEvent: {}
+[2.328172] (-) TimerEvent: {}
+[2.428905] (-) TimerEvent: {}
+[2.529625] (-) TimerEvent: {}
+[2.630686] (-) TimerEvent: {}
+[2.733066] (-) TimerEvent: {}
+[2.834082] (-) TimerEvent: {}
+[2.934889] (-) TimerEvent: {}
+[3.037955] (-) TimerEvent: {}
+[3.140600] (-) TimerEvent: {}
+[3.241278] (-) TimerEvent: {}
+[3.342917] (-) TimerEvent: {}
+[3.443605] (-) TimerEvent: {}
+[3.544720] (-) TimerEvent: {}
+[3.645495] (-) TimerEvent: {}
+[3.746207] (-) TimerEvent: {}
+[3.847215] (-) TimerEvent: {}
+[3.947965] (-) TimerEvent: {}
+[4.048892] (-) TimerEvent: {}
+[4.149986] (-) TimerEvent: {}
+[4.251197] (-) TimerEvent: {}
+[4.352931] (-) TimerEvent: {}
+[4.453995] (-) TimerEvent: {}
+[4.554655] (-) TimerEvent: {}
+[4.655980] (-) TimerEvent: {}
+[4.756680] (-) TimerEvent: {}
+[4.822015] (api_waypoint) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/api_waypoint', 'build', '--build-base', '/home/jetson/ros2_ws/src/build/api_waypoint/build', 'install', '--record', '/home/jetson/ros2_ws/src/build/api_waypoint/install.log', '--install-scripts', '$base/lib/api_waypoint', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/ros2_ws/src/api_waypoint', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'jetson', 'LC_TIME': 'en_CA.UTF-8', 'SSH_AGENT_PID': '7701', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/jetson', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.97.1', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '32.6.1', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Jetson Nano Developer Kit', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_CA.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '7501', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '22160', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/jetson/ros2_ws/src/install:/home/jetson/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'jetson', 'JETSON_MODULE': 'NVIDIA Jetson Nano (4 GB ram)', 'JETSON_SERIAL_NUMBER': '1423221007917', 'JOURNAL_STREAM': '8:38818', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Porg', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'jetson', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda/bin:/home/jetson/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/nano:@/tmp/.ICE-unix/7738,unix/nano:/tmp/.ICE-unix/7738', 'INVOCATION_ID': '45a2ff52bc2d49da942fd3347c204925', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_CA.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_CA.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'LC_TELEPHONE': 'en_CA.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-97750cf633.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '4', 'AMENT_PREFIX_PATH': '/home/jetson/ros2_ws/src/install/waypoint_nav:/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher:/home/jetson/ros2_ws/src/install/vicon_bridge:/home/jetson/ros2_ws/src/install/unit_tester:/home/jetson/ros2_ws/src/install/realsense2mavros:/home/jetson/ros2_ws/src/install/px4_autonomy_modules:/home/jetson/ros2_ws/src/install/image_saver:/home/jetson/ros2_ws/src/install/exer3_control:/home/jetson/ros2_ws/src/install/exer2_control:/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/src/install/dummy_vicon_republisher:/home/jetson/ros2_ws/src/install/crack_controller:/home/jetson/ros2_ws/src/install/crack_comm:/home/jetson/ros2_ws/src/install/comm_node:/home/jetson/ros2_ws/src/install/api_waypoint:/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/px4_autonomy_modules:/home/jetson/ros2_ws/install/image_saver:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/crack_controller:/home/jetson/ros2_ws/install/crack_comm:/home/jetson/ros2_ws/install/comm_node:/home/jetson/ros2_ws/install/api_waypoint:/opt/ros/foxy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'LC_NAME': 'en_CA.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'en_CA.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_CA.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/jetson/ros2_ws/src/build/api_waypoint', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/ros2_ws/src/build/api_waypoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/waypoint_nav/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/vicon_bridge/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/realsense2mavros/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/exer3_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/exer2_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/crack_controller/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/crack_comm/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages:/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/waypoint_nav/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/unit_tester/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/realsense2mavros/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/dummy_vicon_republisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/comm_node/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/api_waypoint/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_CA.UTF-8', 'LC_PAPER': 'en_CA.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '4.6', 'CMAKE_PREFIX_PATH': '/home/jetson/ros2_ws/src/install/px4_autonomy_modules:/home/jetson/ros2_ws/install/px4_autonomy_modules', 'JETSON_P_NUMBER': 'p3448-0000'}, 'shell': False}
+[4.856942] (-) TimerEvent: {}
+[4.957855] (-) TimerEvent: {}
+[5.058477] (-) TimerEvent: {}
+[5.159148] (-) TimerEvent: {}
+[5.259815] (-) TimerEvent: {}
+[5.360495] (-) TimerEvent: {}
+[5.461104] (-) TimerEvent: {}
+[5.561829] (-) TimerEvent: {}
+[5.662857] (-) TimerEvent: {}
+[5.763524] (-) TimerEvent: {}
+[5.864193] (-) TimerEvent: {}
+[5.964973] (-) TimerEvent: {}
+[6.065592] (-) TimerEvent: {}
+[6.166272] (-) TimerEvent: {}
+[6.242828] (api_waypoint) StderrLine: {'line': b"/usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[6.243770] (api_waypoint) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.266431] (-) TimerEvent: {}
+[6.367077] (-) TimerEvent: {}
+[6.413152] (api_waypoint) StdoutLine: {'line': b'running egg_info\n'}
+[6.416632] (api_waypoint) StdoutLine: {'line': b'writing ../build/api_waypoint/api_waypoint.egg-info/PKG-INFO\n'}
+[6.419391] (api_waypoint) StdoutLine: {'line': b'writing dependency_links to ../build/api_waypoint/api_waypoint.egg-info/dependency_links.txt\n'}
+[6.419924] (api_waypoint) StdoutLine: {'line': b'writing entry points to ../build/api_waypoint/api_waypoint.egg-info/entry_points.txt\n'}
+[6.420351] (api_waypoint) StdoutLine: {'line': b'writing requirements to ../build/api_waypoint/api_waypoint.egg-info/requires.txt\n'}
+[6.420744] (api_waypoint) StdoutLine: {'line': b'writing top-level names to ../build/api_waypoint/api_waypoint.egg-info/top_level.txt\n'}
+[6.435587] (api_waypoint) StdoutLine: {'line': b"reading manifest file '../build/api_waypoint/api_waypoint.egg-info/SOURCES.txt'\n"}
+[6.440381] (api_waypoint) StdoutLine: {'line': b"writing manifest file '../build/api_waypoint/api_waypoint.egg-info/SOURCES.txt'\n"}
+[6.441315] (api_waypoint) StdoutLine: {'line': b'running build\n'}
+[6.441948] (api_waypoint) StdoutLine: {'line': b'running build_py\n'}
+[6.442818] (api_waypoint) StdoutLine: {'line': b'copying api_waypoint/api_waypoint_node.py -> /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint\n'}
+[6.444507] (api_waypoint) StdoutLine: {'line': b'running install\n'}
+[6.449360] (api_waypoint) StdoutLine: {'line': b'running install_lib\n'}
+[6.453297] (api_waypoint) StdoutLine: {'line': b'copying /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint/api_waypoint_node.py -> /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint\n'}
+[6.458000] (api_waypoint) StdoutLine: {'line': b'byte-compiling /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint/api_waypoint_node.py to api_waypoint_node.cpython-38.pyc\n'}
+[6.464376] (api_waypoint) StdoutLine: {'line': b'running install_data\n'}
+[6.465259] (api_waypoint) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.467193] (-) TimerEvent: {}
+[6.472977] (api_waypoint) StdoutLine: {'line': b"removing '/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[6.474654] (api_waypoint) StdoutLine: {'line': b'Copying ../build/api_waypoint/api_waypoint.egg-info to /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint-0.0.0-py3.8.egg-info\n'}
+[6.479223] (api_waypoint) StdoutLine: {'line': b'running install_scripts\n'}
+[6.567364] (-) TimerEvent: {}
+[6.573834] (api_waypoint) StdoutLine: {'line': b'Installing api_waypoint_node script to /home/jetson/ros2_ws/src/install/api_waypoint/lib/api_waypoint\n'}
+[6.575751] (api_waypoint) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/ros2_ws/src/build/api_waypoint/install.log'\n"}
+[6.667621] (-) TimerEvent: {}
+[6.688166] (api_waypoint) CommandEnded: {'returncode': 0}
+[6.749480] (api_waypoint) JobEnded: {'identifier': 'api_waypoint', 'rc': 0}
+[6.752652] (-) EventReactorShutdown: {}

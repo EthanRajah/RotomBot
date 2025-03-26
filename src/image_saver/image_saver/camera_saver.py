@@ -39,7 +39,7 @@ class CameraSaverNode(Node):
         self.bridge = CvBridge()
 
         # OpenCV Camera Capture
-        self.cap = cv2.VideoCapture(gstreamer_pipeline(), cv2.CAP_GSTREAMER)
+        self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
         if not self.cap.isOpened():
             self.get_logger().error("Failed to open camera. Check pipeline.")
 

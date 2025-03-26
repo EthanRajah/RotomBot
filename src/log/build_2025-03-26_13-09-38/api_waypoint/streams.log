@@ -1,0 +1,40 @@
+[4.086s] Invoking command in '/home/jetson/ros2_ws/src/api_waypoint': PYTHONPATH=/home/jetson/ros2_ws/src/build/api_waypoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/api_waypoint build --build-base /home/jetson/ros2_ws/src/build/api_waypoint/build install --record /home/jetson/ros2_ws/src/build/api_waypoint/install.log --install-scripts $base/lib/api_waypoint --single-version-externally-managed install_data
+[5.547s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[5.548s]   warnings.warn(
+[5.701s] running egg_info
+[5.705s] writing ../build/api_waypoint/api_waypoint.egg-info/PKG-INFO
+[5.707s] writing dependency_links to ../build/api_waypoint/api_waypoint.egg-info/dependency_links.txt
+[5.707s] writing entry points to ../build/api_waypoint/api_waypoint.egg-info/entry_points.txt
+[5.708s] writing requirements to ../build/api_waypoint/api_waypoint.egg-info/requires.txt
+[5.708s] writing top-level names to ../build/api_waypoint/api_waypoint.egg-info/top_level.txt
+[5.730s] reading manifest file '../build/api_waypoint/api_waypoint.egg-info/SOURCES.txt'
+[5.736s] writing manifest file '../build/api_waypoint/api_waypoint.egg-info/SOURCES.txt'
+[5.737s] running build
+[5.737s] running build_py
+[5.738s] copying api_waypoint/test.py -> /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint
+[5.739s] copying api_waypoint/database_setup.py -> /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint
+[5.740s] copying api_waypoint/api_waypoint_node.py -> /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint
+[5.742s] copying api_waypoint/API.py -> /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint
+[5.744s] running install
+[5.748s] running install_lib
+[5.752s] copying /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint/test.py -> /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint
+[5.754s] copying /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint/database_setup.py -> /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint
+[5.755s] copying /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint/api_waypoint_node.py -> /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint
+[5.755s] copying /home/jetson/ros2_ws/src/build/api_waypoint/build/lib/api_waypoint/API.py -> /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint
+[5.759s] byte-compiling /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint/test.py to test.cpython-38.pyc
+[5.761s] byte-compiling /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint/database_setup.py to database_setup.cpython-38.pyc
+[5.775s] byte-compiling /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint/api_waypoint_node.py to api_waypoint_node.cpython-38.pyc
+[5.776s]   File "/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint/api_waypoint_node.py", line 198
+[5.776s]     msg.pose.orientation.y
+[5.777s]     ^
+[5.783s] SyntaxError: invalid syntax
+[5.784s] 
+[5.784s] byte-compiling /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint/API.py to API.cpython-38.pyc
+[5.785s] running install_data
+[5.797s] running install_egg_info
+[5.806s] removing '/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint-0.0.0-py3.8.egg-info' (and everything under it)
+[5.810s] Copying ../build/api_waypoint/api_waypoint.egg-info to /home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages/api_waypoint-0.0.0-py3.8.egg-info
+[5.815s] running install_scripts
+[5.910s] Installing api_waypoint_node script to /home/jetson/ros2_ws/src/install/api_waypoint/lib/api_waypoint
+[5.915s] writing list of installed files to '/home/jetson/ros2_ws/src/build/api_waypoint/install.log'
+[6.031s] Invoked command in '/home/jetson/ros2_ws/src/api_waypoint' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/api_waypoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/api_waypoint build --build-base /home/jetson/ros2_ws/src/build/api_waypoint/build install --record /home/jetson/ros2_ws/src/build/api_waypoint/install.log --install-scripts $base/lib/api_waypoint --single-version-externally-managed install_data

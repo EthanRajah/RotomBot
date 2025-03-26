@@ -1,10 +1,9 @@
-# STARTER CODE: Taken from RotomBot's flight_controller.py for exercise 3.
-# TODO: when we get to each waypoint, hover for a few seconds until we get a good image, run onboard inference 
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from std_srvs.srv import Trigger
 import numpy as np
+from tf_transformations import euler_from_quaternion, quaternion_from_euler, quaternion_matrix
 
 class FlightController(Node):
     def __init__(self):
@@ -16,6 +15,7 @@ class FlightController(Node):
         self.hold_count = 0
         self.active = False  # Control active flag
         self.waypoints = None
+        self.obs_centers = None # Dictionary of obstacle centers: {A:[x, y], B:[x, y], C:[x, y], D:[x, y]}
         # Pass in transform from map to vicon/world
         self.home = None
         # track if we set the first waypoint
@@ -55,6 +55,11 @@ class FlightController(Node):
                 self.first_waypoint_set = True
         #self.get_logger().info(f"active: {self.active}, curpose: {self.current_pose}, curwaypt: {self.current_waypoint}")
         if self.active and self.current_pose and self.current_waypoint:
+            # Here, current_waypoint coordinates are in the initial frame., want coordinates in cube frame. do new transforms:
+            # 1. Initial frame to cube frame (composed of matrix of /mavros/vision_pose/pose readings)
+            
+            # TODO: GURPREET EDIT FROM HERE ONWARDS
+            
             # Compute distance to current waypoint
             dist = np.linalg.norm([
                 self.current_pose.position.x - self.current_waypoint.position.x,
@@ -88,9 +93,6 @@ class FlightController(Node):
 
                 # self.get_logger().info(f"Moving toward waypoint: {sp.pose.position}")
 
-            # Publish the waypoint
-            self.setpoint_pub.publish(sp)
-
             # Use dist to see if we're within ball radius of waypoint
             ball_radius = 0.25
             if dist < ball_radius and self.hold_count < 20:
@@ -116,6 +118,9 @@ class FlightController(Node):
                 sp.pose.position.z = 0.1
                 sp.pose.orientation.w = 1.0 
                 self.get_logger().info(f"Waypoints Complete. Landing!")
+
+            # Publish the waypoint
+            self.setpoint_pub.publish(sp)
 
 def main(args=None):
     rclpy.init(args=args)

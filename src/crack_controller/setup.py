@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'crack_node = crack_controller.crack_node:main',
+            'crack_controller = crack_controller.crack_node:main',
         ],
     },
 )
