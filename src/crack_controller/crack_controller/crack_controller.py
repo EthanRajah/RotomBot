@@ -21,7 +21,7 @@ class FlightController(Node):
         # track if we set the first waypoint
         self.first_waypoint_set = False
         self.drone_radius = 0.25
-        self.safety_radius =0.15+0.25
+        self.safety_radius = 0.15 + 2*self.drone_radius
 
         # **Subscribers**
         self.create_subscription(PoseStamped, '/mavros/vision_pose/pose', self.pose_callback, 50)

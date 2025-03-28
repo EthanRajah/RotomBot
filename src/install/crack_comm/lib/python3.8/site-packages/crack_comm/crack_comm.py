@@ -42,7 +42,7 @@ class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
         # HARDCODE Test swapper field
-        self.test2 = True
+        self.test2 = False
         self.get_logger().info("Test2 flag: " + str(self.test2))
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()
@@ -118,6 +118,29 @@ class CommNode(Node):
         # self.first_realsense = None
         # Defines transformation matrix from vicon world frame to cube (map) frame
         self.T_2_0 = None
+
+        # Final project: 4 subscribers for 4 obstacles (need center points, whereas api_waypoints_node sends goal drone poses)
+        self.obs_A = self.create_subscription(
+            PoseStamped,
+            '/vicon/ROB498_Obstacle_A/ROB498_Obstacle_A',
+            self.obs_callback_A,
+            10)
+        self.obs_B = self.create_subscription(
+            PoseStamped,
+            '/vicon/ROB498_Obstacle_B/ROB498_Obstacle_B',
+            self.obs_callback_B,
+            10)
+        self.obs_C = self.create_subscription(
+            PoseStamped,
+            '/vicon/ROB498_Obstacle_C/ROB498_Obstacle_C',
+            self.obs_callback_C,
+            10)
+        self.obs_D = self.create_subscription(
+            PoseStamped,
+            '/vicon/ROB498_Obstacle_D/ROB498_Obstacle_D',
+            self.obs_callback_D,
+            10)
+        self.obs_centers = {}
 
     def arm_drone(self):
         """ Sends command to arm the drone """
@@ -288,6 +311,7 @@ class CommNode(Node):
         waypoints_pose_list.append(self.local_start.pose)
         # Set flight controller waypoints list to be waypoints array gotten here
         self.flight_controller.waypoints = waypoints_pose_list
+        self.flight_controller.obs_centers = self.obs_centers
 
     def pose_callback(self, msg):
         """ Updates the drone's current PoseStamped message. """
@@ -347,31 +371,61 @@ class CommNode(Node):
             self.get_logger().info('First vicon received and logged in waypoint.py')
             self.first_vicon = (mavros_msg.pose.position, mavros_msg.pose.orientation)
 
-    # def realsense_callback(self, msg):
-    #     # Create new PoseStamped message for MAVROS
-    #     # self.get_logger().info('Publishing')
+    def obs_callback_A(self, msg):
+        # Create new PoseStamped message for MAVROS
+        mavros_msg = PoseStamped()
 
-    #     mavros_msg = PoseStamped()
+        # Copy header
+        mavros_msg.header = msg.header
+        mavros_msg.header.frame_id = 'map'
 
-    #     # Copy header
-    #     mavros_msg.header = msg.header
-    #     mavros_msg.header.frame_id = 'map'self.get_logger
+        # Copy vicon position data 
+        mavros_msg.pose.position = msg.pose.position
 
-    #     # Copy position data and transform to cube frame
-    #     mavros_msg.pose.position = msg.pose.pose.position
-    #     mavros_msg.pose.position.x += self.transform[0]
-    #     mavros_msg.pose.position.y += self.transform[1]
-    #     mavros_msg.pose.position.z += self.transform[2]
+        # Copy x,y coordinates to obs_centers at key
+        self.obs_centers['A'] = (mavros_msg.pose.position.x, mavros_msg.pose.position.y)
 
-    #     # Copy orientation data
-    #     mavros_msg.pose.orientation = msg.pose.pose.orientation
+    def obs_callback_B(self, msg):
+        # Create new PoseStamped message for MAVROS
+        mavros_msg = PoseStamped()
 
-    #     # Save pos and orientation tuple only once
-    #     if self.first_realsense is None:
-    #         self.get_logger().info('First realsense received and logged in waypoint.py')
-    #         self.first_realsense = (mavros_msg.pose.position, mavros_msg.pose.orientation)
+        # Copy header
+        mavros_msg.header = msg.header
+        mavros_msg.header.frame_id = 'map'
 
-        
+        # Copy vicon position data 
+        mavros_msg.pose.position = msg.pose.position
+
+        # Copy x,y coordinates to obs_centers at key
+        self.obs_centers['B'] = (mavros_msg.pose.position.x, mavros_msg.pose.position.y)
+
+    def obs_callback_C(self, msg):
+        # Create new PoseStamped message for MAVROS
+        mavros_msg = PoseStamped()
+
+        # Copy header
+        mavros_msg.header = msg.header
+        mavros_msg.header.frame_id = 'map'
+
+        # Copy vicon position data 
+        mavros_msg.pose.position = msg.pose.position
+
+        # Copy x,y coordinates to obs_centers at key
+        self.obs_centers['C'] = (mavros_msg.pose.position.x, mavros_msg.pose.position.y)
+
+    def obs_callback_D(self, msg):
+        # Create new PoseStamped message for MAVROS
+        mavros_msg = PoseStamped()
+
+        # Copy header
+        mavros_msg.header = msg.header
+        mavros_msg.header.frame_id = 'map'
+
+        # Copy vicon position data 
+        mavros_msg.pose.position = msg.pose.position
+
+        # Copy x,y coordinates to obs_centers at key
+        self.obs_centers['D'] = (mavros_msg.pose.position.x, mavros_msg.pose.position.y)
 
 def main(args=None):
     # rclpy.init(args=args)

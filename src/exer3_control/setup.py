@@ -23,6 +23,7 @@ setup(
             'flight_controller = exer3_control.flight_controller:main',
             'grabber = exer3_control.grabber:main',  # Added entry point for grabber
             'plotter = exer3_control.plotter:main',
+            'obs_grabber = exer3_control.obs_grabber:main',
         ],
     },
 )

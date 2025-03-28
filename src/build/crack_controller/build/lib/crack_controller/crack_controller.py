@@ -15,10 +15,13 @@ class FlightController(Node):
         self.hold_count = 0
         self.active = False  # Control active flag
         self.waypoints = None
+        self.obs_centers = None # Dictionary of obstacle centers: {A:[x, y], B:[x, y], C:[x, y], D:[x, y]}
         # Pass in transform from map to vicon/world
         self.home = None
         # track if we set the first waypoint
         self.first_waypoint_set = False
+        self.drone_radius = 0.25
+        self.safety_radius =0.15+0.25
 
         # **Subscribers**
         self.create_subscription(PoseStamped, '/mavros/vision_pose/pose', self.pose_callback, 50)
@@ -40,6 +43,23 @@ class FlightController(Node):
         """ Updates the drone's current position. """
         self.current_pose = msg.pose
 
+    def check_within_obstacles(self, current_pose, obs_centers, safety_radius):
+        """ Check if the current position of the drone is within any of the obstacle radius
+        INPUT - current_pose: PoseStamped() object, obs_centers: Dictionary of obstacle centers: {A:[x, y], B:[x, y], C:[x, y], D:[x, y]}
+                safety_radius: float
+        OUTPUT - Repulsive vector: numpy array [x, y]. The vector from each obstacle center to the current position of the drone will be 
+                weighted by the inverse of the distance between the drone and the obstacle center.
+        """
+        repulsive_vec = np.array([0, 0, 0])
+        within_obs = {}
+        for obs in obs_centers.keys():
+            obs_center = obs_centers[obs]
+            dist = np.linalg.norm([current_pose.position.x - obs_center[0], current_pose.position.y - obs_center[1]])
+            if dist < safety_radius:
+                repulsive_vec += np.array([current_pose.position.x - obs_center[0], current_pose.position.y - obs_center[1], 0]) / dist /max(0.25 , dist) 
+                within_obs[obs] = obs_center
+        return repulsive_vec, within_obs
+        
     ## === CONTROL LOOP === ##
     def control_loop(self):
         """ Controls the drone by publishing waypoints. """
@@ -56,16 +76,19 @@ class FlightController(Node):
         if self.active and self.current_pose and self.current_waypoint:
             # Here, current_waypoint coordinates are in the initial frame., want coordinates in cube frame. do new transforms:
             # 1. Initial frame to cube frame (composed of matrix of /mavros/vision_pose/pose readings)
-            # GURPREET: EDIT HERE
             
-            # YOUR CODE HERE... 
-
+            # TODO: GURPREET EDIT FROM HERE ONWARDS
+            #Check if the current position of the drone is within any of the obstacle radius
+            repulsive_vec, obs_within = self.check_within_obstacles(self.current_pose, self.obs_centers, self.safety_radius)
+            
             # Compute distance to current waypoint
-            dist = np.linalg.norm([
+            move_vector = np.array([
                 self.current_pose.position.x - self.current_waypoint.position.x,
                 self.current_pose.position.y - self.current_waypoint.position.y,
                 self.current_pose.position.z - self.current_waypoint.position.z
             ])
+            
+            dist = np.linalg.norm(move_vector)
 
             # Create setpoint message
             sp = PoseStamped()
@@ -73,22 +96,34 @@ class FlightController(Node):
             sp.header.frame_id = "map"
 
             if dist < 0.75:
-                # **If within 0.5m, publish the waypoint directly**
-                sp.pose.position = self.current_waypoint.position
+                # # **If within 0.5m, publish the waypoint directly**
+                # sp.pose.position  = self.current_waypoint.position
+                # sp.pose.orientation = self.current_waypoint.orientation
+                # # self.get_logger().info("Hovering at start position.")
+                
+                ######
+                move_vector_augmented = move_vector + repulsive_vec
+                move_vector_augmented = move_vector_augmented / np.linalg.norm(move_vector_augmented) * dist
+                
+                sp.pose.position.x = self.current_pose.position.x + move_vector_augmented[0]
+                sp.pose.position.y = self.current_pose.position.y + move_vector_augmented[1]
+                sp.pose.position.z = self.current_pose.position.z + move_vector_augmented[2]
                 sp.pose.orientation = self.current_waypoint.orientation
-                # self.get_logger().info("Hovering at start position.")
             else:
                 # **Move 0.5m closer to start**
-                move_vector = np.array([
-                    self.current_waypoint.position.x - self.current_pose.position.x,
-                    self.current_waypoint.position.y - self.current_pose.position.y,
-                    self.current_waypoint.position.z - self.current_pose.position.z
-                ])
-                move_vector = move_vector / np.linalg.norm(move_vector) * 0.75  # Normalize and scale
-
-                sp.pose.position.x = self.current_pose.position.x + move_vector[0]
-                sp.pose.position.y = self.current_pose.position.y + move_vector[1]
-                sp.pose.position.z = self.current_pose.position.z + move_vector[2]
+                # move_vector = np.array([
+                #     self.current_waypoint.position.x - self.current_pose.position.x,
+                #     self.current_waypoint.position.y - self.current_pose.position.y,
+                #     self.current_waypoint.position.z - self.current_pose.position.z
+                # ])
+                # move_vector = move_vector / np.linalg.norm(move_vector) * 0.75  # Normalize and scale
+                
+                move_vector_augmented = move_vector + repulsive_vec
+                move_vector_augmented = move_vector_augmented / np.linalg.norm(move_vector_augmented) * 0.75
+                
+                sp.pose.position.x = self.current_pose.position.x + move_vector_augmented[0]
+                sp.pose.position.y = self.current_pose.position.y + move_vector_augmented[1]
+                sp.pose.position.z = self.current_pose.position.z + move_vector_augmented[2]
                 sp.pose.orientation = self.current_waypoint.orientation
 
                 # self.get_logger().info(f"Moving toward waypoint: {sp.pose.position}")
@@ -118,7 +153,6 @@ class FlightController(Node):
                 sp.pose.position.z = 0.1
                 sp.pose.orientation.w = 1.0 
                 self.get_logger().info(f"Waypoints Complete. Landing!")
-
             # Publish the waypoint
             self.setpoint_pub.publish(sp)
 

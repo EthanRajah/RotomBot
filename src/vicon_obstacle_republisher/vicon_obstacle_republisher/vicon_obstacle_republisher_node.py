@@ -47,18 +47,27 @@ class DummyViconRepublisher(Node):
         # new_msg.pose = msg.pose
 
         # Set pose to 90 degree yaw rotation
-        new_msg.pose.position.x = 1.0
-        new_msg.pose.position.y = 1.0
+        new_msg.pose.position.x = 1.75
+        new_msg.pose.position.y = -1.75
         new_msg.pose.position.z = 1.0
         new_msg.pose.orientation.x = 0.0
         new_msg.pose.orientation.y = 0.0
         new_msg.pose.orientation.z = -0.707
         new_msg.pose.orientation.w = 0.707
 
-        # Publish to the new topic
+        # Publish to the new topic: publish different waypoints in x and y (all we care about)
         self.pose_pub_a.publish(new_msg)
+
+        new_msg.pose.position.x = -1.75
+        new_msg.pose.position.y = -1.75
         self.pose_pub_b.publish(new_msg)
+
+        new_msg.pose.position.x = 1.75
+        new_msg.pose.position.y = 1.75
         self.pose_pub_c.publish(new_msg)
+
+        new_msg.pose.position.x = -1.75
+        new_msg.pose.position.y = 1.75
         self.pose_pub_d.publish(new_msg)
 
 def main(args=None):

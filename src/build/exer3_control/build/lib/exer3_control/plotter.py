@@ -29,6 +29,7 @@ def plot(csv_file):
     plt.title('Vicon vs Realsense')
     plt.legend()
     plt.savefig('Vicon_Vs_Realsense.png')
+    print("Done Plotting")
 
 if __name__ == '__main__':
     print('Plotting data for realsense and vicon...')

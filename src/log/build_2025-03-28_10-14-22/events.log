@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.004072] (-) JobUnselected: {'identifier': 'api_waypoint'}
+[0.004759] (-) JobUnselected: {'identifier': 'comm_node'}
+[0.005380] (-) JobUnselected: {'identifier': 'crack_comm'}
+[0.005978] (-) JobUnselected: {'identifier': 'crack_controller'}
+[0.006896] (-) JobUnselected: {'identifier': 'dummy_vicon_republisher'}
+[0.009323] (-) JobUnselected: {'identifier': 'dummy_waypoint_publisher'}
+[0.011077] (-) JobUnselected: {'identifier': 'exer2_control'}
+[0.011830] (-) JobUnselected: {'identifier': 'exer3_control'}
+[0.012620] (-) JobUnselected: {'identifier': 'image_saver'}
+[0.013444] (-) JobUnselected: {'identifier': 'px4_autonomy_modules'}
+[0.014173] (-) JobUnselected: {'identifier': 'realsense2mavros'}
+[0.015206] (-) JobUnselected: {'identifier': 'unit_tester'}
+[0.017085] (-) JobUnselected: {'identifier': 'vicon_bridge'}
+[0.017827] (-) JobUnselected: {'identifier': 'waypoint_nav'}
+[0.019004] (vicon_obstacle_republisher) JobQueued: {'identifier': 'vicon_obstacle_republisher', 'dependencies': OrderedDict()}
+[0.019639] (vicon_obstacle_republisher) JobStarted: {'identifier': 'vicon_obstacle_republisher'}
+[0.098769] (-) TimerEvent: {}
+[0.199816] (-) TimerEvent: {}
+[0.301567] (-) TimerEvent: {}
+[0.403385] (-) TimerEvent: {}
+[0.505178] (-) TimerEvent: {}
+[0.606854] (-) TimerEvent: {}
+[0.708136] (-) TimerEvent: {}
+[0.809501] (-) TimerEvent: {}
+[0.910807] (-) TimerEvent: {}
+[1.012488] (-) TimerEvent: {}
+[1.114211] (-) TimerEvent: {}
+[1.215704] (-) TimerEvent: {}
+[1.317647] (-) TimerEvent: {}
+[1.419304] (-) TimerEvent: {}
+[1.519980] (-) TimerEvent: {}
+[1.621218] (-) TimerEvent: {}
+[1.723803] (-) TimerEvent: {}
+[1.825011] (-) TimerEvent: {}
+[1.925900] (-) TimerEvent: {}
+[2.027413] (-) TimerEvent: {}
+[2.128257] (-) TimerEvent: {}
+[2.229502] (-) TimerEvent: {}
+[2.330225] (-) TimerEvent: {}
+[2.432067] (-) TimerEvent: {}
+[2.533863] (-) TimerEvent: {}
+[2.634515] (-) TimerEvent: {}
+[2.735167] (-) TimerEvent: {}
+[2.835823] (-) TimerEvent: {}
+[2.936495] (-) TimerEvent: {}
+[3.037138] (-) TimerEvent: {}
+[3.137808] (-) TimerEvent: {}
+[3.238453] (-) TimerEvent: {}
+[3.339067] (-) TimerEvent: {}
+[3.439683] (-) TimerEvent: {}
+[3.540327] (-) TimerEvent: {}
+[3.641407] (-) TimerEvent: {}
+[3.742007] (-) TimerEvent: {}
+[3.842614] (-) TimerEvent: {}
+[3.943859] (-) TimerEvent: {}
+[4.044539] (-) TimerEvent: {}
+[4.145135] (-) TimerEvent: {}
+[4.245831] (-) TimerEvent: {}
+[4.341479] (vicon_obstacle_republisher) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/vicon_obstacle_republisher', 'build', '--build-base', '/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/build', 'install', '--record', '/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/install.log', '--install-scripts', '$base/lib/vicon_obstacle_republisher', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/ros2_ws/src/vicon_obstacle_republisher', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'jetson', 'SSH_CLIENT': '100.110.180.50 64597 22', 'LC_TIME': 'en_CA.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'BROWSER': '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/jetson', 'OLDPWD': '/home/jetson/.vscode-server', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-3b6696da-1aa0-4313-9651-7eb89f660aab.sock', 'JETSON_L4T': '32.6.1', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Nano Developer Kit', 'VSCODE_GIT_ASKPASS_MAIN': '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_CA.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/jetson/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'jetson', 'JETSON_MODULE': 'NVIDIA Jetson Nano (4 GB ram)', 'JETSON_SERIAL_NUMBER': '1423221007917', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Porg', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/cuda/bin:/home/jetson/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_CA.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_CA.UTF-8', 'LC_TELEPHONE': 'en_CA.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-b212844ed0.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '4', 'AMENT_PREFIX_PATH': '/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/px4_autonomy_modules:/home/jetson/ros2_ws/install/image_saver:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/crack_controller:/home/jetson/ros2_ws/install/crack_comm:/home/jetson/ros2_ws/install/comm_node:/home/jetson/ros2_ws/install/api_waypoint:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_CA.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'en_CA.UTF-8', 'LC_IDENTIFICATION': 'en_CA.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher', 'SSH_CONNECTION': '100.110.180.50 64597 100.64.173.47 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/waypoint_nav/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/unit_tester/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/realsense2mavros/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer3_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/dummy_waypoint_publisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/dummy_vicon_republisher/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/comm_node/lib/python3.8/site-packages:/home/jetson/ros2_ws/install/api_waypoint/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_CA.UTF-8', 'LC_PAPER': 'en_CA.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '4.6', 'CMAKE_PREFIX_PATH': '/home/jetson/ros2_ws/install/px4_autonomy_modules', 'JETSON_P_NUMBER': 'p3448-0000'}, 'shell': False}
+[4.359608] (-) TimerEvent: {}
+[4.462078] (-) TimerEvent: {}
+[4.562753] (-) TimerEvent: {}
+[4.663416] (-) TimerEvent: {}
+[4.764081] (-) TimerEvent: {}
+[4.865133] (-) TimerEvent: {}
+[4.966068] (-) TimerEvent: {}
+[5.067258] (-) TimerEvent: {}
+[5.168234] (-) TimerEvent: {}
+[5.268850] (-) TimerEvent: {}
+[5.369497] (-) TimerEvent: {}
+[5.470144] (-) TimerEvent: {}
+[5.570813] (-) TimerEvent: {}
+[5.573619] (vicon_obstacle_republisher) StderrLine: {'line': b"/usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[5.574382] (vicon_obstacle_republisher) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.670966] (-) TimerEvent: {}
+[5.715642] (vicon_obstacle_republisher) StdoutLine: {'line': b'running egg_info\n'}
+[5.718720] (vicon_obstacle_republisher) StdoutLine: {'line': b'writing ../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/PKG-INFO\n'}
+[5.719452] (vicon_obstacle_republisher) StdoutLine: {'line': b'writing dependency_links to ../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/dependency_links.txt\n'}
+[5.720007] (vicon_obstacle_republisher) StdoutLine: {'line': b'writing entry points to ../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/entry_points.txt\n'}
+[5.720742] (vicon_obstacle_republisher) StdoutLine: {'line': b'writing requirements to ../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/requires.txt\n'}
+[5.721338] (vicon_obstacle_republisher) StdoutLine: {'line': b'writing top-level names to ../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/top_level.txt\n'}
+[5.737783] (vicon_obstacle_republisher) StdoutLine: {'line': b"reading manifest file '../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/SOURCES.txt'\n"}
+[5.742757] (vicon_obstacle_republisher) StdoutLine: {'line': b"writing manifest file '../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/SOURCES.txt'\n"}
+[5.743463] (vicon_obstacle_republisher) StdoutLine: {'line': b'running build\n'}
+[5.744606] (vicon_obstacle_republisher) StdoutLine: {'line': b'running build_py\n'}
+[5.745016] (vicon_obstacle_republisher) StdoutLine: {'line': b'running install\n'}
+[5.747652] (vicon_obstacle_republisher) StdoutLine: {'line': b'running install_lib\n'}
+[5.753806] (vicon_obstacle_republisher) StdoutLine: {'line': b'running install_data\n'}
+[5.754682] (vicon_obstacle_republisher) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.762369] (vicon_obstacle_republisher) StdoutLine: {'line': b"removing '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.763552] (vicon_obstacle_republisher) StdoutLine: {'line': b'Copying ../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info to /home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher-0.0.0-py3.8.egg-info\n'}
+[5.769074] (vicon_obstacle_republisher) StdoutLine: {'line': b'running install_scripts\n'}
+[5.771101] (-) TimerEvent: {}
+[5.852264] (vicon_obstacle_republisher) StdoutLine: {'line': b'Installing vicon_obstacle_republisher_node script to /home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/vicon_obstacle_republisher\n'}
+[5.853697] (vicon_obstacle_republisher) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/install.log'\n"}
+[5.871336] (-) TimerEvent: {}
+[5.952446] (vicon_obstacle_republisher) CommandEnded: {'returncode': 0}
+[5.971460] (-) TimerEvent: {}
+[6.016595] (vicon_obstacle_republisher) JobEnded: {'identifier': 'vicon_obstacle_republisher', 'rc': 0}
+[6.019380] (-) EventReactorShutdown: {}

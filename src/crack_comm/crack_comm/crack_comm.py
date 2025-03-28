@@ -42,7 +42,7 @@ class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
         # HARDCODE Test swapper field
-        self.test2 = True
+        self.test2 = False
         self.get_logger().info("Test2 flag: " + str(self.test2))
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()
@@ -284,9 +284,16 @@ class CommNode(Node):
         print('Waypoints Received')
         WAYPOINTS_RECEIVED = True
         WAYPOINTS = np.empty((0,3))
+        orientations = np.empty((0,4))
         for pose in msg.poses:
             pos = np.array([pose.position.x, pose.position.y, pose.position.z])
             WAYPOINTS = np.vstack((WAYPOINTS, pos))
+            # Save the orientations
+            orient = np.array([pose.orientation.x, 
+                               pose.orientation.y,
+                               pose.orientation.z,
+                               pose.orientation.w])
+            orientations = np.vstack((orientations, orient))
         # Transform points into cube frame before we send to flight controller
         waypoints_transformed = self.find_transformation()
         # Get waypoints in list format
@@ -294,21 +301,22 @@ class CommNode(Node):
         self.get_logger().info(f"transformed waypoints: {waypoints_list}")
         # Convert each waypoint to Pose message
         waypoints_pose_list = []
-        for waypoint in waypoints_list:
+        for i, waypoint in enumerate(waypoints_list):
             pose = PoseStamped()
             pose.header.stamp = self.get_clock().now().to_msg()
             pose.header.frame_id = "map"
             pose.pose.position.x = waypoint[0]
             pose.pose.position.y = waypoint[1]
             pose.pose.position.z = waypoint[2]
-            pose.pose.orientation.x = 0.0
-            pose.pose.orientation.y = 0.0
-            pose.pose.orientation.z = 0.0
-            pose.pose.orientation.w = 1.0
+            pose.pose.orientation.x = orientations[i, 0]
+            pose.pose.orientation.y = orientations[i, 1]
+            pose.pose.orientation.z = orientations[i, 2]
+            pose.pose.orientation.w = orientations[i, 3]
             # Append the pose only
             waypoints_pose_list.append(pose.pose)
         # Add home waypoint to the end
         waypoints_pose_list.append(self.local_start.pose)
+        self.get_logger().info(f"waypoints at end of callback_waypoints: {waypoints_pose_list}")
         # Set flight controller waypoints list to be waypoints array gotten here
         self.flight_controller.waypoints = waypoints_pose_list
         self.flight_controller.obs_centers = self.obs_centers
