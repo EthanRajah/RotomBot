@@ -11,6 +11,8 @@ from rclpy.executors import MultiThreadedExecutor
 from tf_transformations import euler_from_quaternion, quaternion_from_euler, quaternion_matrix
 import time
 import numpy as np
+from image_processor.image_processor import DroneWaypointProcessor
+from std_msgs.msg import StringMultiArray
 
 STATE = 'Init'
 WAYPOINTS = None
@@ -77,6 +79,10 @@ class CommNode(Node):
         self.srv_land = self.create_service(Trigger, '/rob498_drone_4/comm/land', self.callback_land)
         self.srv_abort = self.create_service(Trigger, '/rob498_drone_4/comm/abort', self.callback_land)
 
+        # Services for holding the drone in place
+        self.srv_start_image_processing = self.create_service(Trigger, '/rob498_drone_4/comm/start_image_processing', self.callback_start_image_processing)
+        self.srv_stop_image_processing = self.create_service(Trigger, '/rob498_drone_4/comm/stop_image_processing', self.callback_stop_image_processing)
+
         self.get_logger().info("CommNode started and ready to receive commands.")
         
         # MAVROS services for arming and mode switching
@@ -109,13 +115,7 @@ class CommNode(Node):
             self.vicon_callback,
             10)
         self.first_vicon = None
-        # # Also subscribe to the camera pose to get initial camera pose for frame transform: NOW UNUSED
-        # self.realsense_sub = self.create_subscription(
-        #     Odometry,
-        #     '/camera/pose/sample',
-        #     self.realsense_callback,
-        #     rclpy.qos.qos_profile_system_default)
-        # self.first_realsense = None
+
         # Defines transformation matrix from vicon world frame to cube (map) frame
         self.T_2_0 = None
 
@@ -141,6 +141,17 @@ class CommNode(Node):
             self.obs_callback_D,
             10)
         self.obs_centers = {}
+
+        # Instansiate the Image processing state machine
+        self.image_processor = DroneWaypointProcessor()
+
+        # Subscribe to node that gives waypoints in one shot
+        self.waypoints_sub = self.create_subscription(
+            StringMultiArray,
+            '/rob498_drone_4/comm/waypoint_keys',
+            self.callback_waypoint_keys,
+            10)
+        self.waypoint_keys = None
 
     def arm_drone(self):
         """ Sends command to arm the drone """
@@ -435,6 +446,35 @@ class CommNode(Node):
         # Copy x,y coordinates to obs_centers at key
         self.obs_centers['D'] = (mavros_msg.pose.position.x, mavros_msg.pose.position.y)
 
+    def start_image_processing(self, request, response):
+        self.get_logger().info("Starting image processing...")
+        # Start image processing logic here
+        response.success = True
+        response.message = "Image processing started."
+
+        # Call the start pipeline method with the current waypoint
+        current_waypoint = self.waypoint_keys[self.flight_controller.waypoints_achieved]
+        self.image_processor.start_pipeline(current_waypoint)
+        return response
+    
+    def stop_image_processing(self, request, response):
+        self.get_logger().info("Stopping image processing...")
+        # Stop image processing logic here
+        response.success = True
+        response.message = "Image processing stopped."
+
+        # Set keep hover in flight controller to false
+        self.flight_controller.keep_hover = False
+        return response
+    
+    def callback_waypoint_keys(self, msg):
+        # Handle the waypoint keys received from the service
+        if self.waypoint_keys is not None:
+            return
+        self.get_logger().info(f"Waypoint keys received: {msg.data}")
+        self.waypoint_keys = msg.data
+
+
 def main(args=None):
     # rclpy.init(args=args)
     # node = CommNode()
@@ -446,11 +486,12 @@ def main(args=None):
     rclpy.init(args=args)
     comm_node = CommNode()
     # Assuming both realsense and vicon are attributes added in CommNode
-    executor = MultiThreadedExecutor(num_threads=4)
+    executor = MultiThreadedExecutor(num_threads=5)
     executor.add_node(comm_node)
     executor.add_node(comm_node.realsense)
     executor.add_node(comm_node.vicon)
     executor.add_node(comm_node.flight_controller)
+    executor.add_node(comm_node.image_processor)
 
     try:
         executor.spin()
@@ -459,6 +500,7 @@ def main(args=None):
         comm_node.realsense.destroy_node()
         comm_node.vicon.destroy_node()
         comm_node.flight_controller.destroy_node()
+        comm_node.image_processor.destroy_node()
         rclpy.shutdown()
 
 if __name__ == "__main__":

@@ -9,31 +9,7 @@ from cv_bridge import CvBridge
 import time
 import requests
 import base64
-
-# For camera saving
-def gstreamer_pipeline(
-    sensor_id=0,
-    capture_width=1920,
-    capture_height=1080,
-    display_width=1280,
-    display_height=720,
-    framerate=30,
-    flip_method=0,
-):
-    return (
-        "nvarguscamerasrc sensor-id=%d ! "
-        "video/x-raw(memory:NVMM), width=%d, height=%d, framerate=%d/1 ! "
-        "nvvidconv flip-method=%d ! "
-        "video/x-raw, format=BGRx ! videoconvert ! "
-        "video/x-raw, format=BGR ! appsink"
-        % (
-            sensor_id,
-            capture_width,
-            capture_height,
-            framerate,
-            flip_method,
-        )
-    )
+from std_srvs.srv import Trigger
 
 class DroneWaypointProcessor(Node):
     def __init__(self):
@@ -50,7 +26,7 @@ class DroneWaypointProcessor(Node):
         # for camera: Timer to capture frames from cam at 30 fps
         self.timer_pub = self.create_timer(1.0 / 30, self.capture_frame)  # 30 FPS
         # OpenCV Camera Capture
-        self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
+        self.cap = cv2.VideoCapture(self.gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
         if not self.cap.isOpened():
             self.get_logger().error("Failed to open camera. Check pipeline.")
         # Store latest frame
@@ -69,6 +45,9 @@ class DroneWaypointProcessor(Node):
         # For sending
         self.SERVER = "http://100.66.221.84:5072"
         self.IMAGE_MAP = {}
+
+        # Client to send end_processing service call to comm node
+        self.end_processing_client = self.create_client(Trigger, '/rob498_drone_4/comm/stop_image_processing')
 
     def start_pipeline(self, waypoint_id):
         with self.lock:
@@ -90,6 +69,7 @@ class DroneWaypointProcessor(Node):
             elif self.current_state == 'SENDING':
                 self.handle_sending()
             elif self.current_state == 'DONE':
+                self.call_stop_image_processing_service(self.end_processing_client, 'Stop Image Processing')
                 self.get_logger().info("Processing complete. Waiting for next waypoint...")
                 self.current_state = 'IDLE'
             elif self.current_state == 'ERROR':
@@ -114,10 +94,10 @@ class DroneWaypointProcessor(Node):
         try:
             self.get_logger().info("Selecting sharpest image...")
             # --- Your Laplacian image selection code here ---
-            folder_path = f'~/Downloads/{str(last_waypoint)}'
-            _, best_image = find_sharpest_image(folder_path)
+            folder_path = f'~/Downloads/{str(self.last_waypoint)}'
+            best_filename, best_image = self.find_sharpest_image(folder_path)
             self.cur_best_image = best_image # (h, w, c)
-            self.IMAGE_MAP[last_waypoint] = best_filename
+            self.IMAGE_MAP[self.last_waypoint] = best_filename
             self.current_state = 'INFERENCING'
         except Exception as e:
             self.get_logger().error(f"Image selection failed: {e}")
@@ -140,7 +120,7 @@ class DroneWaypointProcessor(Node):
             if self.confidence:
                 self.send_to_db()
             else:
-                self.get_logger().info(f"No crack detected at waypoint {last_waypoint}")
+                self.get_logger().info(f"No crack detected at waypoint {self.last_waypoint}")
             self.current_state = 'DONE'
         except Exception as e:
             self.get_logger().error(f"API call failed: {e}")
@@ -163,7 +143,7 @@ class DroneWaypointProcessor(Node):
     def save_image(self):
         """Save the latest captured frame every 5 seconds."""
         if self.latest_frame is not None:
-            download_path = os.path.expanduser(f'~/Downloads/{str(last_waypoint)}')
+            download_path = os.path.expanduser(f'~/Downloads/{str(self.last_waypoint)}')
             os.makedirs(download_path, exist_ok=True)
             timestamp = time.strftime("%Y%m%d-%H%M%S")
             file_path = os.path.join(download_path, f"image_{timestamp}.png")
@@ -171,15 +151,41 @@ class DroneWaypointProcessor(Node):
             cv2.imwrite(file_path, self.latest_frame)
             self.get_logger().info(f"Image saved to {file_path}")
 
+    # For camera saving
+    def gstreamer_pipeline(
+        self,
+        sensor_id=0,
+        capture_width=1920,
+        capture_height=1080,
+        display_width=1280,
+        display_height=720,
+        framerate=30,
+        flip_method=0,
+    ):
+        return (
+            "nvarguscamerasrc sensor-id=%d ! "
+            "video/x-raw(memory:NVMM), width=%d, height=%d, framerate=%d/1 ! "
+            "nvvidconv flip-method=%d ! "
+            "video/x-raw, format=BGRx ! videoconvert ! "
+            "video/x-raw, format=BGR ! appsink"
+            % (
+                sensor_id,
+                capture_width,
+                capture_height,
+                framerate,
+                flip_method,
+            )
+        )
+
     ####### SELECTING_IMAGE Helpers ##########
 
-    def laplacian_variance(image):
+    def laplacian_variance(self, image):
         """Compute the variance of the Laplacian of an image."""
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         return cv2.Laplacian(gray, cv2.CV_64F).var()
 
 
-    def find_sharpest_image(folder_path):
+    def find_sharpest_image(self, folder_path):
         """Find the sharpest image in a folder based on Laplacian variance."""
         best_image = None
         best_variance = 0
@@ -193,7 +199,7 @@ class DroneWaypointProcessor(Node):
                 if image is None:
                     continue
 
-                variance = laplacian_variance(image)
+                variance = self.laplacian_variance(image)
                 print(f"{filename}: Variance = {variance}")
 
                 if variance > best_variance:
@@ -251,7 +257,23 @@ class DroneWaypointProcessor(Node):
 
                 except Exception as e:
                     print(f"Error reading or sending image for {building}: {e}")
-    
+
+    def call_stop_image_processing_service(self, client, service_name: str):
+        # Wait for the service to be available
+        while not client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info(f'{service_name} service not available, waiting...')
+        self.get_logger().info(f'Calling {service_name} service...')
+        req = Trigger.Request()
+        future = client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            response = future.result()
+            self.get_logger().info(
+                f'{service_name} response: success={response.success}, message="{response.message}"'
+            )
+        else:
+            self.get_logger().error(f'Exception calling {service_name} service: {future.exception()}')
+
 def main(args=None):
     rclpy.init(args=args)
     node = DroneWaypointProcessor()

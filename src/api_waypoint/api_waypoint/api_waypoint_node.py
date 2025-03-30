@@ -6,6 +6,7 @@ import requests
 import time
 from threading import Lock
 from geometry_msgs.msg import PoseArray, Pose, PoseStamped
+from std_msgs.msg import StringMultiArray
 
 class WaypointProcessorNode(Node):
     """
@@ -43,6 +44,8 @@ class WaypointProcessorNode(Node):
         # Create a publisher for waypoints
         self.publisher = self.create_publisher(PoseArray, '/rob498_drone_4/comm/waypoints', 10)
 
+        # Create a publisher for waypoint string keys
+        self.publisher_keys = self.create_publisher(StringMultiArray, '/rob498_drone_4/comm/waypoint_keys', 10)
         # Create array of site ids to publish to the waypoint topic
         self.loc_keys = []
 
@@ -71,6 +74,7 @@ class WaypointProcessorNode(Node):
         self.first_b = False
         self.first_c = False
         self.first_d = False
+        
     def check_and_update_waypoints(self):
         """
         Periodic callback to check for new waypoints and update their status.
@@ -179,6 +183,11 @@ class WaypointProcessorNode(Node):
             waypoint_array.poses.append(pose)
 
         self.publisher.publish(waypoint_array)
+
+        # Publish the string keys 
+        msg = StringMultiArray()
+        msg.data = self.loc_keys
+        self.publisher_keys.publish(msg)
 
     def vicon_callback_a(self, msg):
         if not self.first_a:

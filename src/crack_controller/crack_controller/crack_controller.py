@@ -30,13 +30,17 @@ class FlightController(Node):
         self.setpoint_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
 
         # **Services**
-        # self.create_response = self.create_service(Trigger, '/comm/test', self.handle_test)
-        # self.land_response = self.stop_service(Trigger, '/comm/land', self.handle_land)
+        self.start_client = self.create_client(Trigger, '/rob498_drone_4/comm/start_image_processing')
 
         # **Timer for Publishing Setpoints (20Hz)**
         self.timer = self.create_timer(0.05, self.control_loop)
 
         self.get_logger().info("Flight Controller Initialized")
+
+        self.waypoints_achieved = 0
+
+        self.keep_hover = False
+        self.called_start_image_processing = False
 
     ## === CALLBACKS === ##
     def pose_callback(self, msg):
@@ -130,11 +134,16 @@ class FlightController(Node):
 
             # Use dist to see if we're within ball radius of waypoint
             ball_radius = 0.25
-            if dist < ball_radius and self.hold_count < 20:
-                self.hold_count += 1
+            if dist < ball_radius and not self.called_start_image_processing:
+                self.call_start_image_processing_service(self.start_client, 'Start Image Processing')
+                self.called_start_image_processing = True # Sets self.keep_hover = True
+            if dist < ball_radius and self.keep_hover:
+                pass
             elif dist < ball_radius and len(self.waypoints):
                 # Update current_waypoint if waypoints list is not empty
                 self.get_logger().info(f"Waypoint reached: {self.current_waypoint}")
+                self.waypoints_achieved += 1
+                self.called_start_image_processing = False
                 self.current_waypoint = self.waypoints.pop(0)
                 self.hold_count = 0
                 self.get_logger().info(f"Next waypoint: {self.current_waypoint}")
@@ -155,6 +164,24 @@ class FlightController(Node):
                 self.get_logger().info(f"Waypoints Complete. Landing!")
             # Publish the waypoint
             self.setpoint_pub.publish(sp)
+            
+    def call_start_image_processing_service(self, client, service_name: str):
+        # Wait for the service to be available
+        while not client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info(f'{service_name} service not available, waiting...')
+        self.get_logger().info(f'Calling {service_name} service...')
+        req = Trigger.Request()
+        future = client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            response = future.result()
+            self.get_logger().info(
+                f'{service_name} response: success={response.success}, message="{response.message}"'
+            )
+            # Flip the hover flag to true
+            self.keep_hover = True
+        else:
+            self.get_logger().error(f'Exception calling {service_name} service: {future.exception()}')
 
 def main(args=None):
     rclpy.init(args=args)
