@@ -36,13 +36,13 @@ class obs_grabber(Node):
         ])
 
         # Create subscribers using message_filters
-        # self.realsense_sub = Subscriber(self, Odometry, '/camera/pose/sample', 
-        #     qos_profile=rclpy.qos.QoSProfile(
-        #         reliability=rclpy.qos.ReliabilityPolicy.BEST_EFFORT,
-        #         durability=rclpy.qos.DurabilityPolicy.VOLATILE,
-        #         depth=10))
+        self.vicon_sub = Subscriber(self, PoseStamped, '/vicon/ROB498_Drone/ROB498_Drone', 
+            qos_profile=rclpy.qos.QoSProfile(
+                reliability=rclpy.qos.ReliabilityPolicy.RELIABLE,
+                durability=rclpy.qos.DurabilityPolicy.VOLATILE,
+                depth=10))
         
-        self.vicon_sub = Subscriber(self, PoseStamped, '/vicon/ROB498_Drone/ROB498_Drone', 10)
+        # self.vicon_sub = Subscriber(self, PoseStamped, '/vicon/ROB498_Drone/ROB498_Drone', 10)
         
         # Create synchronizer for the two topics with a time tolerance of 0.1 seconds
         self.ts = ApproximateTimeSynchronizer(

@@ -1,18 +1,20 @@
+#!usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger  # Service message type for handling commands
 from mavros_msgs.srv import CommandBool, SetMode
 from nav_msgs.msg import Odometry  # use Odometry for reading directly from camera since it has both pose and twist
 from geometry_msgs.msg import PoseStamped, PoseArray
-from exer3_control.flight_controller import FlightController
+from crack_controller.crack_controller import FlightController
 from vicon_bridge.vicon_bridge import ViconBridge
 from realsense2mavros.realsense2mavros import realsense2mavros
 from rclpy.executors import MultiThreadedExecutor
 from tf_transformations import euler_from_quaternion, quaternion_from_euler, quaternion_matrix
 import time
 import numpy as np
-from image_processor.image_processor import DroneWaypointProcessor
-from std_msgs.msg import StringMultiArray
+from image_processor.state_machine import DroneWaypointProcessor
+from std_msgs.msg import String
 
 STATE = 'Init'
 WAYPOINTS = None
@@ -69,7 +71,7 @@ class CommNode(Node):
         self.sub_waypoints = self.create_subscription(PoseArray, 'rob498_drone_4/comm/waypoints', self.callback_waypoints, 10)
         self.create_subscription(PoseStamped, '/mavros/vision_pose/pose', self.pose_callback, 50)
         
-        self.target_altitude = 0.5  # meters
+        self.target_altitude = 0.3  # meters
         
         # Create 20 Hz timer (1/20 = 0.05)
         self.timer = self.create_timer(0.05, self.publish_hover_setpoint)
@@ -147,7 +149,7 @@ class CommNode(Node):
 
         # Subscribe to node that gives waypoints in one shot
         self.waypoints_sub = self.create_subscription(
-            StringMultiArray,
+            String,
             '/rob498_drone_4/comm/waypoint_keys',
             self.callback_waypoint_keys,
             10)
@@ -446,7 +448,7 @@ class CommNode(Node):
         # Copy x,y coordinates to obs_centers at key
         self.obs_centers['D'] = (mavros_msg.pose.position.x, mavros_msg.pose.position.y)
 
-    def start_image_processing(self, request, response):
+    def callback_start_image_processing(self, request, response):
         self.get_logger().info("Starting image processing...")
         # Start image processing logic here
         response.success = True
@@ -457,7 +459,7 @@ class CommNode(Node):
         self.image_processor.start_pipeline(current_waypoint)
         return response
     
-    def stop_image_processing(self, request, response):
+    def callback_stop_image_processing(self, request, response):
         self.get_logger().info("Stopping image processing...")
         # Stop image processing logic here
         response.success = True
@@ -471,8 +473,9 @@ class CommNode(Node):
         # Handle the waypoint keys received from the service
         if self.waypoint_keys is not None:
             return
-        self.get_logger().info(f"Waypoint keys received: {msg.data}")
-        self.waypoint_keys = msg.data
+        
+        self.waypoint_keys = msg.data.split(",")
+        self.get_logger().info(f"Waypoint keys received: {self.waypoint_keys}")
 
 
 def main(args=None):

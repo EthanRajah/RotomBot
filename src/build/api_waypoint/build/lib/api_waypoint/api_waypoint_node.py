@@ -6,6 +6,7 @@ import requests
 import time
 from threading import Lock
 from geometry_msgs.msg import PoseArray, Pose, PoseStamped
+from std_msgs.msg import String
 
 class WaypointProcessorNode(Node):
     """
@@ -16,8 +17,8 @@ class WaypointProcessorNode(Node):
         super().__init__('waypoint_processor_node')
         
         # Parameters
-        # self.ip = "http://10.42.0.103:5072"
-        self.ip = "http://100.66.221.84:5072"
+        self.ip = "http://10.42.0.101:5072"
+        # self.ip = "http://100.66.212.151:5072"
         self.declare_parameter('check_interval_sec', 5.0)  # How often to check for waypoints
         self.declare_parameter('api_base_url', self.ip)
         
@@ -30,10 +31,10 @@ class WaypointProcessorNode(Node):
 
         # Lookup table for buildings -> position + quaternion, make sure all floats
         # Hard code z and orientation so that it matches where the crack is on the pillar (phase)
-        self.lookup = {"A": [0.0, 0.55, 1.0, 0.0, 0.0, 0.707, 0.707], # 90 degree yaw
-                       "B": [-0.55, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0], # 180 yaw
-                       "C": [0.0, -0.55, 1.0, 0.0, 0.0, 0.707, -0.707], # 270 yaw
-                       "D": [0.55, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]} # 0 yaw
+        self.lookup = {"A": [0.0, -0.55, 0.3, 0.0, 0.0, 0.707, 0.707], # 90 degree yaw
+                       "B": [0.55, 0.0, 0.3, 0.0, 0.0, 1.0, 0.0], # 180 yaw
+                       "C": [0.0, 0.55, 0.3, 0.0, 0.0, 0.707, -0.707], # 270 yaw
+                       "D": [-0.55, 0.0, 0.3, 0.0, 0.0, 0.0, 1.0]} # 0 yaw
         
         # For thread safety when accessing shared resources
         self.lock = Lock()
@@ -43,6 +44,8 @@ class WaypointProcessorNode(Node):
         # Create a publisher for waypoints
         self.publisher = self.create_publisher(PoseArray, '/rob498_drone_4/comm/waypoints', 10)
 
+        # Create a publisher for waypoint string keys
+        self.publisher_keys = self.create_publisher(String, '/rob498_drone_4/comm/waypoint_keys', 10)
         # Create array of site ids to publish to the waypoint topic
         self.loc_keys = []
 
@@ -67,7 +70,11 @@ class WaypointProcessorNode(Node):
             '/vicon/ROB498_Obstacle_D/ROB498_Obstacle_D',
             self.vicon_callback_d,
             10)
-
+        self.first_a = False
+        self.first_b = False
+        self.first_c = False
+        self.first_d = False
+        
     def check_and_update_waypoints(self):
         """
         Periodic callback to check for new waypoints and update their status.
@@ -177,81 +184,98 @@ class WaypointProcessorNode(Node):
 
         self.publisher.publish(waypoint_array)
 
+        # Publish the string keys 
+        msg = String()
+        msg.data = ",".join(self.loc_keys)
+        self.publisher_keys.publish(msg)
+
     def vicon_callback_a(self, msg):
-        # Create new PoseStamped message for MAVROS
-        mavros_msg = PoseStamped()
+        if not self.first_a:
+            self.first_a = True
+            # Create new PoseStamped message for MAVROS
+            mavros_msg = PoseStamped()
 
-        # Copy header
-        mavros_msg.header = msg.header
-        mavros_msg.header.frame_id = 'map'
+            # Copy header
+            mavros_msg.header = msg.header
+            mavros_msg.header.frame_id = 'map'
 
-        # Copy vicon position data 
-        mavros_msg.pose.position = msg.pose.position
+            # Copy vicon position data 
+            mavros_msg.pose.position = msg.pose.position
 
-        # Copy orientation data:
-        mavros_msg.pose.orientation = msg.pose.orientation
+            # Copy orientation data:
+            mavros_msg.pose.orientation = msg.pose.orientation
 
-        # Update lookup at this key
-        coords = [msg.pose.position.x + self.lookup['A'][0],
-                  msg.pose.position.y + self.lookup['A'][1]]
-        self.lookup['A'][:2] = coords
+            # Update lookup at this key
+            coords = [msg.pose.position.x + self.lookup['A'][0],
+                    msg.pose.position.y + self.lookup['A'][1],
+                    self.lookup['A'][2]]
+            self.lookup['A'][:3] = coords
 
     def vicon_callback_b(self, msg):
-        # Create new PoseStamped message for MAVROS
-        mavros_msg = PoseStamped()
+        if not self.first_b:
+            self.first_b = True
+            # Create new PoseStamped message for MAVROS
+            mavros_msg = PoseStamped()
 
-        # Copy header
-        mavros_msg.header = msg.header
-        mavros_msg.header.frame_id = 'map'
+            # Copy header
+            mavros_msg.header = msg.header
+            mavros_msg.header.frame_id = 'map'
 
-        # Copy vicon position data 
-        mavros_msg.pose.position = msg.pose.position
+            # Copy vicon position data 
+            mavros_msg.pose.position = msg.pose.position
 
-        # Copy orientation data
-        mavros_msg.pose.orientation = msg.pose.orientation
+            # Copy orientation data
+            mavros_msg.pose.orientation = msg.pose.orientation
 
-        # Update lookup at this key
-        coords = [msg.pose.position.x + self.lookup['B'][0],
-                  msg.pose.position.y + self.lookup['B'][1]]
-        self.lookup['B'][:2] = coords
+            # Update lookup at this key
+            coords = [msg.pose.position.x + self.lookup['B'][0],
+                    msg.pose.position.y + self.lookup['B'][1],
+                    self.lookup['B'][2]]
+            self.lookup['B'][:3] = coords
 
     def vicon_callback_c(self, msg):
-        # Create new PoseStamped message for MAVROS
-        mavros_msg = PoseStamped()
+        if not self.first_c:
+            self.first_c = True
+            # Create new PoseStamped message for MAVROS
+            mavros_msg = PoseStamped()
 
-        # Copy header
-        mavros_msg.header = msg.header
-        mavros_msg.header.frame_id = 'map'
+            # Copy header
+            mavros_msg.header = msg.header
+            mavros_msg.header.frame_id = 'map'
 
-        # Copy vicon position data 
-        mavros_msg.pose.position = msg.pose.position
+            # Copy vicon position data 
+            mavros_msg.pose.position = msg.pose.position
 
-        # Copy orientation data
-        mavros_msg.pose.orientation = msg.pose.orientation
+            # Copy orientation data
+            mavros_msg.pose.orientation = msg.pose.orientation
 
-        # Update lookup at this key
-        coords = [msg.pose.position.x + self.lookup['C'][0],
-                  msg.pose.position.y + self.lookup['C'][1]]
-        self.lookup['C'][:2] = coords
+            # Update lookup at this key
+            coords = [msg.pose.position.x + self.lookup['C'][0],
+                    msg.pose.position.y + self.lookup['C'][1],
+                    self.lookup['C'][2]]
+            self.lookup['C'][:3] = coords
     
     def vicon_callback_d(self, msg):
-        # Create new PoseStamped message for MAVROS
-        mavros_msg = PoseStamped()
+        if not self.first_d:
+            self.first_d = True
+            # Create new PoseStamped message for MAVROS
+            mavros_msg = PoseStamped()
 
-        # Copy header
-        mavros_msg.header = msg.header
-        mavros_msg.header.frame_id = 'map'
+            # Copy header
+            mavros_msg.header = msg.header
+            mavros_msg.header.frame_id = 'map'
 
-        # Copy vicon position data 
-        mavros_msg.pose.position = msg.pose.position
+            # Copy vicon position data 
+            mavros_msg.pose.position = msg.pose.position
 
-        # Copy orientation data
-        mavros_msg.pose.orientation = msg.pose.orientation
+            # Copy orientation data
+            mavros_msg.pose.orientation = msg.pose.orientation
 
-        # Update lookup at this key
-        coords = [msg.pose.position.x + self.lookup['D'][0],
-                  msg.pose.position.y + self.lookup['D'][1]]
-        self.lookup['D'][:2] = coords
+            # Update lookup at this key
+            coords = [msg.pose.position.x + self.lookup['D'][0],
+                    msg.pose.position.y + self.lookup['D'][1],
+                    self.lookup['D'][2]]
+            self.lookup['D'][:3] = coords
         
 def main(args=None):
     rclpy.init(args=args)

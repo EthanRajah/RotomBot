@@ -42,7 +42,7 @@ class CommNode(Node):
     def __init__(self):
         super().__init__('comm_node')
         # HARDCODE Test swapper field
-        self.test2 = True
+        self.test2 = False
         self.get_logger().info("Test2 flag: " + str(self.test2))
         # Initialize publishers to/mavros/vision_pose/pose
         self.vicon = ViconBridge()

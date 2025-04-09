@@ -1,0 +1,1001 @@
+[1.723s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.723s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7faed87880>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7faed87880>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7faebe4370>)
+[3.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.036s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jetson/ros2_ws/src'
+[3.036s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.037s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.037s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.038s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.038s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.038s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.038s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.039s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.039s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.150s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.152s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extensions ['ignore', 'ignore_ament_install']
+[3.153s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extension 'ignore'
+[3.153s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extension 'ignore_ament_install'
+[3.154s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extensions ['colcon_pkg']
+[3.154s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extension 'colcon_pkg'
+[3.154s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extensions ['colcon_meta']
+[3.154s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extension 'colcon_meta'
+[3.155s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extensions ['ros']
+[3.155s] Level 1:colcon.colcon_core.package_identification:_identify(api_waypoint) by extension 'ros'
+[3.171s] DEBUG:colcon.colcon_core.package_identification:Package 'api_waypoint' with type 'ros.ament_python' and name 'api_waypoint'
+[3.172s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.172s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.173s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.174s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extensions ['ignore', 'ignore_ament_install']
+[3.174s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extension 'ignore'
+[3.174s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extension 'ignore_ament_install'
+[3.175s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extensions ['colcon_pkg']
+[3.175s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extension 'colcon_pkg'
+[3.175s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extensions ['colcon_meta']
+[3.175s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extension 'colcon_meta'
+[3.176s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extensions ['ros']
+[3.176s] Level 1:colcon.colcon_core.package_identification:_identify(comm_node) by extension 'ros'
+[3.180s] DEBUG:colcon.colcon_core.package_identification:Package 'comm_node' with type 'ros.ament_python' and name 'comm_node'
+[3.180s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extensions ['ignore', 'ignore_ament_install']
+[3.181s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extension 'ignore'
+[3.181s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extension 'ignore_ament_install'
+[3.181s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extensions ['colcon_pkg']
+[3.181s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extension 'colcon_pkg'
+[3.182s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extensions ['colcon_meta']
+[3.182s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extension 'colcon_meta'
+[3.182s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extensions ['ros']
+[3.182s] Level 1:colcon.colcon_core.package_identification:_identify(crack_comm) by extension 'ros'
+[3.186s] DEBUG:colcon.colcon_core.package_identification:Package 'crack_comm' with type 'ros.ament_python' and name 'crack_comm'
+[3.187s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extensions ['ignore', 'ignore_ament_install']
+[3.187s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extension 'ignore'
+[3.187s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extension 'ignore_ament_install'
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extensions ['colcon_pkg']
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extension 'colcon_pkg'
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extensions ['colcon_meta']
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extension 'colcon_meta'
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extensions ['ros']
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(crack_controller) by extension 'ros'
+[3.193s] DEBUG:colcon.colcon_core.package_identification:Package 'crack_controller' with type 'ros.ament_python' and name 'crack_controller'
+[3.194s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extensions ['ignore', 'ignore_ament_install']
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'ignore'
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'ignore_ament_install'
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extensions ['colcon_pkg']
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'colcon_pkg'
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extensions ['colcon_meta']
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'colcon_meta'
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extensions ['ros']
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'ros'
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extensions ['cmake', 'python']
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'cmake'
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'python'
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extensions ['python_setup_py']
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(drone_images) by extension 'python_setup_py'
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extensions ['ignore', 'ignore_ament_install']
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extension 'ignore'
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extension 'ignore_ament_install'
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extensions ['colcon_pkg']
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extension 'colcon_pkg'
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extensions ['colcon_meta']
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extension 'colcon_meta'
+[3.201s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extensions ['ros']
+[3.201s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_vicon_republisher) by extension 'ros'
+[3.205s] DEBUG:colcon.colcon_core.package_identification:Package 'dummy_vicon_republisher' with type 'ros.ament_python' and name 'dummy_vicon_republisher'
+[3.205s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extensions ['ignore', 'ignore_ament_install']
+[3.206s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extension 'ignore'
+[3.206s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extension 'ignore_ament_install'
+[3.207s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extensions ['colcon_pkg']
+[3.207s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extension 'colcon_pkg'
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extensions ['colcon_meta']
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extension 'colcon_meta'
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extensions ['ros']
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(dummy_waypoint_publisher) by extension 'ros'
+[3.218s] DEBUG:colcon.colcon_core.package_identification:Package 'dummy_waypoint_publisher' with type 'ros.ament_python' and name 'dummy_waypoint_publisher'
+[3.218s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extensions ['ignore', 'ignore_ament_install']
+[3.219s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extension 'ignore'
+[3.219s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extension 'ignore_ament_install'
+[3.219s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extensions ['colcon_pkg']
+[3.219s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extension 'colcon_pkg'
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extensions ['colcon_meta']
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extension 'colcon_meta'
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extensions ['ros']
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(exer2_control) by extension 'ros'
+[3.224s] DEBUG:colcon.colcon_core.package_identification:Package 'exer2_control' with type 'ros.ament_python' and name 'exer2_control'
+[3.224s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extensions ['ignore', 'ignore_ament_install']
+[3.224s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extension 'ignore'
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extension 'ignore_ament_install'
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extensions ['colcon_pkg']
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extension 'colcon_pkg'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extensions ['colcon_meta']
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extension 'colcon_meta'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extensions ['ros']
+[3.228s] Level 1:colcon.colcon_core.package_identification:_identify(exer3_control) by extension 'ros'
+[3.237s] DEBUG:colcon.colcon_core.package_identification:Package 'exer3_control' with type 'ros.ament_python' and name 'exer3_control'
+[3.238s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extensions ['ignore', 'ignore_ament_install']
+[3.238s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extension 'ignore'
+[3.238s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extension 'ignore_ament_install'
+[3.239s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extensions ['colcon_pkg']
+[3.239s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extension 'colcon_pkg'
+[3.239s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extensions ['colcon_meta']
+[3.239s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extension 'colcon_meta'
+[3.240s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extensions ['ros']
+[3.240s] Level 1:colcon.colcon_core.package_identification:_identify(image_processor) by extension 'ros'
+[3.244s] DEBUG:colcon.colcon_core.package_identification:Package 'image_processor' with type 'ros.ament_python' and name 'image_processor'
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extensions ['ignore', 'ignore_ament_install']
+[3.245s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extension 'ignore'
+[3.245s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extension 'ignore_ament_install'
+[3.245s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extensions ['colcon_pkg']
+[3.246s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extension 'colcon_pkg'
+[3.246s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extensions ['colcon_meta']
+[3.246s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extension 'colcon_meta'
+[3.246s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extensions ['ros']
+[3.247s] Level 1:colcon.colcon_core.package_identification:_identify(image_saver) by extension 'ros'
+[3.255s] DEBUG:colcon.colcon_core.package_identification:Package 'image_saver' with type 'ros.ament_python' and name 'image_saver'
+[3.256s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.257s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.257s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.257s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extensions ['ignore', 'ignore_ament_install']
+[3.258s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'ignore'
+[3.258s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'ignore_ament_install'
+[3.258s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extensions ['colcon_pkg']
+[3.258s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'colcon_pkg'
+[3.259s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extensions ['colcon_meta']
+[3.259s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'colcon_meta'
+[3.259s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extensions ['ros']
+[3.259s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'ros'
+[3.260s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extensions ['cmake', 'python']
+[3.260s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'cmake'
+[3.260s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'python'
+[3.261s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extensions ['python_setup_py']
+[3.261s] Level 1:colcon.colcon_core.package_identification:_identify(launcher) by extension 'python_setup_py'
+[3.262s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.262s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.263s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.263s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extensions ['ignore', 'ignore_ament_install']
+[3.264s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'ignore'
+[3.264s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'ignore_ament_install'
+[3.264s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extensions ['colcon_pkg']
+[3.264s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'colcon_pkg'
+[3.264s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extensions ['colcon_meta']
+[3.265s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'colcon_meta'
+[3.265s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extensions ['ros']
+[3.265s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'ros'
+[3.265s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extensions ['cmake', 'python']
+[3.265s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'cmake'
+[3.266s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'python'
+[3.266s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extensions ['python_setup_py']
+[3.266s] Level 1:colcon.colcon_core.package_identification:_identify(myenv) by extension 'python_setup_py'
+[3.267s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extensions ['ignore', 'ignore_ament_install']
+[3.268s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'ignore'
+[3.268s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'ignore_ament_install'
+[3.268s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extensions ['colcon_pkg']
+[3.269s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'colcon_pkg'
+[3.269s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extensions ['colcon_meta']
+[3.269s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'colcon_meta'
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extensions ['ros']
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'ros'
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extensions ['cmake', 'python']
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'cmake'
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'python'
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extensions ['python_setup_py']
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/bin) by extension 'python_setup_py'
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extensions ['ignore', 'ignore_ament_install']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'ignore'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'ignore_ament_install'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extensions ['colcon_pkg']
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'colcon_pkg'
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extensions ['colcon_meta']
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'colcon_meta'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extensions ['ros']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'ros'
+[3.276s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extensions ['cmake', 'python']
+[3.276s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'cmake'
+[3.276s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'python'
+[3.276s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extensions ['python_setup_py']
+[3.276s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/include) by extension 'python_setup_py'
+[3.277s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extensions ['ignore', 'ignore_ament_install']
+[3.278s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'ignore'
+[3.278s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'ignore_ament_install'
+[3.278s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extensions ['colcon_pkg']
+[3.278s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'colcon_pkg'
+[3.278s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extensions ['colcon_meta']
+[3.279s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'colcon_meta'
+[3.279s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extensions ['ros']
+[3.279s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'ros'
+[3.279s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extensions ['cmake', 'python']
+[3.280s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'cmake'
+[3.280s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'python'
+[3.280s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extensions ['python_setup_py']
+[3.280s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib) by extension 'python_setup_py'
+[3.281s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extensions ['ignore', 'ignore_ament_install']
+[3.281s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'ignore'
+[3.281s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'ignore_ament_install'
+[3.281s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extensions ['colcon_pkg']
+[3.282s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'colcon_pkg'
+[3.282s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extensions ['colcon_meta']
+[3.282s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'colcon_meta'
+[3.282s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extensions ['ros']
+[3.282s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'ros'
+[3.283s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extensions ['cmake', 'python']
+[3.283s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'cmake'
+[3.283s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'python'
+[3.283s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extensions ['python_setup_py']
+[3.283s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6) by extension 'python_setup_py'
+[3.284s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extensions ['ignore', 'ignore_ament_install']
+[3.284s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'ignore'
+[3.285s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'ignore_ament_install'
+[3.285s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extensions ['colcon_pkg']
+[3.285s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'colcon_pkg'
+[3.285s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extensions ['colcon_meta']
+[3.285s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'colcon_meta'
+[3.286s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extensions ['ros']
+[3.286s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'ros'
+[3.286s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extensions ['cmake', 'python']
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'cmake'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'python'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extensions ['python_setup_py']
+[3.288s] Level 1:colcon.colcon_core.package_identification:_identify(myenv/lib/python3.6/site-packages) by extension 'python_setup_py'
+[3.288s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extensions ['ignore', 'ignore_ament_install']
+[3.289s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extension 'ignore'
+[3.289s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extension 'ignore_ament_install'
+[3.290s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extensions ['colcon_pkg']
+[3.290s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extension 'colcon_pkg'
+[3.290s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extensions ['colcon_meta']
+[3.290s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extension 'colcon_meta'
+[3.291s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extensions ['ros']
+[3.291s] Level 1:colcon.colcon_core.package_identification:_identify(px4_autonomy_modules) by extension 'ros'
+[3.299s] DEBUG:colcon.colcon_core.package_identification:Package 'px4_autonomy_modules' with type 'ros.ament_cmake' and name 'px4_autonomy_modules'
+[3.300s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extensions ['ignore', 'ignore_ament_install']
+[3.301s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extension 'ignore'
+[3.301s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extension 'ignore_ament_install'
+[3.301s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extensions ['colcon_pkg']
+[3.301s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extension 'colcon_pkg'
+[3.301s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extensions ['colcon_meta']
+[3.302s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extension 'colcon_meta'
+[3.302s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extensions ['ros']
+[3.302s] Level 1:colcon.colcon_core.package_identification:_identify(realsense2mavros) by extension 'ros'
+[3.307s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense2mavros' with type 'ros.ament_python' and name 'realsense2mavros'
+[3.307s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['ignore', 'ignore_ament_install']
+[3.308s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'ignore'
+[3.308s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'ignore_ament_install'
+[3.309s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['colcon_pkg']
+[3.309s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'colcon_pkg'
+[3.309s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['colcon_meta']
+[3.310s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'colcon_meta'
+[3.310s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['ros']
+[3.310s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'ros'
+[3.311s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['cmake', 'python']
+[3.311s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'cmake'
+[3.311s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'python'
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extensions ['python_setup_py']
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(task2) by extension 'python_setup_py'
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extensions ['ignore', 'ignore_ament_install']
+[3.313s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extension 'ignore'
+[3.313s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extension 'ignore_ament_install'
+[3.314s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extensions ['colcon_pkg']
+[3.314s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extension 'colcon_pkg'
+[3.314s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extensions ['colcon_meta']
+[3.315s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extension 'colcon_meta'
+[3.315s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extensions ['ros']
+[3.315s] Level 1:colcon.colcon_core.package_identification:_identify(unit_tester) by extension 'ros'
+[3.319s] DEBUG:colcon.colcon_core.package_identification:Package 'unit_tester' with type 'ros.ament_python' and name 'unit_tester'
+[3.320s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extensions ['ignore', 'ignore_ament_install']
+[3.320s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extension 'ignore'
+[3.320s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extension 'ignore_ament_install'
+[3.320s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extensions ['colcon_pkg']
+[3.321s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extension 'colcon_pkg'
+[3.321s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extensions ['colcon_meta']
+[3.321s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extension 'colcon_meta'
+[3.321s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extensions ['ros']
+[3.322s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_bridge) by extension 'ros'
+[3.327s] DEBUG:colcon.colcon_core.package_identification:Package 'vicon_bridge' with type 'ros.ament_python' and name 'vicon_bridge'
+[3.327s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extensions ['ignore', 'ignore_ament_install']
+[3.328s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extension 'ignore'
+[3.328s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extension 'ignore_ament_install'
+[3.328s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extensions ['colcon_pkg']
+[3.329s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extension 'colcon_pkg'
+[3.329s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extensions ['colcon_meta']
+[3.329s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extension 'colcon_meta'
+[3.330s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extensions ['ros']
+[3.330s] Level 1:colcon.colcon_core.package_identification:_identify(vicon_obstacle_republisher) by extension 'ros'
+[3.339s] DEBUG:colcon.colcon_core.package_identification:Package 'vicon_obstacle_republisher' with type 'ros.ament_python' and name 'vicon_obstacle_republisher'
+[3.339s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extensions ['ignore', 'ignore_ament_install']
+[3.340s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extension 'ignore'
+[3.340s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extension 'ignore_ament_install'
+[3.340s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extensions ['colcon_pkg']
+[3.341s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extension 'colcon_pkg'
+[3.341s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extensions ['colcon_meta']
+[3.341s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extension 'colcon_meta'
+[3.341s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extensions ['ros']
+[3.341s] Level 1:colcon.colcon_core.package_identification:_identify(waypoint_nav) by extension 'ros'
+[3.346s] DEBUG:colcon.colcon_core.package_identification:Package 'waypoint_nav' with type 'ros.ament_python' and name 'waypoint_nav'
+[3.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[3.526s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.547s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/jetson/ros2_ws/install
+[3.555s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/foxy
+[3.565s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.997s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'cmake_args' from command line to 'None'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'cmake_target' from command line to 'None'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'cmake_clean_cache' from command line to 'False'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'cmake_clean_first' from command line to 'False'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'cmake_force_configure' from command line to 'False'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'ament_cmake_args' from command line to 'None'
+[3.998s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'catkin_cmake_args' from command line to 'None'
+[3.999s] Level 5:colcon.colcon_core.verb:set package 'api_waypoint' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.999s] DEBUG:colcon.colcon_core.verb:Building package 'api_waypoint' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/api_waypoint', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/api_waypoint', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/api_waypoint', 'symlink_install': False, 'test_result_base': None}
+[4.001s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'cmake_args' from command line to 'None'
+[4.001s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'cmake_target' from command line to 'None'
+[4.001s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.001s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'cmake_clean_cache' from command line to 'False'
+[4.001s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'cmake_clean_first' from command line to 'False'
+[4.002s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'cmake_force_configure' from command line to 'False'
+[4.002s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'ament_cmake_args' from command line to 'None'
+[4.002s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'catkin_cmake_args' from command line to 'None'
+[4.002s] Level 5:colcon.colcon_core.verb:set package 'comm_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.002s] DEBUG:colcon.colcon_core.verb:Building package 'comm_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/comm_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/comm_node', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/comm_node', 'symlink_install': False, 'test_result_base': None}
+[4.004s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'cmake_args' from command line to 'None'
+[4.004s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'cmake_target' from command line to 'None'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'cmake_clean_cache' from command line to 'False'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'cmake_clean_first' from command line to 'False'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'cmake_force_configure' from command line to 'False'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'ament_cmake_args' from command line to 'None'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'catkin_cmake_args' from command line to 'None'
+[4.005s] Level 5:colcon.colcon_core.verb:set package 'crack_comm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.005s] DEBUG:colcon.colcon_core.verb:Building package 'crack_comm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/crack_comm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/crack_comm', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/crack_comm', 'symlink_install': False, 'test_result_base': None}
+[4.008s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'cmake_args' from command line to 'None'
+[4.008s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'cmake_target' from command line to 'None'
+[4.008s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.008s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[4.008s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'cmake_clean_first' from command line to 'False'
+[4.009s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'cmake_force_configure' from command line to 'False'
+[4.009s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'ament_cmake_args' from command line to 'None'
+[4.009s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[4.009s] Level 5:colcon.colcon_core.verb:set package 'crack_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.009s] DEBUG:colcon.colcon_core.verb:Building package 'crack_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/crack_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/crack_controller', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/crack_controller', 'symlink_install': False, 'test_result_base': None}
+[4.012s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'cmake_args' from command line to 'None'
+[4.012s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'cmake_target' from command line to 'None'
+[4.012s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.013s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'cmake_clean_cache' from command line to 'False'
+[4.013s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'cmake_clean_first' from command line to 'False'
+[4.013s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'cmake_force_configure' from command line to 'False'
+[4.013s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'ament_cmake_args' from command line to 'None'
+[4.013s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'catkin_cmake_args' from command line to 'None'
+[4.013s] Level 5:colcon.colcon_core.verb:set package 'dummy_vicon_republisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.013s] DEBUG:colcon.colcon_core.verb:Building package 'dummy_vicon_republisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/dummy_vicon_republisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/dummy_vicon_republisher', 'symlink_install': False, 'test_result_base': None}
+[4.016s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'cmake_args' from command line to 'None'
+[4.016s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'cmake_target' from command line to 'None'
+[4.016s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.016s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[4.016s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[4.017s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[4.017s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[4.017s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[4.017s] Level 5:colcon.colcon_core.verb:set package 'dummy_waypoint_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.017s] DEBUG:colcon.colcon_core.verb:Building package 'dummy_waypoint_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/dummy_waypoint_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/dummy_waypoint_publisher', 'symlink_install': False, 'test_result_base': None}
+[4.019s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'cmake_args' from command line to 'None'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'cmake_target' from command line to 'None'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'cmake_clean_first' from command line to 'False'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'cmake_force_configure' from command line to 'False'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'ament_cmake_args' from command line to 'None'
+[4.020s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[4.021s] Level 5:colcon.colcon_core.verb:set package 'exer2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.021s] DEBUG:colcon.colcon_core.verb:Building package 'exer2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/exer2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/exer2_control', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/exer2_control', 'symlink_install': False, 'test_result_base': None}
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'cmake_args' from command line to 'None'
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'cmake_target' from command line to 'None'
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'cmake_clean_cache' from command line to 'False'
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'cmake_clean_first' from command line to 'False'
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'cmake_force_configure' from command line to 'False'
+[4.023s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'ament_cmake_args' from command line to 'None'
+[4.024s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'catkin_cmake_args' from command line to 'None'
+[4.024s] Level 5:colcon.colcon_core.verb:set package 'exer3_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.024s] DEBUG:colcon.colcon_core.verb:Building package 'exer3_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/exer3_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/exer3_control', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/exer3_control', 'symlink_install': False, 'test_result_base': None}
+[4.026s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_args' from command line to 'None'
+[4.027s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_target' from command line to 'None'
+[4.027s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.027s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_clean_cache' from command line to 'False'
+[4.027s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_clean_first' from command line to 'False'
+[4.027s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_force_configure' from command line to 'False'
+[4.027s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'ament_cmake_args' from command line to 'None'
+[4.028s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'catkin_cmake_args' from command line to 'None'
+[4.028s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.028s] DEBUG:colcon.colcon_core.verb:Building package 'image_processor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/image_processor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/image_processor', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/image_processor', 'symlink_install': False, 'test_result_base': None}
+[4.030s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'cmake_args' from command line to 'None'
+[4.031s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'cmake_target' from command line to 'None'
+[4.031s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.031s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'cmake_clean_cache' from command line to 'False'
+[4.031s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'cmake_clean_first' from command line to 'False'
+[4.031s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'cmake_force_configure' from command line to 'False'
+[4.031s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'ament_cmake_args' from command line to 'None'
+[4.032s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'catkin_cmake_args' from command line to 'None'
+[4.032s] Level 5:colcon.colcon_core.verb:set package 'image_saver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.032s] DEBUG:colcon.colcon_core.verb:Building package 'image_saver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/image_saver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/image_saver', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/image_saver', 'symlink_install': False, 'test_result_base': None}
+[4.034s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'cmake_args' from command line to 'None'
+[4.035s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'cmake_target' from command line to 'None'
+[4.035s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.035s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'cmake_clean_cache' from command line to 'False'
+[4.035s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'cmake_clean_first' from command line to 'False'
+[4.035s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'cmake_force_configure' from command line to 'False'
+[4.036s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'ament_cmake_args' from command line to 'None'
+[4.036s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'catkin_cmake_args' from command line to 'None'
+[4.036s] Level 5:colcon.colcon_core.verb:set package 'px4_autonomy_modules' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.036s] DEBUG:colcon.colcon_core.verb:Building package 'px4_autonomy_modules' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/px4_autonomy_modules', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/px4_autonomy_modules', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/px4_autonomy_modules', 'symlink_install': False, 'test_result_base': None}
+[4.038s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'cmake_args' from command line to 'None'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'cmake_target' from command line to 'None'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'cmake_clean_cache' from command line to 'False'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'cmake_clean_first' from command line to 'False'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'cmake_force_configure' from command line to 'False'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'ament_cmake_args' from command line to 'None'
+[4.039s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'catkin_cmake_args' from command line to 'None'
+[4.040s] Level 5:colcon.colcon_core.verb:set package 'realsense2mavros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.040s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2mavros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/realsense2mavros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/realsense2mavros', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/realsense2mavros', 'symlink_install': False, 'test_result_base': None}
+[4.042s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'cmake_args' from command line to 'None'
+[4.042s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'cmake_target' from command line to 'None'
+[4.042s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.042s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'cmake_clean_cache' from command line to 'False'
+[4.042s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'cmake_clean_first' from command line to 'False'
+[4.042s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'cmake_force_configure' from command line to 'False'
+[4.043s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'ament_cmake_args' from command line to 'None'
+[4.043s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'catkin_cmake_args' from command line to 'None'
+[4.043s] Level 5:colcon.colcon_core.verb:set package 'unit_tester' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.043s] DEBUG:colcon.colcon_core.verb:Building package 'unit_tester' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/unit_tester', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/unit_tester', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/unit_tester', 'symlink_install': False, 'test_result_base': None}
+[4.045s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'cmake_args' from command line to 'None'
+[4.045s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'cmake_target' from command line to 'None'
+[4.045s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.045s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[4.046s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[4.046s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[4.046s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[4.046s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[4.046s] Level 5:colcon.colcon_core.verb:set package 'vicon_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.046s] DEBUG:colcon.colcon_core.verb:Building package 'vicon_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/vicon_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/vicon_bridge', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/vicon_bridge', 'symlink_install': False, 'test_result_base': None}
+[4.049s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'cmake_args' from command line to 'None'
+[4.049s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'cmake_target' from command line to 'None'
+[4.049s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.049s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'cmake_clean_cache' from command line to 'False'
+[4.050s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'cmake_clean_first' from command line to 'False'
+[4.050s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'cmake_force_configure' from command line to 'False'
+[4.050s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'ament_cmake_args' from command line to 'None'
+[4.050s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'catkin_cmake_args' from command line to 'None'
+[4.050s] Level 5:colcon.colcon_core.verb:set package 'vicon_obstacle_republisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.050s] DEBUG:colcon.colcon_core.verb:Building package 'vicon_obstacle_republisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/vicon_obstacle_republisher', 'symlink_install': False, 'test_result_base': None}
+[4.053s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_args' from command line to 'None'
+[4.053s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_target' from command line to 'None'
+[4.053s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.053s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_clean_cache' from command line to 'False'
+[4.053s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_clean_first' from command line to 'False'
+[4.054s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_force_configure' from command line to 'False'
+[4.054s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'ament_cmake_args' from command line to 'None'
+[4.054s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'catkin_cmake_args' from command line to 'None'
+[4.054s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.054s] DEBUG:colcon.colcon_core.verb:Building package 'waypoint_nav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetson/ros2_ws/src/build/waypoint_nav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetson/ros2_ws/src/install/waypoint_nav', 'merge_install': False, 'path': '/home/jetson/ros2_ws/src/waypoint_nav', 'symlink_install': False, 'test_result_base': None}
+[4.055s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[4.060s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[4.061s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/api_waypoint' with build type 'ament_python'
+[4.062s] Level 1:colcon.colcon_core.shell:create_environment_hook('api_waypoint', 'ament_prefix_path')
+[4.097s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[4.098s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/hook/ament_prefix_path.ps1'
+[4.110s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/hook/ament_prefix_path.dsv'
+[4.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/hook/ament_prefix_path.sh'
+[4.120s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.120s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.150s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/comm_node' with build type 'ament_python'
+[4.151s] Level 1:colcon.colcon_core.shell:create_environment_hook('comm_node', 'ament_prefix_path')
+[4.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/hook/ament_prefix_path.ps1'
+[4.157s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/hook/ament_prefix_path.dsv'
+[4.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/hook/ament_prefix_path.sh'
+[4.164s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.164s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.198s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/crack_comm' with build type 'ament_python'
+[4.200s] Level 1:colcon.colcon_core.shell:create_environment_hook('crack_comm', 'ament_prefix_path')
+[4.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/hook/ament_prefix_path.ps1'
+[4.205s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/hook/ament_prefix_path.dsv'
+[4.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/hook/ament_prefix_path.sh'
+[4.213s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.213s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.242s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/crack_controller' with build type 'ament_python'
+[4.244s] Level 1:colcon.colcon_core.shell:create_environment_hook('crack_controller', 'ament_prefix_path')
+[4.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/hook/ament_prefix_path.ps1'
+[4.256s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/hook/ament_prefix_path.dsv'
+[4.259s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/hook/ament_prefix_path.sh'
+[4.263s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.263s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.228s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/api_waypoint'
+[6.231s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.968s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/comm_node'
+[7.971s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.972s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.645s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/crack_comm'
+[9.647s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.649s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.626s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/crack_controller'
+[11.629s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.631s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[15.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/crack_comm': PYTHONPATH=/home/jetson/ros2_ws/src/build/crack_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/crack_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/crack_comm build --build-base /home/jetson/ros2_ws/src/build/crack_comm/build install --record /home/jetson/ros2_ws/src/build/crack_comm/install.log --install-scripts $base/lib/crack_comm --single-version-externally-managed install_data
+[15.771s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/api_waypoint': PYTHONPATH=/home/jetson/ros2_ws/src/build/api_waypoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/api_waypoint build --build-base /home/jetson/ros2_ws/src/build/api_waypoint/build install --record /home/jetson/ros2_ws/src/build/api_waypoint/install.log --install-scripts $base/lib/api_waypoint --single-version-externally-managed install_data
+[15.803s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/comm_node': PYTHONPATH=/home/jetson/ros2_ws/src/build/comm_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/comm_node build --build-base /home/jetson/ros2_ws/src/build/comm_node/build install --record /home/jetson/ros2_ws/src/build/comm_node/install.log --install-scripts $base/lib/comm_node --single-version-externally-managed install_data
+[15.825s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/crack_controller': PYTHONPATH=/home/jetson/ros2_ws/src/build/crack_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/crack_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/crack_controller build --build-base /home/jetson/ros2_ws/src/build/crack_controller/build install --record /home/jetson/ros2_ws/src/build/crack_controller/install.log --install-scripts $base/lib/crack_controller --single-version-externally-managed install_data
+[18.795s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/crack_comm' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/crack_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/crack_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/crack_comm build --build-base /home/jetson/ros2_ws/src/build/crack_comm/build install --record /home/jetson/ros2_ws/src/build/crack_comm/install.log --install-scripts $base/lib/crack_comm --single-version-externally-managed install_data
+[18.852s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm' for CMake module files
+[18.864s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm' for CMake config files
+[18.877s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm/lib'
+[18.882s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm/bin'
+[18.896s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm/lib/pkgconfig/crack_comm.pc'
+[18.899s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm/lib/python3.8/site-packages'
+[18.900s] Level 1:colcon.colcon_core.shell:create_environment_hook('crack_comm', 'pythonpath')
+[18.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/hook/pythonpath.ps1'
+[18.917s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/hook/pythonpath.dsv'
+[18.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/hook/pythonpath.sh'
+[18.941s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_comm/bin'
+[18.942s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(crack_comm)
+[18.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/package.ps1'
+[18.964s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/package.dsv'
+[18.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/package.sh'
+[18.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/package.bash'
+[18.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_comm/share/crack_comm/package.zsh'
+[19.003s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/crack_comm/share/colcon-core/packages/crack_comm)
+[19.009s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/dummy_vicon_republisher' with build type 'ament_python'
+[19.013s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_vicon_republisher', 'ament_prefix_path')
+[19.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/hook/ament_prefix_path.ps1'
+[19.018s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/hook/ament_prefix_path.dsv'
+[19.020s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/hook/ament_prefix_path.sh'
+[19.028s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.029s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.090s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint' for CMake module files
+[19.095s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/api_waypoint' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/api_waypoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/api_waypoint build --build-base /home/jetson/ros2_ws/src/build/api_waypoint/build install --record /home/jetson/ros2_ws/src/build/api_waypoint/install.log --install-scripts $base/lib/api_waypoint --single-version-externally-managed install_data
+[19.111s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint' for CMake config files
+[19.115s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint/lib'
+[19.117s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint/bin'
+[19.117s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint/lib/pkgconfig/api_waypoint.pc'
+[19.119s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint/lib/python3.8/site-packages'
+[19.120s] Level 1:colcon.colcon_core.shell:create_environment_hook('api_waypoint', 'pythonpath')
+[19.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/hook/pythonpath.ps1'
+[19.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/hook/pythonpath.dsv'
+[19.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/hook/pythonpath.sh'
+[19.139s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/api_waypoint/bin'
+[19.139s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(api_waypoint)
+[19.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/package.ps1'
+[19.159s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/package.dsv'
+[19.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/package.sh'
+[19.172s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/package.bash'
+[19.178s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/api_waypoint/share/api_waypoint/package.zsh'
+[19.181s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/api_waypoint/share/colcon-core/packages/api_waypoint)
+[19.199s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/dummy_waypoint_publisher' with build type 'ament_python'
+[19.202s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_waypoint_publisher', 'ament_prefix_path')
+[19.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/hook/ament_prefix_path.ps1'
+[19.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/hook/ament_prefix_path.dsv'
+[19.213s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/hook/ament_prefix_path.sh'
+[19.219s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.220s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.271s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller' for CMake module files
+[19.273s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/crack_controller' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/crack_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/crack_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/crack_controller build --build-base /home/jetson/ros2_ws/src/build/crack_controller/build install --record /home/jetson/ros2_ws/src/build/crack_controller/install.log --install-scripts $base/lib/crack_controller --single-version-externally-managed install_data
+[19.280s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller' for CMake config files
+[19.284s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller/lib'
+[19.284s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller/bin'
+[19.285s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller/lib/pkgconfig/crack_controller.pc'
+[19.287s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller/lib/python3.8/site-packages'
+[19.287s] Level 1:colcon.colcon_core.shell:create_environment_hook('crack_controller', 'pythonpath')
+[19.290s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/hook/pythonpath.ps1'
+[19.293s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/hook/pythonpath.dsv'
+[19.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/hook/pythonpath.sh'
+[19.298s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/crack_controller/bin'
+[19.298s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(crack_controller)
+[19.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/package.ps1'
+[19.306s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/package.dsv'
+[19.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/package.sh'
+[19.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/package.bash'
+[19.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/crack_controller/share/crack_controller/package.zsh'
+[19.335s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/crack_controller/share/colcon-core/packages/crack_controller)
+[19.343s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/exer2_control' with build type 'ament_python'
+[19.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('exer2_control', 'ament_prefix_path')
+[19.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/hook/ament_prefix_path.ps1'
+[19.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/hook/ament_prefix_path.dsv'
+[19.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/hook/ament_prefix_path.sh'
+[19.360s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.360s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.347s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/dummy_vicon_republisher'
+[21.349s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.350s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[23.042s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/dummy_waypoint_publisher'
+[23.044s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[23.045s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[23.081s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node' for CMake module files
+[23.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/comm_node' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/comm_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/comm_node build --build-base /home/jetson/ros2_ws/src/build/comm_node/build install --record /home/jetson/ros2_ws/src/build/comm_node/install.log --install-scripts $base/lib/comm_node --single-version-externally-managed install_data
+[23.088s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node' for CMake config files
+[23.092s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node/lib'
+[23.092s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node/bin'
+[23.093s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node/lib/pkgconfig/comm_node.pc'
+[23.094s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node/lib/python3.8/site-packages'
+[23.094s] Level 1:colcon.colcon_core.shell:create_environment_hook('comm_node', 'pythonpath')
+[23.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/hook/pythonpath.ps1'
+[23.099s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/hook/pythonpath.dsv'
+[23.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/hook/pythonpath.sh'
+[23.103s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/comm_node/bin'
+[23.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(comm_node)
+[23.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/package.ps1'
+[23.108s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/package.dsv'
+[23.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/package.sh'
+[23.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/package.bash'
+[23.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/comm_node/share/comm_node/package.zsh'
+[23.118s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/comm_node/share/colcon-core/packages/comm_node)
+[23.121s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/exer3_control' with build type 'ament_python'
+[23.122s] Level 1:colcon.colcon_core.shell:create_environment_hook('exer3_control', 'ament_prefix_path')
+[23.123s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/hook/ament_prefix_path.ps1'
+[23.126s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/hook/ament_prefix_path.dsv'
+[23.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/hook/ament_prefix_path.sh'
+[23.132s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[23.133s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[24.858s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/exer2_control'
+[24.860s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[24.860s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[27.452s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/exer3_control'
+[27.456s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.457s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[28.689s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/dummy_vicon_republisher': PYTHONPATH=/home/jetson/ros2_ws/src/build/dummy_vicon_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/dummy_vicon_republisher build --build-base /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build install --record /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/install.log --install-scripts $base/lib/dummy_vicon_republisher --single-version-externally-managed install_data
+[29.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/dummy_waypoint_publisher': PYTHONPATH=/home/jetson/ros2_ws/src/build/dummy_waypoint_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/dummy_waypoint_publisher build --build-base /home/jetson/ros2_ws/src/build/dummy_waypoint_publisher/build install --record /home/jetson/ros2_ws/src/build/dummy_waypoint_publisher/install.log --install-scripts $base/lib/dummy_waypoint_publisher --single-version-externally-managed install_data
+[31.845s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/exer3_control': PYTHONPATH=/home/jetson/ros2_ws/src/build/exer3_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/exer3_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/exer3_control build --build-base /home/jetson/ros2_ws/src/build/exer3_control/build install --record /home/jetson/ros2_ws/src/build/exer3_control/install.log --install-scripts $base/lib/exer3_control --single-version-externally-managed install_data
+[31.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/exer2_control': PYTHONPATH=/home/jetson/ros2_ws/src/build/exer2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/exer2_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/exer2_control build --build-base /home/jetson/ros2_ws/src/build/exer2_control/build install --record /home/jetson/ros2_ws/src/build/exer2_control/install.log --install-scripts $base/lib/exer2_control --single-version-externally-managed install_data
+[31.938s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher' for CMake module files
+[31.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/dummy_vicon_republisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/dummy_vicon_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/dummy_vicon_republisher build --build-base /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/build install --record /home/jetson/ros2_ws/src/build/dummy_vicon_republisher/install.log --install-scripts $base/lib/dummy_vicon_republisher --single-version-externally-managed install_data
+[31.943s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher' for CMake config files
+[31.947s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib'
+[31.957s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/bin'
+[31.958s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/pkgconfig/dummy_vicon_republisher.pc'
+[31.959s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/lib/python3.8/site-packages'
+[31.962s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_vicon_republisher', 'pythonpath')
+[31.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/hook/pythonpath.ps1'
+[31.967s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/hook/pythonpath.dsv'
+[31.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/hook/pythonpath.sh'
+[31.984s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/bin'
+[31.984s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dummy_vicon_republisher)
+[31.995s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/package.ps1'
+[31.998s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/package.dsv'
+[32.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/package.sh'
+[32.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/package.bash'
+[32.006s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/dummy_vicon_republisher/package.zsh'
+[32.019s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/dummy_vicon_republisher/share/colcon-core/packages/dummy_vicon_republisher)
+[32.021s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/image_processor' with build type 'ament_python'
+[32.022s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_processor', 'ament_prefix_path')
+[32.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/hook/ament_prefix_path.ps1'
+[32.045s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/hook/ament_prefix_path.dsv'
+[32.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/hook/ament_prefix_path.sh'
+[32.059s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[32.059s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[34.283s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/image_processor'
+[34.285s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[34.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[34.370s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher' for CMake module files
+[34.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/dummy_waypoint_publisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/dummy_waypoint_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/dummy_waypoint_publisher build --build-base /home/jetson/ros2_ws/src/build/dummy_waypoint_publisher/build install --record /home/jetson/ros2_ws/src/build/dummy_waypoint_publisher/install.log --install-scripts $base/lib/dummy_waypoint_publisher --single-version-externally-managed install_data
+[34.383s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher' for CMake config files
+[34.388s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/lib'
+[34.390s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/bin'
+[34.391s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/lib/pkgconfig/dummy_waypoint_publisher.pc'
+[34.399s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/lib/python3.8/site-packages'
+[34.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_waypoint_publisher', 'pythonpath')
+[34.401s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/hook/pythonpath.ps1'
+[34.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/hook/pythonpath.dsv'
+[34.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/hook/pythonpath.sh'
+[34.413s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/bin'
+[34.414s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dummy_waypoint_publisher)
+[34.416s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/package.ps1'
+[34.419s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/package.dsv'
+[34.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/package.sh'
+[34.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/package.bash'
+[34.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/dummy_waypoint_publisher/package.zsh'
+[34.433s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/dummy_waypoint_publisher/share/colcon-core/packages/dummy_waypoint_publisher)
+[34.439s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/image_saver' with build type 'ament_python'
+[34.460s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_saver', 'ament_prefix_path')
+[34.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/hook/ament_prefix_path.ps1'
+[34.471s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/hook/ament_prefix_path.dsv'
+[34.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/hook/ament_prefix_path.sh'
+[34.507s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[34.508s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[34.625s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control' for CMake module files
+[34.628s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/exer2_control' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/exer2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/exer2_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/exer2_control build --build-base /home/jetson/ros2_ws/src/build/exer2_control/build install --record /home/jetson/ros2_ws/src/build/exer2_control/install.log --install-scripts $base/lib/exer2_control --single-version-externally-managed install_data
+[34.632s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control' for CMake config files
+[34.641s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control/lib'
+[34.647s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control/bin'
+[34.647s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control/lib/pkgconfig/exer2_control.pc'
+[34.649s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control/lib/python3.8/site-packages'
+[34.650s] Level 1:colcon.colcon_core.shell:create_environment_hook('exer2_control', 'pythonpath')
+[34.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/hook/pythonpath.ps1'
+[34.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/hook/pythonpath.dsv'
+[34.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/hook/pythonpath.sh'
+[34.668s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer2_control/bin'
+[34.669s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(exer2_control)
+[34.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/package.ps1'
+[34.676s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/package.dsv'
+[34.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/package.sh'
+[34.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/package.bash'
+[34.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer2_control/share/exer2_control/package.zsh'
+[34.692s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/exer2_control/share/colcon-core/packages/exer2_control)
+[36.849s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/image_saver'
+[36.851s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[36.852s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[36.924s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jetson/ros2_ws/src/px4_autonomy_modules' with build type 'ament_cmake'
+[36.926s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jetson/ros2_ws/src/px4_autonomy_modules'
+[36.928s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[36.929s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[36.985s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control' for CMake module files
+[36.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/exer3_control' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/exer3_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/exer3_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/exer3_control build --build-base /home/jetson/ros2_ws/src/build/exer3_control/build install --record /home/jetson/ros2_ws/src/build/exer3_control/install.log --install-scripts $base/lib/exer3_control --single-version-externally-managed install_data
+[36.997s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control' for CMake config files
+[37.000s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control/lib'
+[37.000s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control/bin'
+[37.001s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control/lib/pkgconfig/exer3_control.pc'
+[37.002s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control/lib/python3.8/site-packages'
+[37.003s] Level 1:colcon.colcon_core.shell:create_environment_hook('exer3_control', 'pythonpath')
+[37.004s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/hook/pythonpath.ps1'
+[37.007s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/hook/pythonpath.dsv'
+[37.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/hook/pythonpath.sh'
+[37.017s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/exer3_control/bin'
+[37.017s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(exer3_control)
+[37.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/package.ps1'
+[37.023s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/package.dsv'
+[37.025s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/package.sh'
+[37.034s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/package.bash'
+[37.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/exer3_control/share/exer3_control/package.zsh'
+[37.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/exer3_control/share/colcon-core/packages/exer3_control)
+[37.045s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/realsense2mavros' with build type 'ament_python'
+[37.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2mavros', 'ament_prefix_path')
+[37.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/hook/ament_prefix_path.ps1'
+[37.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/hook/ament_prefix_path.dsv'
+[37.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/hook/ament_prefix_path.sh'
+[37.063s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.063s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[37.195s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_obstacle_republisher:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/image_saver:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/crack_controller:/home/jetson/ros2_ws/install/crack_comm:/home/jetson/ros2_ws/install/comm_node:/home/jetson/ros2_ws/install/api_waypoint:/opt/ros/foxy /usr/bin/cmake --build /home/jetson/ros2_ws/src/build/px4_autonomy_modules -- -j4 -l4
+[39.239s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/realsense2mavros'
+[39.241s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[39.241s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[39.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_obstacle_republisher:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/image_saver:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/crack_controller:/home/jetson/ros2_ws/install/crack_comm:/home/jetson/ros2_ws/install/comm_node:/home/jetson/ros2_ws/install/api_waypoint:/opt/ros/foxy /usr/bin/cmake --build /home/jetson/ros2_ws/src/build/px4_autonomy_modules -- -j4 -l4
+[39.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_obstacle_republisher:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/image_saver:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/crack_controller:/home/jetson/ros2_ws/install/crack_comm:/home/jetson/ros2_ws/install/comm_node:/home/jetson/ros2_ws/install/api_waypoint:/opt/ros/foxy /usr/bin/cmake --install /home/jetson/ros2_ws/src/build/px4_autonomy_modules
+[39.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/image_processor': PYTHONPATH=/home/jetson/ros2_ws/src/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/image_processor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_processor build --build-base /home/jetson/ros2_ws/src/build/image_processor/build install --record /home/jetson/ros2_ws/src/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[39.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_autonomy_modules)
+[39.491s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules' for CMake module files
+[39.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/build/px4_autonomy_modules' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/ros2_ws/install/waypoint_nav:/home/jetson/ros2_ws/install/vicon_obstacle_republisher:/home/jetson/ros2_ws/install/vicon_bridge:/home/jetson/ros2_ws/install/unit_tester:/home/jetson/ros2_ws/install/realsense2mavros:/home/jetson/ros2_ws/install/image_saver:/home/jetson/ros2_ws/install/exer3_control:/home/jetson/ros2_ws/install/exer2_control:/home/jetson/ros2_ws/install/dummy_waypoint_publisher:/home/jetson/ros2_ws/install/dummy_vicon_republisher:/home/jetson/ros2_ws/install/crack_controller:/home/jetson/ros2_ws/install/crack_comm:/home/jetson/ros2_ws/install/comm_node:/home/jetson/ros2_ws/install/api_waypoint:/opt/ros/foxy /usr/bin/cmake --install /home/jetson/ros2_ws/src/build/px4_autonomy_modules
+[39.495s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules' for CMake config files
+[39.497s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_autonomy_modules', 'cmake_prefix_path')
+[39.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/hook/cmake_prefix_path.ps1'
+[39.510s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/hook/cmake_prefix_path.dsv'
+[39.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/hook/cmake_prefix_path.sh'
+[39.519s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/bin'
+[39.520s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/lib/pkgconfig/px4_autonomy_modules.pc'
+[39.521s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/lib/python3.8/site-packages'
+[39.522s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/bin'
+[39.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.ps1'
+[39.527s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.dsv'
+[39.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.sh'
+[39.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.bash'
+[39.542s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.zsh'
+[39.544s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/colcon-core/packages/px4_autonomy_modules)
+[39.565s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_autonomy_modules)
+[39.575s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules' for CMake module files
+[39.578s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules' for CMake config files
+[39.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_autonomy_modules', 'cmake_prefix_path')
+[39.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/hook/cmake_prefix_path.ps1'
+[39.584s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/hook/cmake_prefix_path.dsv'
+[39.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/hook/cmake_prefix_path.sh'
+[39.593s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/bin'
+[39.593s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/lib/pkgconfig/px4_autonomy_modules.pc'
+[39.594s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/lib/python3.8/site-packages'
+[39.596s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/bin'
+[39.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.ps1'
+[39.601s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.dsv'
+[39.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.sh'
+[39.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.bash'
+[39.614s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/px4_autonomy_modules/package.zsh'
+[39.617s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/px4_autonomy_modules/share/colcon-core/packages/px4_autonomy_modules)
+[39.621s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/unit_tester' with build type 'ament_python'
+[39.622s] Level 1:colcon.colcon_core.shell:create_environment_hook('unit_tester', 'ament_prefix_path')
+[39.623s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/hook/ament_prefix_path.ps1'
+[39.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/hook/ament_prefix_path.dsv'
+[39.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/hook/ament_prefix_path.sh'
+[39.646s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[39.648s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[42.120s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/unit_tester'
+[42.122s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[42.122s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[42.175s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor' for CMake module files
+[42.180s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/image_processor' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/image_processor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_processor build --build-base /home/jetson/ros2_ws/src/build/image_processor/build install --record /home/jetson/ros2_ws/src/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[42.181s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor' for CMake config files
+[42.184s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor/lib'
+[42.184s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor/bin'
+[42.185s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor/lib/pkgconfig/image_processor.pc'
+[42.186s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor/lib/python3.8/site-packages'
+[42.187s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_processor', 'pythonpath')
+[42.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/hook/pythonpath.ps1'
+[42.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/hook/pythonpath.dsv'
+[42.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/hook/pythonpath.sh'
+[42.200s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_processor/bin'
+[42.200s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_processor)
+[42.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/package.ps1'
+[42.206s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/package.dsv'
+[42.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/package.sh'
+[42.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/package.bash'
+[42.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_processor/share/image_processor/package.zsh'
+[42.218s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/image_processor/share/colcon-core/packages/image_processor)
+[42.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/image_saver': PYTHONPATH=/home/jetson/ros2_ws/src/build/image_saver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_saver build --build-base /home/jetson/ros2_ws/src/build/image_saver/build install --record /home/jetson/ros2_ws/src/build/image_saver/install.log --install-scripts $base/lib/image_saver --single-version-externally-managed install_data
+[42.247s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/vicon_bridge' with build type 'ament_python'
+[42.250s] Level 1:colcon.colcon_core.shell:create_environment_hook('vicon_bridge', 'ament_prefix_path')
+[42.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/hook/ament_prefix_path.ps1'
+[42.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/hook/ament_prefix_path.dsv'
+[42.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/hook/ament_prefix_path.sh'
+[42.264s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[42.264s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[44.456s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/vicon_bridge'
+[44.459s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[44.459s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[44.536s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/realsense2mavros': PYTHONPATH=/home/jetson/ros2_ws/src/build/realsense2mavros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/realsense2mavros/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/realsense2mavros build --build-base /home/jetson/ros2_ws/src/build/realsense2mavros/build install --record /home/jetson/ros2_ws/src/build/realsense2mavros/install.log --install-scripts $base/lib/realsense2mavros --single-version-externally-managed install_data
+[45.070s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver' for CMake module files
+[45.074s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/image_saver' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/image_saver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_saver build --build-base /home/jetson/ros2_ws/src/build/image_saver/build install --record /home/jetson/ros2_ws/src/build/image_saver/install.log --install-scripts $base/lib/image_saver --single-version-externally-managed install_data
+[45.085s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver' for CMake config files
+[45.098s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver/lib'
+[45.099s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver/bin'
+[45.100s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver/lib/pkgconfig/image_saver.pc'
+[45.102s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages'
+[45.102s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_saver', 'pythonpath')
+[45.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/hook/pythonpath.ps1'
+[45.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/hook/pythonpath.dsv'
+[45.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/hook/pythonpath.sh'
+[45.144s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/image_saver/bin'
+[45.146s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_saver)
+[45.154s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/package.ps1'
+[45.159s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/package.dsv'
+[45.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/package.sh'
+[45.179s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/package.bash'
+[45.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/image_saver/share/image_saver/package.zsh'
+[45.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/image_saver/share/colcon-core/packages/image_saver)
+[45.216s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/vicon_obstacle_republisher' with build type 'ament_python'
+[45.219s] Level 1:colcon.colcon_core.shell:create_environment_hook('vicon_obstacle_republisher', 'ament_prefix_path')
+[45.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/hook/ament_prefix_path.ps1'
+[45.240s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/hook/ament_prefix_path.dsv'
+[45.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/hook/ament_prefix_path.sh'
+[45.259s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[45.265s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[47.963s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/vicon_obstacle_republisher'
+[47.965s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[47.966s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[48.011s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/unit_tester': PYTHONPATH=/home/jetson/ros2_ws/src/build/unit_tester/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/unit_tester build --build-base /home/jetson/ros2_ws/src/build/unit_tester/build install --record /home/jetson/ros2_ws/src/build/unit_tester/install.log --install-scripts $base/lib/unit_tester --single-version-externally-managed install_data
+[48.035s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros' for CMake module files
+[48.040s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/realsense2mavros' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/realsense2mavros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/realsense2mavros/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/realsense2mavros build --build-base /home/jetson/ros2_ws/src/build/realsense2mavros/build install --record /home/jetson/ros2_ws/src/build/realsense2mavros/install.log --install-scripts $base/lib/realsense2mavros --single-version-externally-managed install_data
+[48.044s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros' for CMake config files
+[48.047s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros/lib'
+[48.049s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros/bin'
+[48.050s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros/lib/pkgconfig/realsense2mavros.pc'
+[48.052s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros/lib/python3.8/site-packages'
+[48.053s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2mavros', 'pythonpath')
+[48.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/hook/pythonpath.ps1'
+[48.061s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/hook/pythonpath.dsv'
+[48.066s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/hook/pythonpath.sh'
+[48.072s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/realsense2mavros/bin'
+[48.073s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2mavros)
+[48.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/package.ps1'
+[48.081s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/package.dsv'
+[48.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/package.sh'
+[48.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/package.bash'
+[48.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/realsense2mavros/share/realsense2mavros/package.zsh'
+[48.094s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/realsense2mavros/share/colcon-core/packages/realsense2mavros)
+[48.099s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetson/ros2_ws/src/waypoint_nav' with build type 'ament_python'
+[48.100s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoint_nav', 'ament_prefix_path')
+[48.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/hook/ament_prefix_path.ps1'
+[48.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/hook/ament_prefix_path.dsv'
+[48.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/hook/ament_prefix_path.sh'
+[48.114s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[48.114s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[50.535s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetson/ros2_ws/src/waypoint_nav'
+[50.538s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[50.539s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[50.591s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/vicon_bridge': PYTHONPATH=/home/jetson/ros2_ws/src/build/vicon_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/vicon_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vicon_bridge build --build-base /home/jetson/ros2_ws/src/build/vicon_bridge/build install --record /home/jetson/ros2_ws/src/build/vicon_bridge/install.log --install-scripts $base/lib/vicon_bridge --single-version-externally-managed install_data
+[50.626s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester' for CMake module files
+[50.638s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester' for CMake config files
+[50.641s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester/lib'
+[50.641s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester/bin'
+[50.642s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester/lib/pkgconfig/unit_tester.pc'
+[50.634s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/unit_tester' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/unit_tester/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/unit_tester build --build-base /home/jetson/ros2_ws/src/build/unit_tester/build install --record /home/jetson/ros2_ws/src/build/unit_tester/install.log --install-scripts $base/lib/unit_tester --single-version-externally-managed install_data
+[50.643s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester/lib/python3.8/site-packages'
+[50.644s] Level 1:colcon.colcon_core.shell:create_environment_hook('unit_tester', 'pythonpath')
+[50.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/hook/pythonpath.ps1'
+[50.653s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/hook/pythonpath.dsv'
+[50.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/hook/pythonpath.sh'
+[50.665s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/unit_tester/bin'
+[50.667s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unit_tester)
+[50.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/package.ps1'
+[50.680s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/package.dsv'
+[50.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/package.sh'
+[50.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/package.bash'
+[50.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/unit_tester/share/unit_tester/package.zsh'
+[50.704s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/unit_tester/share/colcon-core/packages/unit_tester)
+[51.773s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/vicon_obstacle_republisher': PYTHONPATH=/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vicon_obstacle_republisher build --build-base /home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/build install --record /home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/install.log --install-scripts $base/lib/vicon_obstacle_republisher --single-version-externally-managed install_data
+[53.041s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge' for CMake module files
+[53.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/vicon_bridge' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/vicon_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/vicon_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vicon_bridge build --build-base /home/jetson/ros2_ws/src/build/vicon_bridge/build install --record /home/jetson/ros2_ws/src/build/vicon_bridge/install.log --install-scripts $base/lib/vicon_bridge --single-version-externally-managed install_data
+[53.047s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge' for CMake config files
+[53.063s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge/lib'
+[53.064s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge/bin'
+[53.065s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge/lib/pkgconfig/vicon_bridge.pc'
+[53.070s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge/lib/python3.8/site-packages'
+[53.071s] Level 1:colcon.colcon_core.shell:create_environment_hook('vicon_bridge', 'pythonpath')
+[53.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/hook/pythonpath.ps1'
+[53.076s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/hook/pythonpath.dsv'
+[53.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/hook/pythonpath.sh'
+[53.081s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_bridge/bin'
+[53.081s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vicon_bridge)
+[53.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/package.ps1'
+[53.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/package.dsv'
+[53.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/package.sh'
+[53.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/package.bash'
+[53.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_bridge/share/vicon_bridge/package.zsh'
+[53.105s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/vicon_bridge/share/colcon-core/packages/vicon_bridge)
+[53.676s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetson/ros2_ws/src/waypoint_nav': PYTHONPATH=/home/jetson/ros2_ws/src/build/waypoint_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/waypoint_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/waypoint_nav build --build-base /home/jetson/ros2_ws/src/build/waypoint_nav/build install --record /home/jetson/ros2_ws/src/build/waypoint_nav/install.log --install-scripts $base/lib/waypoint_nav --single-version-externally-managed install_data
+[54.406s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher' for CMake module files
+[54.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/vicon_obstacle_republisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/vicon_obstacle_republisher build --build-base /home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/build install --record /home/jetson/ros2_ws/src/build/vicon_obstacle_republisher/install.log --install-scripts $base/lib/vicon_obstacle_republisher --single-version-externally-managed install_data
+[54.418s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher' for CMake config files
+[54.422s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib'
+[54.423s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/bin'
+[54.423s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/pkgconfig/vicon_obstacle_republisher.pc'
+[54.426s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/lib/python3.8/site-packages'
+[54.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('vicon_obstacle_republisher', 'pythonpath')
+[54.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/hook/pythonpath.ps1'
+[54.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/hook/pythonpath.dsv'
+[54.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/hook/pythonpath.sh'
+[54.446s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/bin'
+[54.450s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vicon_obstacle_republisher)
+[54.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/package.ps1'
+[54.458s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/package.dsv'
+[54.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/package.sh'
+[54.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/package.bash'
+[54.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher/package.zsh'
+[54.476s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/vicon_obstacle_republisher/share/colcon-core/packages/vicon_obstacle_republisher)
+[55.864s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav' for CMake module files
+[55.866s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetson/ros2_ws/src/waypoint_nav' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/waypoint_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/waypoint_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/waypoint_nav build --build-base /home/jetson/ros2_ws/src/build/waypoint_nav/build install --record /home/jetson/ros2_ws/src/build/waypoint_nav/install.log --install-scripts $base/lib/waypoint_nav --single-version-externally-managed install_data
+[55.870s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav' for CMake config files
+[55.873s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav/lib'
+[55.875s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav/bin'
+[55.876s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav/lib/pkgconfig/waypoint_nav.pc'
+[55.877s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav/lib/python3.8/site-packages'
+[55.877s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoint_nav', 'pythonpath')
+[55.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/hook/pythonpath.ps1'
+[55.880s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/hook/pythonpath.dsv'
+[55.882s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/hook/pythonpath.sh'
+[55.884s] Level 1:colcon.colcon_core.environment:checking '/home/jetson/ros2_ws/src/install/waypoint_nav/bin'
+[55.884s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(waypoint_nav)
+[55.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/package.ps1'
+[55.892s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/package.dsv'
+[55.894s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/package.sh'
+[55.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/package.bash'
+[55.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetson/ros2_ws/src/install/waypoint_nav/share/waypoint_nav/package.zsh'
+[55.901s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetson/ros2_ws/src/install/waypoint_nav/share/colcon-core/packages/waypoint_nav)
+[55.904s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[55.905s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[55.905s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[55.906s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[55.983s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[55.984s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[55.984s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[56.575s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[56.579s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetson/ros2_ws/src/install/local_setup.ps1'
+[56.584s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jetson/ros2_ws/src/install/_local_setup_util_ps1.py'
+[56.596s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetson/ros2_ws/src/install/setup.ps1'
+[56.609s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetson/ros2_ws/src/install/local_setup.sh'
+[56.614s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jetson/ros2_ws/src/install/_local_setup_util_sh.py'
+[56.617s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetson/ros2_ws/src/install/setup.sh'
+[56.625s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetson/ros2_ws/src/install/local_setup.bash'
+[56.631s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetson/ros2_ws/src/install/setup.bash'
+[56.641s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetson/ros2_ws/src/install/local_setup.zsh'
+[56.648s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetson/ros2_ws/src/install/setup.zsh'

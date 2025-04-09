@@ -21,9 +21,9 @@ def plot(csv_file):
     vicon_z = []
     # Read data from each file
     for row in csv_data:
-        vicon_x.append(float(row[8]))
-        vicon_y.append(float(row[9]))
-        vicon_z.append(float(row[10]))
+        vicon_x.append(float(row[1]))
+        vicon_y.append(float(row[2]))
+        vicon_z.append(float(row[3]))
     # Plot data
     # plt.plot(time, vicon_z, label='Vicon')
     # plt.plot(time, realsense_z, label='Realsense')
@@ -51,4 +51,4 @@ def plot(csv_file):
 
 if __name__ == '__main__':
     print('Plotting data for realsense and vicon...')
-    plot('combined_data.csv')   
+    plot('vicon_data_obs.csv')   

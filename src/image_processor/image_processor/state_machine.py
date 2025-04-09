@@ -1,3 +1,5 @@
+#!usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 import threading
@@ -26,9 +28,19 @@ class DroneWaypointProcessor(Node):
         # for camera: Timer to capture frames from cam at 30 fps
         self.timer_pub = self.create_timer(1.0 / 30, self.capture_frame)  # 30 FPS
         # OpenCV Camera Capture
+        self.bridge = CvBridge()
         self.cap = cv2.VideoCapture(self.gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
         if not self.cap.isOpened():
             self.get_logger().error("Failed to open camera. Check pipeline.")
+        # Camera intrinsic params
+        self.dist = np.array([-0.19927273, 0.0216427, 0.00122196, -0.00259398, 0.01506653]).reshape(-1, 1)
+        self.newcameramtx = np.array([[8.07071504e+02, 0.00000000e+00, 1.04769754e+03],
+                               [0.00000000e+00, 8.11702513e+02, 3.34017608e+02],
+                               [0.00000000e+00, 0.00000000e+00, 1.00000000e+00]]).reshape(3, 3)
+        self.mtx = np.array([[1.00914351e+03, 0.00000000e+00, 1.05808703e+03],
+                            [0.00000000e+00, 1.01188475e+03, 3.33138874e+02],
+                            [0.00000000e+00, 0.00000000e+00, 1.00000000e+00]]).reshape(3, 3)
+        self.roi = (35, 60, 1852, 956)
         # Store latest frame
         self.latest_frame = None
         # Define field for counting numbr of images processed for this waypoint
@@ -43,7 +55,7 @@ class DroneWaypointProcessor(Node):
         self.confidence = None
 
         # For sending
-        self.SERVER = "http://100.66.221.84:5072"
+        self.SERVER = "http://10.42.0.101:5072"
         self.IMAGE_MAP = {}
 
         # Client to send end_processing service call to comm node
@@ -94,8 +106,9 @@ class DroneWaypointProcessor(Node):
         try:
             self.get_logger().info("Selecting sharpest image...")
             # --- Your Laplacian image selection code here ---
-            folder_path = f'~/Downloads/{str(self.last_waypoint)}'
+            folder_path = f'/home/jetson/Downloads/{str(self.last_waypoint)}'
             best_filename, best_image = self.find_sharpest_image(folder_path)
+            best_filename = f'{folder_path}/{best_filename}'
             self.cur_best_image = best_image # (h, w, c)
             self.IMAGE_MAP[self.last_waypoint] = best_filename
             self.current_state = 'INFERENCING'
@@ -133,10 +146,10 @@ class DroneWaypointProcessor(Node):
         ret, frame = self.cap.read()
         if ret:
             # Convert OpenCV image to ROS Image message
-            msg = self.bridge.cv2_to_imgmsg(frame, encoding='bgr8')
-            self.publisher_.publish(msg)
+            #msg = self.bridge.cv2_to_imgmsg(frame, encoding='bgr8')
+            #self.publisher_.publish(msg)
             self.latest_frame = frame
-            self.get_logger().info("Published frame")
+            #self.get_logger().info("Published frame")
         else:
             self.get_logger().warn("Failed to capture frame")
 
@@ -145,10 +158,14 @@ class DroneWaypointProcessor(Node):
         if self.latest_frame is not None:
             download_path = os.path.expanduser(f'~/Downloads/{str(self.last_waypoint)}')
             os.makedirs(download_path, exist_ok=True)
-            timestamp = time.strftime("%Y%m%d-%H%M%S")
+            timestamp = time.strftime("%Y%m%d-%H%M%S") + "_" + str(self.image_count)
             file_path = os.path.join(download_path, f"image_{timestamp}.png")
 
-            cv2.imwrite(file_path, self.latest_frame)
+            # Apply calibrated intrinsics
+            dst = cv2.undistort(self.latest_frame, self.mtx, self.dist, None, self.newcameramtx)
+            x, y, w, h = self.roi
+            dst = dst[y:y+h, x:x+w]
+            cv2.imwrite(file_path, dst)
             self.get_logger().info(f"Image saved to {file_path}")
 
     # For camera saving
@@ -218,7 +235,9 @@ class DroneWaypointProcessor(Node):
     def run_inference(self):
         # Image for inference is in self.cur_best_image (h, w, c)
         # NOTE: write True/False based on result in self.confidence
-        pass
+        
+        # for debug: write true to confidence
+        self.confidence = True
 
     ####### Sending Helpers #########
     def send_to_db(self):
@@ -265,14 +284,14 @@ class DroneWaypointProcessor(Node):
         self.get_logger().info(f'Calling {service_name} service...')
         req = Trigger.Request()
         future = client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-        if future.result() is not None:
-            response = future.result()
-            self.get_logger().info(
-                f'{service_name} response: success={response.success}, message="{response.message}"'
-            )
-        else:
-            self.get_logger().error(f'Exception calling {service_name} service: {future.exception()}')
+        # rclpy.spin_until_future_complete(self, future)
+        # if future.result() is not None:
+        #     response = future.result()
+        #     self.get_logger().info(
+        #         f'{service_name} response: success={response.success}, message="{response.message}"'
+        #     )
+        # else:
+        #     self.get_logger().error(f'Exception calling {service_name} service: {future.exception()}')
 
 def main(args=None):
     rclpy.init(args=args)

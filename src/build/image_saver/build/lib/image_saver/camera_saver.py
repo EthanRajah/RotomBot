@@ -38,7 +38,7 @@ class CameraSaverNode(Node):
         self.publisher_ = self.create_publisher(Image, '/camera/image_raw', 10)
         self.bridge = CvBridge()
 
-        # OpenCV Camera Capture
+        # OpenCV Camera Captures
         self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
         if not self.cap.isOpened():
             self.get_logger().error("Failed to open camera. Check pipeline.")
@@ -64,7 +64,7 @@ class CameraSaverNode(Node):
     def save_image(self):
         """Save the latest captured frame every 5 seconds."""
         if self.latest_frame is not None:
-            download_path = os.path.expanduser('~/Downloads')
+            download_path = os.path.expanduser('~/Downloads/camera_calibration/')
             os.makedirs(download_path, exist_ok=True)
             timestamp = time.strftime("%Y%m%d-%H%M%S")
             file_path = os.path.join(download_path, f"image_{timestamp}.png")

@@ -11,9 +11,9 @@ from tf_transformations import euler_from_quaternion, quaternion_from_euler
 import os
 
 
-class grabber(Node):
+class obs_grabber(Node):
     def __init__(self, combined_file):
-        super().__init__('grabber')
+        super().__init__('obs_grabber')
 
         # Store CSV file handle
         self.combined_file = combined_file
@@ -36,13 +36,13 @@ class grabber(Node):
         ])
 
         # Create subscribers using message_filters
-        # self.realsense_sub = Subscriber(self, Odometry, '/camera/pose/sample', 
-        #     qos_profile=rclpy.qos.QoSProfile(
-        #         reliability=rclpy.qos.ReliabilityPolicy.BEST_EFFORT,
-        #         durability=rclpy.qos.DurabilityPolicy.VOLATILE,
-        #         depth=10))
+        self.vicon_sub = Subscriber(self, PoseStamped, '/vicon/ROB498_Drone/ROB498_Drone', 
+            qos_profile=rclpy.qos.QoSProfile(
+                reliability=rclpy.qos.ReliabilityPolicy.RELIABLE,
+                durability=rclpy.qos.DurabilityPolicy.VOLATILE,
+                depth=10))
         
-        self.vicon_sub = Subscriber(self, PoseStamped, '/vicon/ROB498_Drone/ROB498_Drone', 10)
+        # self.vicon_sub = Subscriber(self, PoseStamped, '/vicon/ROB498_Drone/ROB498_Drone', 10)
         
         # Create synchronizer for the two topics with a time tolerance of 0.1 seconds
         self.ts = ApproximateTimeSynchronizer(
@@ -81,10 +81,10 @@ def main(args=None):
     # Open CSV file
     output_dir = 'src/exer3_control/exer3_control'
     os.makedirs(output_dir, exist_ok=True)
-    combined_data_file = open(os.path.join(output_dir, 'combined_data.csv'), 'w', newline='')
+    combined_data_file = open(os.path.join(output_dir, 'vicon_data_obs.csv'), 'w', newline='')
 
     # Create grabber instance with CSV file handle
-    grabber_class = grabber(combined_data_file)
+    grabber_class = obs_grabber(combined_data_file)
 
     try:
         rclpy.spin(grabber_class)

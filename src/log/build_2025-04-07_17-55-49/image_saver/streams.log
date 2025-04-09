@@ -1,0 +1,26 @@
+[8.514s] Invoking command in '/home/jetson/ros2_ws/src/image_saver': PYTHONPATH=/home/jetson/ros2_ws/src/build/image_saver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_saver build --build-base /home/jetson/ros2_ws/src/build/image_saver/build install --record /home/jetson/ros2_ws/src/build/image_saver/install.log --install-scripts $base/lib/image_saver --single-version-externally-managed install_data
+[10.417s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[10.418s]   warnings.warn(
+[10.608s] running egg_info
+[10.611s] writing ../build/image_saver/image_saver.egg-info/PKG-INFO
+[10.613s] writing dependency_links to ../build/image_saver/image_saver.egg-info/dependency_links.txt
+[10.614s] writing entry points to ../build/image_saver/image_saver.egg-info/entry_points.txt
+[10.614s] writing requirements to ../build/image_saver/image_saver.egg-info/requires.txt
+[10.615s] writing top-level names to ../build/image_saver/image_saver.egg-info/top_level.txt
+[10.647s] reading manifest file '../build/image_saver/image_saver.egg-info/SOURCES.txt'
+[10.654s] writing manifest file '../build/image_saver/image_saver.egg-info/SOURCES.txt'
+[10.655s] running build
+[10.655s] running build_py
+[10.661s] copying image_saver/camera_saver.py -> /home/jetson/ros2_ws/src/build/image_saver/build/lib/image_saver
+[10.671s] running install
+[10.675s] running install_lib
+[10.680s] copying /home/jetson/ros2_ws/src/build/image_saver/build/lib/image_saver/camera_saver.py -> /home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages/image_saver
+[10.689s] byte-compiling /home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages/image_saver/camera_saver.py to camera_saver.cpython-38.pyc
+[10.691s] running install_data
+[10.705s] running install_egg_info
+[10.716s] removing '/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages/image_saver-0.0.0-py3.8.egg-info' (and everything under it)
+[10.727s] Copying ../build/image_saver/image_saver.egg-info to /home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages/image_saver-0.0.0-py3.8.egg-info
+[10.740s] running install_scripts
+[10.871s] Installing camera_saver script to /home/jetson/ros2_ws/src/install/image_saver/lib/image_saver
+[10.878s] writing list of installed files to '/home/jetson/ros2_ws/src/build/image_saver/install.log'
+[11.026s] Invoked command in '/home/jetson/ros2_ws/src/image_saver' returned '0': PYTHONPATH=/home/jetson/ros2_ws/src/build/image_saver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/src/install/image_saver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_saver build --build-base /home/jetson/ros2_ws/src/build/image_saver/build install --record /home/jetson/ros2_ws/src/build/image_saver/install.log --install-scripts $base/lib/image_saver --single-version-externally-managed install_data
