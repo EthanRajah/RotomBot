@@ -1,0 +1,36 @@
+/usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running develop
+Removing /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image-saver.egg-link (link to .)
+/usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+writing ../../build/image_saver/image_saver.egg-info/PKG-INFO
+writing dependency_links to ../../build/image_saver/image_saver.egg-info/dependency_links.txt
+writing entry points to ../../build/image_saver/image_saver.egg-info/entry_points.txt
+writing requirements to ../../build/image_saver/image_saver.egg-info/requires.txt
+writing top-level names to ../../build/image_saver/image_saver.egg-info/top_level.txt
+reading manifest file '../../build/image_saver/image_saver.egg-info/SOURCES.txt'
+writing manifest file '../../build/image_saver/image_saver.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jetson/ros2_ws/build/image_saver/build
+creating /home/jetson/ros2_ws/build/image_saver/build/lib
+creating /home/jetson/ros2_ws/build/image_saver/build/lib/image_saver
+copying image_saver/__init__.py -> /home/jetson/ros2_ws/build/image_saver/build/lib/image_saver
+copying image_saver/camera_saver.py -> /home/jetson/ros2_ws/build/image_saver/build/lib/image_saver
+running install
+running install_lib
+creating /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image_saver
+copying /home/jetson/ros2_ws/build/image_saver/build/lib/image_saver/__init__.py -> /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image_saver
+copying /home/jetson/ros2_ws/build/image_saver/build/lib/image_saver/camera_saver.py -> /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image_saver
+byte-compiling /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image_saver/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image_saver/camera_saver.py to camera_saver.cpython-38.pyc
+running install_data
+copying resource/image_saver -> /home/jetson/ros2_ws/install/image_saver/share/ament_index/resource_index/packages
+copying package.xml -> /home/jetson/ros2_ws/install/image_saver/share/image_saver
+running install_egg_info
+Copying ../../build/image_saver/image_saver.egg-info to /home/jetson/ros2_ws/install/image_saver/lib/python3.8/site-packages/image_saver-0.0.0-py3.8.egg-info
+running install_scripts
+Installing camera_saver script to /home/jetson/ros2_ws/install/image_saver/lib/image_saver
+writing list of installed files to '/home/jetson/ros2_ws/build/image_saver/install.log'

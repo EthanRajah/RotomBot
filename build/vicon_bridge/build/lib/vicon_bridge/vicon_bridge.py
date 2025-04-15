@@ -4,7 +4,7 @@ import rclpy
 import numpy as np
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped, TransformStamped
-from tf_transformations import euler_from_quaternion, quaternion_from_euler
+from tf_transformations import euler_from_quaternion, quaternion_from_euler, quaternion_matrix
 
 
 class ViconBridge(Node):
@@ -39,10 +39,15 @@ class ViconBridge(Node):
 
 
         # Copy vicon position data and transform to cube frame
+        # Get rotation matrix from current quaternion
+        quat = [msg.pose.orientation.x, msg.pose.orientation.y, msg.pose.orientation.z, msg.pose.orientation.w]
+        R = quaternion_matrix(quat)[:3, :3]
+        # Transform the self.transform data so we add it in the cube frame
+        self.cur_transform = np.dot(R, self.transform)
         mavros_msg.pose.position = msg.pose.position
-        mavros_msg.pose.position.x += self.transform[0]
-        mavros_msg.pose.position.y += self.transform[1]
-        mavros_msg.pose.position.z += self.transform[2]
+        mavros_msg.pose.position.x += self.cur_transform[0]
+        mavros_msg.pose.position.y += self.cur_transform[1]
+        mavros_msg.pose.position.z += self.cur_transform[2]
 
         # Copy orientation data
         mavros_msg.pose.orientation = msg.pose.orientation

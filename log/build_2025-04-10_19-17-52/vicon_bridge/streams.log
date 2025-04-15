@@ -1,0 +1,40 @@
+[9.363s] Invoking command in '/home/jetson/ros2_ws/build/vicon_bridge': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/vicon_bridge/build
+[11.247s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[11.249s]   warnings.warn(
+[11.469s] running develop
+[12.349s] Removing /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon-bridge.egg-link (link to .)
+[12.980s] Invoked command in '/home/jetson/ros2_ws/build/vicon_bridge' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/vicon_bridge/build
+[12.990s] Invoking command in '/home/jetson/ros2_ws/src/vicon_bridge': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vicon_bridge build --build-base /home/jetson/ros2_ws/build/vicon_bridge/build install --record /home/jetson/ros2_ws/build/vicon_bridge/install.log --install-scripts $base/lib/vicon_bridge --single-version-externally-managed install_data --force
+[14.934s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[14.935s]   warnings.warn(
+[15.103s] running egg_info
+[15.107s] writing ../../build/vicon_bridge/vicon_bridge.egg-info/PKG-INFO
+[15.109s] writing dependency_links to ../../build/vicon_bridge/vicon_bridge.egg-info/dependency_links.txt
+[15.110s] writing entry points to ../../build/vicon_bridge/vicon_bridge.egg-info/entry_points.txt
+[15.110s] writing requirements to ../../build/vicon_bridge/vicon_bridge.egg-info/requires.txt
+[15.111s] writing top-level names to ../../build/vicon_bridge/vicon_bridge.egg-info/top_level.txt
+[15.127s] reading manifest file '../../build/vicon_bridge/vicon_bridge.egg-info/SOURCES.txt'
+[15.132s] writing manifest file '../../build/vicon_bridge/vicon_bridge.egg-info/SOURCES.txt'
+[15.133s] running build
+[15.134s] running build_py
+[15.135s] creating /home/jetson/ros2_ws/build/vicon_bridge/build
+[15.135s] creating /home/jetson/ros2_ws/build/vicon_bridge/build/lib
+[15.136s] creating /home/jetson/ros2_ws/build/vicon_bridge/build/lib/vicon_bridge
+[15.137s] copying vicon_bridge/vicon_bridge.py -> /home/jetson/ros2_ws/build/vicon_bridge/build/lib/vicon_bridge
+[15.137s] copying vicon_bridge/__init__.py -> /home/jetson/ros2_ws/build/vicon_bridge/build/lib/vicon_bridge
+[15.138s] running install
+[15.142s] running install_lib
+[15.147s] creating /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon_bridge
+[15.147s] copying /home/jetson/ros2_ws/build/vicon_bridge/build/lib/vicon_bridge/vicon_bridge.py -> /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon_bridge
+[15.148s] copying /home/jetson/ros2_ws/build/vicon_bridge/build/lib/vicon_bridge/__init__.py -> /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon_bridge
+[15.151s] byte-compiling /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon_bridge/vicon_bridge.py to vicon_bridge.cpython-38.pyc
+[15.154s] byte-compiling /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon_bridge/__init__.py to __init__.cpython-38.pyc
+[15.155s] running install_data
+[15.155s] copying resource/vicon_bridge -> /home/jetson/ros2_ws/install/vicon_bridge/share/ament_index/resource_index/packages
+[15.157s] copying package.xml -> /home/jetson/ros2_ws/install/vicon_bridge/share/vicon_bridge
+[15.158s] running install_egg_info
+[15.166s] Copying ../../build/vicon_bridge/vicon_bridge.egg-info to /home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages/vicon_bridge-0.0.0-py3.8.egg-info
+[15.171s] running install_scripts
+[15.264s] Installing vicon_bridge script to /home/jetson/ros2_ws/install/vicon_bridge/lib/vicon_bridge
+[15.266s] writing list of installed files to '/home/jetson/ros2_ws/build/vicon_bridge/install.log'
+[15.877s] Invoked command in '/home/jetson/ros2_ws/src/vicon_bridge' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vicon_bridge build --build-base /home/jetson/ros2_ws/build/vicon_bridge/build install --record /home/jetson/ros2_ws/build/vicon_bridge/install.log --install-scripts $base/lib/vicon_bridge --single-version-externally-managed install_data --force

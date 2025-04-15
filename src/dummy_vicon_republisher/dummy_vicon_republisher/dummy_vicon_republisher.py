@@ -36,8 +36,8 @@ class DummyViconRepublisher(Node):
 
         # Set pose to 90 degree yaw rotation
         new_msg.pose.position.x = 1.75
-        new_msg.pose.position.y = -2.3
-        new_msg.pose.position.z = 0.3
+        new_msg.pose.position.y = -2.561
+        new_msg.pose.position.z = 0.312
         new_msg.pose.orientation.x = 0.0
         new_msg.pose.orientation.y = 0.0
         new_msg.pose.orientation.z = 0.707

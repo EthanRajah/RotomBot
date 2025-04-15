@@ -1,0 +1,40 @@
+[11.488s] Invoking command in '/home/jetson/ros2_ws/build/exer2_control': PYTHONPATH=/home/jetson/ros2_ws/build/exer2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/exer2_control/build
+[13.099s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[13.100s]   warnings.warn(
+[13.341s] running develop
+[14.327s] Removing /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2-control.egg-link (link to .)
+[14.955s] Invoked command in '/home/jetson/ros2_ws/build/exer2_control' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/exer2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/exer2_control/build
+[14.965s] Invoking command in '/home/jetson/ros2_ws/src/exer2_control': PYTHONPATH=/home/jetson/ros2_ws/build/exer2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/exer2_control build --build-base /home/jetson/ros2_ws/build/exer2_control/build install --record /home/jetson/ros2_ws/build/exer2_control/install.log --install-scripts $base/lib/exer2_control --single-version-externally-managed install_data --force
+[17.014s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[17.015s]   warnings.warn(
+[17.148s] running egg_info
+[17.152s] writing ../../build/exer2_control/exer2_control.egg-info/PKG-INFO
+[17.153s] writing dependency_links to ../../build/exer2_control/exer2_control.egg-info/dependency_links.txt
+[17.153s] writing entry points to ../../build/exer2_control/exer2_control.egg-info/entry_points.txt
+[17.154s] writing requirements to ../../build/exer2_control/exer2_control.egg-info/requires.txt
+[17.154s] writing top-level names to ../../build/exer2_control/exer2_control.egg-info/top_level.txt
+[17.166s] reading manifest file '../../build/exer2_control/exer2_control.egg-info/SOURCES.txt'
+[17.170s] writing manifest file '../../build/exer2_control/exer2_control.egg-info/SOURCES.txt'
+[17.171s] running build
+[17.171s] running build_py
+[17.172s] creating /home/jetson/ros2_ws/build/exer2_control/build
+[17.172s] creating /home/jetson/ros2_ws/build/exer2_control/build/lib
+[17.172s] creating /home/jetson/ros2_ws/build/exer2_control/build/lib/exer2_control
+[17.173s] copying exer2_control/controller.py -> /home/jetson/ros2_ws/build/exer2_control/build/lib/exer2_control
+[17.173s] copying exer2_control/__init__.py -> /home/jetson/ros2_ws/build/exer2_control/build/lib/exer2_control
+[17.174s] running install
+[17.178s] running install_lib
+[17.181s] creating /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2_control
+[17.182s] copying /home/jetson/ros2_ws/build/exer2_control/build/lib/exer2_control/controller.py -> /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2_control
+[17.182s] copying /home/jetson/ros2_ws/build/exer2_control/build/lib/exer2_control/__init__.py -> /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2_control
+[17.185s] byte-compiling /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2_control/controller.py to controller.cpython-38.pyc
+[17.188s] byte-compiling /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2_control/__init__.py to __init__.cpython-38.pyc
+[17.189s] running install_data
+[17.189s] copying resource/exer2_control -> /home/jetson/ros2_ws/install/exer2_control/share/ament_index/resource_index/packages
+[17.192s] copying package.xml -> /home/jetson/ros2_ws/install/exer2_control/share/exer2_control
+[17.192s] running install_egg_info
+[17.200s] Copying ../../build/exer2_control/exer2_control.egg-info to /home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages/exer2_control-0.0.0-py3.8.egg-info
+[17.204s] running install_scripts
+[17.303s] Installing controller script to /home/jetson/ros2_ws/install/exer2_control/lib/exer2_control
+[17.304s] writing list of installed files to '/home/jetson/ros2_ws/build/exer2_control/install.log'
+[22.773s] Invoked command in '/home/jetson/ros2_ws/src/exer2_control' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/exer2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/exer2_control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/exer2_control build --build-base /home/jetson/ros2_ws/build/exer2_control/build install --record /home/jetson/ros2_ws/build/exer2_control/install.log --install-scripts $base/lib/exer2_control --single-version-externally-managed install_data --force

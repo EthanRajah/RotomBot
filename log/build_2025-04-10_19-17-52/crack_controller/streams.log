@@ -1,0 +1,40 @@
+[14.283s] Invoking command in '/home/jetson/ros2_ws/build/crack_controller': PYTHONPATH=/home/jetson/ros2_ws/build/crack_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/crack_controller/build
+[16.522s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[16.523s]   warnings.warn(
+[16.770s] running develop
+[17.731s] Removing /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack-controller.egg-link (link to .)
+[18.367s] Invoked command in '/home/jetson/ros2_ws/build/crack_controller' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/crack_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/crack_controller/build
+[18.378s] Invoking command in '/home/jetson/ros2_ws/src/crack_controller': PYTHONPATH=/home/jetson/ros2_ws/build/crack_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crack_controller build --build-base /home/jetson/ros2_ws/build/crack_controller/build install --record /home/jetson/ros2_ws/build/crack_controller/install.log --install-scripts $base/lib/crack_controller --single-version-externally-managed install_data --force
+[20.402s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[20.403s]   warnings.warn(
+[20.570s] running egg_info
+[20.572s] writing ../../build/crack_controller/crack_controller.egg-info/PKG-INFO
+[20.574s] writing dependency_links to ../../build/crack_controller/crack_controller.egg-info/dependency_links.txt
+[20.575s] writing entry points to ../../build/crack_controller/crack_controller.egg-info/entry_points.txt
+[20.576s] writing requirements to ../../build/crack_controller/crack_controller.egg-info/requires.txt
+[20.576s] writing top-level names to ../../build/crack_controller/crack_controller.egg-info/top_level.txt
+[20.591s] reading manifest file '../../build/crack_controller/crack_controller.egg-info/SOURCES.txt'
+[20.595s] writing manifest file '../../build/crack_controller/crack_controller.egg-info/SOURCES.txt'
+[20.596s] running build
+[20.597s] running build_py
+[20.597s] creating /home/jetson/ros2_ws/build/crack_controller/build
+[20.597s] creating /home/jetson/ros2_ws/build/crack_controller/build/lib
+[20.598s] creating /home/jetson/ros2_ws/build/crack_controller/build/lib/crack_controller
+[20.598s] copying crack_controller/__init__.py -> /home/jetson/ros2_ws/build/crack_controller/build/lib/crack_controller
+[20.599s] copying crack_controller/crack_controller.py -> /home/jetson/ros2_ws/build/crack_controller/build/lib/crack_controller
+[20.599s] running install
+[20.603s] running install_lib
+[20.607s] creating /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack_controller
+[20.608s] copying /home/jetson/ros2_ws/build/crack_controller/build/lib/crack_controller/__init__.py -> /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack_controller
+[20.608s] copying /home/jetson/ros2_ws/build/crack_controller/build/lib/crack_controller/crack_controller.py -> /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack_controller
+[20.612s] byte-compiling /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack_controller/__init__.py to __init__.cpython-38.pyc
+[20.613s] byte-compiling /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack_controller/crack_controller.py to crack_controller.cpython-38.pyc
+[20.617s] running install_data
+[20.618s] copying resource/crack_controller -> /home/jetson/ros2_ws/install/crack_controller/share/ament_index/resource_index/packages
+[20.621s] copying package.xml -> /home/jetson/ros2_ws/install/crack_controller/share/crack_controller
+[20.621s] running install_egg_info
+[20.629s] Copying ../../build/crack_controller/crack_controller.egg-info to /home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages/crack_controller-0.0.0-py3.8.egg-info
+[20.633s] running install_scripts
+[20.726s] Installing crack_controller script to /home/jetson/ros2_ws/install/crack_controller/lib/crack_controller
+[20.729s] writing list of installed files to '/home/jetson/ros2_ws/build/crack_controller/install.log'
+[23.086s] Invoked command in '/home/jetson/ros2_ws/src/crack_controller' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/crack_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crack_controller build --build-base /home/jetson/ros2_ws/build/crack_controller/build install --record /home/jetson/ros2_ws/build/crack_controller/install.log --install-scripts $base/lib/crack_controller --single-version-externally-managed install_data --force

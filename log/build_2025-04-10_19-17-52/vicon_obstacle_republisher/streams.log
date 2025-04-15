@@ -1,0 +1,40 @@
+[11.664s] Invoking command in '/home/jetson/ros2_ws/build/vicon_obstacle_republisher': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build
+[13.673s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[13.673s]   warnings.warn(
+[13.898s] running develop
+[14.852s] Removing /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon-obstacle-republisher.egg-link (link to .)
+[15.473s] Invoked command in '/home/jetson/ros2_ws/build/vicon_obstacle_republisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build
+[15.482s] Invoking command in '/home/jetson/ros2_ws/src/vicon_obstacle_republisher': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vicon_obstacle_republisher build --build-base /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build install --record /home/jetson/ros2_ws/build/vicon_obstacle_republisher/install.log --install-scripts $base/lib/vicon_obstacle_republisher --single-version-externally-managed install_data --force
+[17.352s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[17.352s]   warnings.warn(
+[17.495s] running egg_info
+[17.499s] writing ../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/PKG-INFO
+[17.500s] writing dependency_links to ../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/dependency_links.txt
+[17.500s] writing entry points to ../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/entry_points.txt
+[17.500s] writing requirements to ../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/requires.txt
+[17.501s] writing top-level names to ../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/top_level.txt
+[17.514s] reading manifest file '../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/SOURCES.txt'
+[17.518s] writing manifest file '../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info/SOURCES.txt'
+[17.519s] running build
+[17.520s] running build_py
+[17.520s] creating /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build
+[17.520s] creating /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build/lib
+[17.521s] creating /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build/lib/vicon_obstacle_republisher
+[17.521s] copying vicon_obstacle_republisher/vicon_obstacle_republisher_node.py -> /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build/lib/vicon_obstacle_republisher
+[17.522s] copying vicon_obstacle_republisher/__init__.py -> /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build/lib/vicon_obstacle_republisher
+[17.522s] running install
+[17.526s] running install_lib
+[17.530s] creating /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher
+[17.531s] copying /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build/lib/vicon_obstacle_republisher/vicon_obstacle_republisher_node.py -> /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher
+[17.531s] copying /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build/lib/vicon_obstacle_republisher/__init__.py -> /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher
+[17.534s] byte-compiling /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher/vicon_obstacle_republisher_node.py to vicon_obstacle_republisher_node.cpython-38.pyc
+[17.536s] byte-compiling /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher/__init__.py to __init__.cpython-38.pyc
+[17.536s] running install_data
+[17.537s] copying resource/vicon_obstacle_republisher -> /home/jetson/ros2_ws/install/vicon_obstacle_republisher/share/ament_index/resource_index/packages
+[17.540s] copying package.xml -> /home/jetson/ros2_ws/install/vicon_obstacle_republisher/share/vicon_obstacle_republisher
+[17.541s] running install_egg_info
+[17.549s] Copying ../../build/vicon_obstacle_republisher/vicon_obstacle_republisher.egg-info to /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages/vicon_obstacle_republisher-0.0.0-py3.8.egg-info
+[17.554s] running install_scripts
+[17.646s] Installing vicon_obstacle_republisher_node script to /home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/vicon_obstacle_republisher
+[17.649s] writing list of installed files to '/home/jetson/ros2_ws/build/vicon_obstacle_republisher/install.log'
+[18.261s] Invoked command in '/home/jetson/ros2_ws/src/vicon_obstacle_republisher' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/vicon_obstacle_republisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/vicon_obstacle_republisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vicon_obstacle_republisher build --build-base /home/jetson/ros2_ws/build/vicon_obstacle_republisher/build install --record /home/jetson/ros2_ws/build/vicon_obstacle_republisher/install.log --install-scripts $base/lib/vicon_obstacle_republisher --single-version-externally-managed install_data --force

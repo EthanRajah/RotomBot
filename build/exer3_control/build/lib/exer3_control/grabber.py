@@ -8,6 +8,7 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseStamped
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
+import os
 
 
 class grabber(Node):
@@ -82,7 +83,9 @@ def main(args=None):
     rclpy.init(args=args)
 
     # Open CSV file
-    combined_data_file = open('combined_data.csv', 'w', newline='')
+    output_dir = 'src/exer3_control/exer3_control'
+    os.makedirs(output_dir, exist_ok=True)
+    combined_data_file = open(os.path.join(output_dir, 'combined_data.csv'), 'w', newline='')
 
     # Create grabber instance with CSV file handle
     grabber_class = grabber(combined_data_file)

@@ -1,0 +1,29 @@
+[9.065s] Invoking command in '/home/jetson/ros2_ws/src/image_processor': PYTHONPATH=/home/jetson/ros2_ws/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /home/jetson/ros2_ws/build/image_processor/build install --record /home/jetson/ros2_ws/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[10.949s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[10.950s]   warnings.warn(
+[11.096s] running egg_info
+[11.099s] writing ../../build/image_processor/image_processor.egg-info/PKG-INFO
+[11.101s] writing dependency_links to ../../build/image_processor/image_processor.egg-info/dependency_links.txt
+[11.102s] writing entry points to ../../build/image_processor/image_processor.egg-info/entry_points.txt
+[11.103s] writing requirements to ../../build/image_processor/image_processor.egg-info/requires.txt
+[11.103s] writing top-level names to ../../build/image_processor/image_processor.egg-info/top_level.txt
+[11.117s] reading manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[11.122s] writing manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[11.122s] running build
+[11.123s] running build_py
+[11.125s] copying image_processor/state_machine.py -> /home/jetson/ros2_ws/build/image_processor/build/lib/image_processor
+[11.127s] copying image_processor/darknet_dir/inference_darknet.py -> /home/jetson/ros2_ws/build/image_processor/build/lib/image_processor/darknet_dir
+[11.130s] running install
+[11.134s] running install_lib
+[11.138s] copying /home/jetson/ros2_ws/build/image_processor/build/lib/image_processor/darknet_dir/inference_darknet.py -> /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor/darknet_dir
+[11.139s] copying /home/jetson/ros2_ws/build/image_processor/build/lib/image_processor/state_machine.py -> /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor
+[11.143s] byte-compiling /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor/darknet_dir/inference_darknet.py to inference_darknet.cpython-38.pyc
+[11.148s] byte-compiling /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor/state_machine.py to state_machine.cpython-38.pyc
+[11.156s] running install_data
+[11.157s] running install_egg_info
+[11.164s] removing '/home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor-0.0.0-py3.8.egg-info' (and everything under it)
+[11.165s] Copying ../../build/image_processor/image_processor.egg-info to /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor-0.0.0-py3.8.egg-info
+[11.170s] running install_scripts
+[11.261s] Installing state_machine script to /home/jetson/ros2_ws/install/image_processor/lib/image_processor
+[11.264s] writing list of installed files to '/home/jetson/ros2_ws/build/image_processor/install.log'
+[13.881s] Invoked command in '/home/jetson/ros2_ws/src/image_processor' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /home/jetson/ros2_ws/build/image_processor/build install --record /home/jetson/ros2_ws/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data

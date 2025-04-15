@@ -1,0 +1,40 @@
+[13.788s] Invoking command in '/home/jetson/ros2_ws/build/crack_comm': PYTHONPATH=/home/jetson/ros2_ws/build/crack_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/crack_comm/build
+[15.428s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[15.428s]   warnings.warn(
+[15.685s] running develop
+[16.716s] Removing /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack-comm.egg-link (link to .)
+[17.356s] Invoked command in '/home/jetson/ros2_ws/build/crack_comm' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/crack_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jetson/ros2_ws/build/crack_comm/build
+[17.359s] Invoking command in '/home/jetson/ros2_ws/src/crack_comm': PYTHONPATH=/home/jetson/ros2_ws/build/crack_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crack_comm build --build-base /home/jetson/ros2_ws/build/crack_comm/build install --record /home/jetson/ros2_ws/build/crack_comm/install.log --install-scripts $base/lib/crack_comm --single-version-externally-managed install_data --force
+[19.327s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[19.328s]   warnings.warn(
+[19.477s] running egg_info
+[19.480s] writing ../../build/crack_comm/crack_comm.egg-info/PKG-INFO
+[19.482s] writing dependency_links to ../../build/crack_comm/crack_comm.egg-info/dependency_links.txt
+[19.482s] writing entry points to ../../build/crack_comm/crack_comm.egg-info/entry_points.txt
+[19.484s] writing requirements to ../../build/crack_comm/crack_comm.egg-info/requires.txt
+[19.484s] writing top-level names to ../../build/crack_comm/crack_comm.egg-info/top_level.txt
+[19.499s] reading manifest file '../../build/crack_comm/crack_comm.egg-info/SOURCES.txt'
+[19.504s] writing manifest file '../../build/crack_comm/crack_comm.egg-info/SOURCES.txt'
+[19.505s] running build
+[19.506s] running build_py
+[19.506s] creating /home/jetson/ros2_ws/build/crack_comm/build
+[19.507s] creating /home/jetson/ros2_ws/build/crack_comm/build/lib
+[19.507s] creating /home/jetson/ros2_ws/build/crack_comm/build/lib/crack_comm
+[19.508s] copying crack_comm/__init__.py -> /home/jetson/ros2_ws/build/crack_comm/build/lib/crack_comm
+[19.508s] copying crack_comm/crack_comm.py -> /home/jetson/ros2_ws/build/crack_comm/build/lib/crack_comm
+[19.509s] running install
+[19.514s] running install_lib
+[19.518s] creating /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack_comm
+[19.518s] copying /home/jetson/ros2_ws/build/crack_comm/build/lib/crack_comm/__init__.py -> /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack_comm
+[19.519s] copying /home/jetson/ros2_ws/build/crack_comm/build/lib/crack_comm/crack_comm.py -> /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack_comm
+[19.522s] byte-compiling /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack_comm/__init__.py to __init__.cpython-38.pyc
+[19.524s] byte-compiling /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack_comm/crack_comm.py to crack_comm.cpython-38.pyc
+[19.533s] running install_data
+[19.534s] copying resource/crack_comm -> /home/jetson/ros2_ws/install/crack_comm/share/ament_index/resource_index/packages
+[19.535s] copying package.xml -> /home/jetson/ros2_ws/install/crack_comm/share/crack_comm
+[19.535s] running install_egg_info
+[19.543s] Copying ../../build/crack_comm/crack_comm.egg-info to /home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages/crack_comm-0.0.0-py3.8.egg-info
+[19.549s] running install_scripts
+[19.646s] Installing crack_comm script to /home/jetson/ros2_ws/install/crack_comm/lib/crack_comm
+[19.648s] writing list of installed files to '/home/jetson/ros2_ws/build/crack_comm/install.log'
+[20.270s] Invoked command in '/home/jetson/ros2_ws/src/crack_comm' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/crack_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/crack_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crack_comm build --build-base /home/jetson/ros2_ws/build/crack_comm/build install --record /home/jetson/ros2_ws/build/crack_comm/install.log --install-scripts $base/lib/crack_comm --single-version-externally-managed install_data --force

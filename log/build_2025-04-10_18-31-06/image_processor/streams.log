@@ -1,0 +1,26 @@
+[7.457s] Invoking command in '/home/jetson/ros2_ws/src/image_processor': PYTHONPATH=/home/jetson/ros2_ws/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /home/jetson/ros2_ws/build/image_processor/build install --record /home/jetson/ros2_ws/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[9.456s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[9.456s]   warnings.warn(
+[9.602s] running egg_info
+[9.604s] writing ../../build/image_processor/image_processor.egg-info/PKG-INFO
+[9.606s] writing dependency_links to ../../build/image_processor/image_processor.egg-info/dependency_links.txt
+[9.607s] writing entry points to ../../build/image_processor/image_processor.egg-info/entry_points.txt
+[9.608s] writing requirements to ../../build/image_processor/image_processor.egg-info/requires.txt
+[9.608s] writing top-level names to ../../build/image_processor/image_processor.egg-info/top_level.txt
+[9.636s] reading manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[9.641s] writing manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[9.641s] running build
+[9.642s] running build_py
+[9.644s] copying image_processor/state_machine.py -> /home/jetson/ros2_ws/build/image_processor/build/lib/image_processor
+[9.648s] running install
+[9.652s] running install_lib
+[9.659s] copying /home/jetson/ros2_ws/build/image_processor/build/lib/image_processor/state_machine.py -> /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor
+[9.665s] byte-compiling /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor/state_machine.py to state_machine.cpython-38.pyc
+[9.672s] running install_data
+[9.673s] running install_egg_info
+[9.681s] removing '/home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor-0.0.0-py3.8.egg-info' (and everything under it)
+[9.682s] Copying ../../build/image_processor/image_processor.egg-info to /home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages/image_processor-0.0.0-py3.8.egg-info
+[9.688s] running install_scripts
+[9.780s] Installing state_machine script to /home/jetson/ros2_ws/install/image_processor/lib/image_processor
+[9.785s] writing list of installed files to '/home/jetson/ros2_ws/build/image_processor/install.log'
+[10.399s] Invoked command in '/home/jetson/ros2_ws/src/image_processor' returned '0': PYTHONPATH=/home/jetson/ros2_ws/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/ros2_ws/install/image_processor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /home/jetson/ros2_ws/build/image_processor/build install --record /home/jetson/ros2_ws/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data

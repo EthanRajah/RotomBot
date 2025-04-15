@@ -6,7 +6,7 @@ import numpy as np
 from rclpy.node import Node
 from nav_msgs.msg import Odometry  # use Odometry since it has both pose and twist
 from geometry_msgs.msg import PoseStamped
-from tf_transformations import euler_from_quaternion, quaternion_from_euler
+from tf_transformations import euler_from_quaternion, quaternion_from_euler, quaternion_matrix, quaternion_from_matrix
 
 
 class realsense2mavros(Node):
@@ -35,9 +35,30 @@ class realsense2mavros(Node):
         # Only publish if self.publish flag is true
         self.publish = False
 
+        self.T_2_0 = np.eye(4)
+
     def realsense_callback(self, msg):
         # Create new PoseStamped message for MAVROS
         # self.get_logger().info('Publishing')
+
+        # Call T_0_2 to get the transform from the camera frame to the map frame
+        t, q = msg.pose.pose.position, msg.pose.pose.orientation
+        T_3_2 = quaternion_matrix([q.x, q.y, q.z, q.w])    
+        T_3_2[:3, 3] = [t.x, t.y, t.z]    
+
+        # Transform we want to publish: T_3_0 = T_2_0 * T_3_2
+        T_3_0 = np.dot(self.T_2_0, T_3_2)
+        # Get position and quaternion
+        p = T_3_0[:3, 3]
+        
+        # Convert Rotation Matrix to Quaternion (Fix)
+        q_matrix = quaternion_from_matrix(T_3_0)
+
+        # Convert Quaternion to Euler Angles
+        euler_angles = euler_from_quaternion(q_matrix)
+
+        # Convert back to Quaternion
+        q = quaternion_from_euler(*euler_angles)
 
         mavros_msg = PoseStamped()
 
@@ -45,14 +66,14 @@ class realsense2mavros(Node):
         mavros_msg.header = msg.header
         mavros_msg.header.frame_id = 'map'
 
-        # Copy position data and transform to cube frame
-        mavros_msg.pose.position = msg.pose.pose.position
-        mavros_msg.pose.position.x += self.transform[0]
-        mavros_msg.pose.position.y += self.transform[1]
-        mavros_msg.pose.position.z += self.transform[2]
+
+        mavros_msg.pose.position.x, mavros_msg.pose.position.y, mavros_msg.pose.position.z = p[0], p[1], p[2]
 
         # Copy orientation data
-        mavros_msg.pose.orientation = msg.pose.pose.orientation
+        mavros_msg.pose.orientation.x = q[0]
+        mavros_msg.pose.orientation.y = q[1]
+        mavros_msg.pose.orientation.z = q[2]
+        mavros_msg.pose.orientation.w = q[3]
 
         # Publish the transformed message
         # self.get_logger().info('Realsense Publishing message')

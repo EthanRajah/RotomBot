@@ -5,7 +5,9 @@ package_name = 'image_processor'
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name],
+    packages=[package_name, f'{package_name}.darknet_dir'],
+    # package_data = {'image_processor.darknet_dir': ['libdarknet.so'],},
+    # include_package_data = True,
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
