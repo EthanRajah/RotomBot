@@ -351,4 +351,4 @@ def get_latest_events():
 if __name__ == '__main__':
     # /opt/anaconda3/envs/dev/bin/python /Users/ethan/Documents/Robotics/ROB498/vlm/API.py
     # 10.42.0.103 - grab from network settings
-    app.run(host='10.42.0.101', port=5072, debug=True)
+    app.run(host='192.168.2.143', port=5072, debug=True)
