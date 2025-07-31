@@ -89,7 +89,7 @@ RotomBot is a low-cost, autonomous drone designed to detect and describe structu
 - Requires pre-mapped obstacles and waypoints
 - VICON-based localization (for testing; SLAM or GPS recommended for real-world deployment)
 
-## Demo Video
+## Demo Video Link
 
 [![RotomBot Demo](https://img.youtube.com/vi/wmpTt7u96Cg/0.jpg)](https://youtu.be/wmpTt7u96Cg)
 
