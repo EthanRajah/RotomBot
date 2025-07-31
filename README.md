@@ -3,10 +3,17 @@
 **Team Members**: Ethan Rajah, Andrew Jairam, Gurpreet Mukker, Arthur Zhuang  
 **Capstone Project – ROB498, University of Toronto, 2025**
 
-<p align="center">
-  <img src="misc/drone.png" alt="Drone Design" width="45%" style="margin-right: 10px;">
-  <img src="misc/CAPSTONE.gif" alt="Drone Demo" width="45%">
-</p>
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <div style="text-align: center;">
+    <img src="misc/drone.png" alt="Drone Design" style="width: 100%; max-width: 400px; border-radius: 8px;">
+    <p><em>Drone Hardware</em></p>
+  </div>
+  <div style="text-align: center;">
+    <img src="misc/CAPSTONE.gif" alt="Drone Demo" style="width: 100%; max-width: 400px; border-radius: 8px;">
+    <p><em>Flight Arena Demo</em></p>
+  </div>
+</div>
+
 ![Inspection Website Preview](misc/website.PNG)
 
 RotomBot is a low-cost, autonomous drone designed to detect and describe structural cracks in civil infrastructure using onboard and offboard ML models. Users can specify inspection points via voice commands, which are transcribed using a speech-to-text model and converted into waypoint instructions for the drone. Leveraging a YOLO-based crack detection model and a vision-language model (VLM) for natural language descriptions, the system provides human-readable summaries of structural health and stores results in a structured SQL database accessible through a web interface. The VLM bridges the gap between raw model outputs and actionable insights, making the system accessible to non-technical users. It enables quick triaging by categorizing cracks by type and severity, helping engineers and reviewers prioritize critical issues efficiently during structural assessments.
@@ -90,5 +97,6 @@ RotomBot is a low-cost, autonomous drone designed to detect and describe structu
 
 ## Demo Video
 
-[![Watch Demo](https://img.shields.io/badge/Watch-Demo-blue?logo=youtube&style=for-the-badge)](https://youtu.be/wmpTt7u96Cg)
+[![RotomBot Demo](https://img.youtube.com/vi/wmpTt7u96Cg/0.jpg)](https://youtu.be/wmpTt7u96Cg)
+
 
