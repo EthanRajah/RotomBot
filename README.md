@@ -3,15 +3,9 @@
 **Team Members**: Ethan Rajah, Andrew Jairam, Gurpreet Mukker, Arthur Zhuang  
 **Capstone Project – ROB498, University of Toronto, 2025**
 
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="misc/drone.png" alt="Drone Design" style="width: 100%; max-width: 400px; border-radius: 8px;">
-    <p><em>Drone Hardware</em></p>
-  </div>
-  <div style="text-align: center;">
-    <img src="misc/CAPSTONE.gif" alt="Drone Demo" style="width: 100%; max-width: 400px; border-radius: 8px;">
-    <p><em>Flight Arena Demo</em></p>
-  </div>
+<div style="display: flex; justify-content: center; align-items: center; gap: 16px;">
+  <img src="misc/drone.png" alt="Drone Design" style="height: 300px; object-fit: contain; border-radius: 6px;">
+  <img src="misc/CAPSTONE.gif" alt="Drone Demo" style="height: 300px; object-fit: contain; border-radius: 6px;">
 </div>
 
 ![Inspection Website Preview](misc/website.PNG)
@@ -68,7 +62,7 @@ RotomBot is a low-cost, autonomous drone designed to detect and describe structu
 | Battery Replacement Time      | ~15 seconds                   |
 | Deployment Cost               | ~$1,500 CAD total             |
 
-## 🧪 Testing
+## 🤖 Testing
 
 - Simulated inspections with printed cracks on cardboard
 - VICON-based localization for indoor flight validation
