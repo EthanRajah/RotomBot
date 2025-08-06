@@ -80,7 +80,7 @@ RotomBot is a low-cost, autonomous drone designed to detect and describe structu
 | Speech Recognition   | Whisper (OpenAI)               |
 | API + Backend        | Flask + SQL                    |
 | Camera               | IMX219 (1080p)                 |
-| Frontend             | HTML (React suggested)         |
+| Frontend             | HTML                           |
 
 ## ⚠️ Design Constraints
 
